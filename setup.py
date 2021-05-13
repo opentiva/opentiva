@@ -9,9 +9,10 @@ with open("README.rst", 'r') as f:
 
 setup(
    name='opentiva',
-   version='1.0',
+   version='1.0.1',
    description='Simulation of target controlled infusions using'
                'pharmacokinetic and pharmacodynamic models.',
+   long_description = long_description,
    author='James Selby',
    author_email='opentiva@jpselby.co.uk',
    project_urls={
