@@ -1,15 +1,29 @@
 #!/usr/bin/env python
 # encoding: utf-8
 
-from setuptools import setup
-from Cython.Build import cythonize
+from setuptools import Extension, setup
+
+try:
+    from Cython.Distutils import build_ext
+except ImportError:
+    use_cython = False
+else:
+    use_cython = True
+
+ext = '.pyx' if use_cython else '.c'
+
+extensions = [Extension("opentiva.pkpd", ["opentiva/pkpd"+ext])]
+
+if use_cython:
+    from Cython.Build import cythonize
+    extensions = cythonize(extensions)
 
 with open("README.rst", 'r') as f:
     readme = f.read()
 
 setup(
    name='opentiva',
-   version='1.0.1',
+   version='1.0.3',
    description='Simulation of target controlled infusions using'
                'pharmacokinetic and pharmacodynamic models.',
    long_description=readme,
@@ -22,9 +36,11 @@ setup(
    },
    license='LICENSE',
    packages=['opentiva'],
-   ext_modules=cythonize('opentiva/pkpd.pyx'),
+   ext_modules=extensions,
    zip_safe=False,
-   install_requires=['numpy', 'scipy', 'cython'],
+   include_package_data=True,
+   setup_requires=['cython'],
+   install_requires=['numpy', 'scipy'],
    classifiers=[
        "Development Status :: 5 - Production/Stable",
        "Intended Audience :: Healthcare Industry",
