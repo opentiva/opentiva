@@ -6,7 +6,7 @@ controlled infusions by using mathematical models relating to the
 pharmacokinetic and pharmacodynamic compartment models of drugs used in 
 anaesthetic practice. 
 
-Full documentation can be found `here <>`_
+Full documentation can be found `here <https://opentiva.readthedocs.io>`_
 
 Features
 --------
