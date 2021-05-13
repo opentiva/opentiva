@@ -5,14 +5,15 @@ from setuptools import setup
 from Cython.Build import cythonize
 
 with open("README.rst", 'r') as f:
-    long_description = f.read()
+    readme = f.read()
 
 setup(
    name='opentiva',
    version='1.0.1',
    description='Simulation of target controlled infusions using'
                'pharmacokinetic and pharmacodynamic models.',
-   long_description = long_description,
+   long_description=readme,
+   long_description_content_type='text/x-rst',
    author='James Selby',
    author_email='opentiva@jpselby.co.uk',
    project_urls={

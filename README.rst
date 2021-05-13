@@ -14,7 +14,7 @@ Features
 - Plasma and effect site targeting
 - One, two and three compartment modelling
 - Built in Pk/Pd models from a range of drugs
-- Tpeak :math:`k_{e0}` calcuation
+- Tpeak ke0 calcuation
 - User defined infusions
 - Optional k20 elimination in two compartment modelling
 - Customize a range of properties relating to the targetting and maintenance 
