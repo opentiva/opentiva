@@ -4,7 +4,7 @@
 from setuptools import Extension, setup
 
 try:
-    from Cython.Distutils import build_ext
+    from Cython.Build import cythonize
 except ImportError:
     use_cython = False
 else:
@@ -39,7 +39,6 @@ setup(
    ext_modules=extensions,
    zip_safe=False,
    include_package_data=True,
-   setup_requires=['cython'],
    install_requires=['numpy', 'scipy'],
    classifiers=[
        "Development Status :: 5 - Production/Stable",
