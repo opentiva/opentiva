@@ -354,12 +354,14 @@ Details of the theory surrounding this can be found :ref:`here<Ke0 'tpeak' metho
                                                        weight=weight, 
                                                        height=height)
     
+    pkpd_model = opentiva.pkpd.PkPdModel(propofol_marsh)
+
     dose = 1 # bolus dose in mg
     tpeak = 236 # time to peak effect site concentration in seconds
     ce_tpeak = 0.25831 # effect site concentration at tpeak
 
-    ke0 = propofol_marsh.ke0_tpeak_method(dose=dose, tpeak=tpeak, 
-                                          ce_tpeak=ce_tpeak)
+    ke0 = pkpd_model.ke0_tpeak_method(dose=dose, tpeak=tpeak, 
+                                      ce_tpeak=ce_tpeak)
 
 .. list-table::
    :widths: 50 50
