@@ -157,7 +157,9 @@ infusions and characteristics of the simulated pump.
 Full API reference can be found :ref:`here<modindex>`.
 
 The effect site targetting parameters (cp_limit and cp_limit_duration) are 
-covered :ref:`here<Effect site targetting>`.
+covered :ref:`here<Effect site targetting>`. The values given in the pump class
+initialization are used as defaults if these are not supplied for an 
+individual target.
 
 Maintenance infusions
 ~~~~~~~~~~~~~~~~~~~~~
@@ -309,7 +311,8 @@ a rapid rise to an effect site of 4 with minimal effect site overshoot.
      - Description
    * - cp_limit_duration
      - int
-     - duration in seconds to achieve the maximal plasma concentration
+     - duration in seconds to achieve the maximal plasma concentration, will 
+       override the value given in pump initialization
    * - ce_bolus_only
      - bool
      - true for Original method (bolus only) effect targetting or false for revised method
@@ -357,7 +360,8 @@ meets the increasing effect site concentration at the target of 4.
      - Description
    * - cp_limit
      - float
-     - multiplied to the target to get maximum increase in plasma concentration
+     - multiplied to the target to get maximum increase in plasma concentration;
+       value will override the value given in pump initialization
 
 .. note::
    **Optimal value for cp_limit:** The maximum value of cp_limit can be found by
@@ -367,6 +371,7 @@ meets the increasing effect site concentration at the target of 4.
    or running the simulation (run()) the calculated cp_limit can be obtained from the
    :ref:`target_concentration<Direct calling>` array. Then the cp_limit for the 
    revised targetting can be set a value less than this.
+
 
 **Duration in effect targetting**
 
