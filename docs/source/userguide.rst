@@ -154,10 +154,10 @@ A minimal example of the required parameters is:
 The optional settings relate to defaults for effect site targetting, maintenance
 infusions and characteristics of the simulated pump. 
 
-Full API reference can be found :ref:`here<modindex>`.
+Full API reference can be found :ref:`here <modindex>`.
 
 The effect site targetting parameters (cp_limit and cp_limit_duration) are 
-covered :ref:`here<Effect site targetting>`. The values given in the pump class
+covered :ref:`here <Effect site targetting>`. The values given in the pump class
 initialization are used as defaults if these are not supplied for an 
 individual target.
 
