@@ -8,6 +8,9 @@ anaesthetic practice.
 
 Usage examples can be found in the examples directory.
 
+Example web app using the module can be found at 
+`opentiva.com <https://opentiva.com>`_
+
 Full documentation can be found `here <https://opentiva.readthedocs.io>`_
 
 Features
