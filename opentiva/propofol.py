@@ -167,16 +167,16 @@ class Schnider(Model):
         self.v2 = 18.9 - 0.391 * (age - 52)
         self.v3 = 238
 
-        cl1 = 1.89 + 0.0456 * (weight - 77) - 0.0681 * (lbm - 59) \
-              + 0.0264 * (height - 177)
-        cl2 = 1.29 - 0.024 * (age - 53)
-        cl3 = 0.836
+        self.cl1 = 1.89 + 0.0456 * (weight - 77) - 0.0681 * (lbm - 59) \
+                   + 0.0264 * (height - 177)
+        self.cl2 = 1.29 - 0.024 * (age - 53)
+        self.cl3 = 0.836
 
-        self.k10 = cl1 / self.v1
-        self.k12 = cl2 / self.v1
-        self.k13 = cl3 / self.v1
-        self.k21 = cl2 / self.v2
-        self.k31 = cl3 / self.v3
+        self.k10 = self.cl1 / self.v1
+        self.k12 = self.cl2 / self.v1
+        self.k13 = self.cl3 / self.v1
+        self.k21 = self.cl2 / self.v2
+        self.k31 = self.cl3 / self.v3
         self.ke0 = 0.456  # TTPE 1.6 minutes is used in original model
 
 
