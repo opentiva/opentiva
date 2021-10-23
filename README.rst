@@ -35,8 +35,8 @@ Install opentiva by running:
 Contribute
 ----------
 
-- Issue Tracker: github.com/opentiva/opentiva/issues
-- Source Code: github.com/opentiva/opentiva
+- Issue Tracker: `github.com/opentiva/opentiva/issues <https://github.com/opentiva/opentiva/issues>`_
+- Source Code: `github.com/opentiva/opentiva <https://github.com/opentiva/opentiva>`_
 
 Support
 -------
