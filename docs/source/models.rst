@@ -100,6 +100,7 @@ Hypnotics
    * Herd
    * Hijazi
    * Hornik
+   * Klamp
 * Midazolam
    * Albrecht
 * Propofol
