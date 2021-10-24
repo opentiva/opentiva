@@ -23,4 +23,5 @@ ce_tpeak = 0.25831 # effect site concentration at tpeak
 ke0 = pkpd_model.ke0_tpeak_method(dose=dose, tpeak=tpeak,
                                   ce_tpeak=ce_tpeak)
 
-print(f"Marsh model Ke0 is {ke0} /second and {ke0/60} /minute")
+print(f"Marsh model Ke0 is {format(ke0, '.3f')} /second and "
+      f"{format(ke0 * 60, '.3f')} /minute")
