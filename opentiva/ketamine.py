@@ -215,3 +215,40 @@ class Hornik(Model):
         self.k21 = self.cl2 / self.v2
 
         self.ke0 = 4.212  # from tpeak 1 min
+
+
+class Klamp(Model):
+    """Klamp class holds pharmacokinetic parameters for the Klamp
+    ketamine model.
+
+    Reference: PMID: 32997732 DOI: 10.1097/ALN.0000000000003577
+    """
+
+    def __init__(self, sex: int, age: float, weight: float, height: float):
+        super().__init__(sex, age, weight, height)
+
+        self.compartments = 3
+        self.concentration_unit = "mg/ml"
+        self.target_unit = "ug/ml"
+        self.age_lower = -1
+        self.age_upper = -1
+        self.weight_lower = -1
+        self.weight_upper = -1
+        self.pmid = "32997732"
+        self.doi = "10.1097/ALN.0000000000003577"
+
+        self.v1 = 25 * (weight / 70)
+        self.v2 = 56 * (weight / 70)
+        self.v3 = 157 * (weight / 70)
+
+        self.cl1 = 84 * (weight / 70) / 60
+        self.cl2 = 161 * (weight / 70) / 60
+        self.cl3 = 79 * (weight / 70) / 60
+
+        self.k10 = self.cl1 / self.v1
+        self.k12 = self.cl2 / self.v1
+        self.k13 = self.cl3 / self.v1
+        self.k21 = self.cl2 / self.v2
+        self.k31 = self.cl3 / self.v3
+
+        self.ke0 = 2.791  # from tpeak 1 min
