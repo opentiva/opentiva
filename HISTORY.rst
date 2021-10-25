@@ -14,7 +14,7 @@ Release History
 - Fixed ke0 example 
 - Added missing self to Schnider model
 
-1.0.4 (2020-05-13)
+1.0.4 (2021-05-13)
 ------------------
 
 First working release
