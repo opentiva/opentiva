@@ -71,7 +71,6 @@ class Gepts(Model):
         super().__init__(sex, age, weight, height)
 
         self.compartments = 3
-        self.drug = "gepts"
         self.concentration_unit = "mcg/ml"
         self.age_lower = 12
         self.age_upper = -1
@@ -107,7 +106,6 @@ class Greely(Model):
         super().__init__(sex, age, weight, height)
 
         self.compartments = 3
-        self.drug = "gepts"
         self.concentration_unit = "mcg/ml"
         self.age_lower = -1
         self.age_upper = 18
