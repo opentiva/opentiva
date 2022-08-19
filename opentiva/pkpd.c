@@ -4083,7 +4083,7 @@ static double __pyx_f_8opentiva_4pkpd_9PkPdModel_calculate_cp(struct __pyx_obj_8
     #endif
   }
 
-  /* "opentiva/pkpd.pyx":240
+  /* "opentiva/pkpd.pyx":239
  *         cdef int start, duration, end, elapsed, diff
  * 
  *         cdef Py_ssize_t x_max = int(infusion_list.shape[0])             # <<<<<<<<<<<<<<
@@ -4092,7 +4092,7 @@ static double __pyx_f_8opentiva_4pkpd_9PkPdModel_calculate_cp(struct __pyx_obj_8
  */
   __pyx_v_x_max = (__pyx_v_infusion_list.shape[0]);
 
-  /* "opentiva/pkpd.pyx":243
+  /* "opentiva/pkpd.pyx":242
  *         cdef Py_ssize_t x
  * 
  *         cp = 0             # <<<<<<<<<<<<<<
@@ -4101,7 +4101,7 @@ static double __pyx_f_8opentiva_4pkpd_9PkPdModel_calculate_cp(struct __pyx_obj_8
  */
   __pyx_v_cp = 0.0;
 
-  /* "opentiva/pkpd.pyx":245
+  /* "opentiva/pkpd.pyx":244
  *         cp = 0
  * 
  *         for x in range(x_max):             # <<<<<<<<<<<<<<
@@ -4113,7 +4113,7 @@ static double __pyx_f_8opentiva_4pkpd_9PkPdModel_calculate_cp(struct __pyx_obj_8
   for (__pyx_t_12 = 0; __pyx_t_12 < __pyx_t_11; __pyx_t_12+=1) {
     __pyx_v_x = __pyx_t_12;
 
-    /* "opentiva/pkpd.pyx":246
+    /* "opentiva/pkpd.pyx":245
  * 
  *         for x in range(x_max):
  *             start = int(infusion_list[x, 0])             # <<<<<<<<<<<<<<
@@ -4133,11 +4133,11 @@ static double __pyx_f_8opentiva_4pkpd_9PkPdModel_calculate_cp(struct __pyx_obj_8
     } else if (unlikely(__pyx_t_14 >= __pyx_v_infusion_list.shape[1])) __pyx_t_7 = 1;
     if (unlikely(__pyx_t_7 != -1)) {
       __Pyx_RaiseBufferIndexError(__pyx_t_7);
-      __PYX_ERR(0, 246, __pyx_L1_error)
+      __PYX_ERR(0, 245, __pyx_L1_error)
     }
     __pyx_v_start = ((int)(*((double *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_infusion_list.data + __pyx_t_13 * __pyx_v_infusion_list.strides[0]) ) + __pyx_t_14 * __pyx_v_infusion_list.strides[1]) ))));
 
-    /* "opentiva/pkpd.pyx":247
+    /* "opentiva/pkpd.pyx":246
  *         for x in range(x_max):
  *             start = int(infusion_list[x, 0])
  *             dose = infusion_list[x, 1]             # <<<<<<<<<<<<<<
@@ -4157,11 +4157,11 @@ static double __pyx_f_8opentiva_4pkpd_9PkPdModel_calculate_cp(struct __pyx_obj_8
     } else if (unlikely(__pyx_t_13 >= __pyx_v_infusion_list.shape[1])) __pyx_t_7 = 1;
     if (unlikely(__pyx_t_7 != -1)) {
       __Pyx_RaiseBufferIndexError(__pyx_t_7);
-      __PYX_ERR(0, 247, __pyx_L1_error)
+      __PYX_ERR(0, 246, __pyx_L1_error)
     }
     __pyx_v_dose = (*((double *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_infusion_list.data + __pyx_t_14 * __pyx_v_infusion_list.strides[0]) ) + __pyx_t_13 * __pyx_v_infusion_list.strides[1]) )));
 
-    /* "opentiva/pkpd.pyx":248
+    /* "opentiva/pkpd.pyx":247
  *             start = int(infusion_list[x, 0])
  *             dose = infusion_list[x, 1]
  *             duration = int(infusion_list[x, 2])             # <<<<<<<<<<<<<<
@@ -4181,11 +4181,11 @@ static double __pyx_f_8opentiva_4pkpd_9PkPdModel_calculate_cp(struct __pyx_obj_8
     } else if (unlikely(__pyx_t_14 >= __pyx_v_infusion_list.shape[1])) __pyx_t_7 = 1;
     if (unlikely(__pyx_t_7 != -1)) {
       __Pyx_RaiseBufferIndexError(__pyx_t_7);
-      __PYX_ERR(0, 248, __pyx_L1_error)
+      __PYX_ERR(0, 247, __pyx_L1_error)
     }
     __pyx_v_duration = ((int)(*((double *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_infusion_list.data + __pyx_t_13 * __pyx_v_infusion_list.strides[0]) ) + __pyx_t_14 * __pyx_v_infusion_list.strides[1]) ))));
 
-    /* "opentiva/pkpd.pyx":249
+    /* "opentiva/pkpd.pyx":248
  *             dose = infusion_list[x, 1]
  *             duration = int(infusion_list[x, 2])
  *             end = int(infusion_list[x, 3])             # <<<<<<<<<<<<<<
@@ -4205,11 +4205,11 @@ static double __pyx_f_8opentiva_4pkpd_9PkPdModel_calculate_cp(struct __pyx_obj_8
     } else if (unlikely(__pyx_t_13 >= __pyx_v_infusion_list.shape[1])) __pyx_t_7 = 1;
     if (unlikely(__pyx_t_7 != -1)) {
       __Pyx_RaiseBufferIndexError(__pyx_t_7);
-      __PYX_ERR(0, 249, __pyx_L1_error)
+      __PYX_ERR(0, 248, __pyx_L1_error)
     }
     __pyx_v_end = ((int)(*((double *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_infusion_list.data + __pyx_t_14 * __pyx_v_infusion_list.strides[0]) ) + __pyx_t_13 * __pyx_v_infusion_list.strides[1]) ))));
 
-    /* "opentiva/pkpd.pyx":250
+    /* "opentiva/pkpd.pyx":249
  *             duration = int(infusion_list[x, 2])
  *             end = int(infusion_list[x, 3])
  *             elapsed = time - start  # Time since infusion started running             # <<<<<<<<<<<<<<
@@ -4218,7 +4218,7 @@ static double __pyx_f_8opentiva_4pkpd_9PkPdModel_calculate_cp(struct __pyx_obj_8
  */
     __pyx_v_elapsed = (__pyx_v_time - __pyx_v_start);
 
-    /* "opentiva/pkpd.pyx":251
+    /* "opentiva/pkpd.pyx":250
  *             end = int(infusion_list[x, 3])
  *             elapsed = time - start  # Time since infusion started running
  *             diff = time - end  # Time since infusion stopped             # <<<<<<<<<<<<<<
@@ -4227,7 +4227,7 @@ static double __pyx_f_8opentiva_4pkpd_9PkPdModel_calculate_cp(struct __pyx_obj_8
  */
     __pyx_v_diff = (__pyx_v_time - __pyx_v_end);
 
-    /* "opentiva/pkpd.pyx":253
+    /* "opentiva/pkpd.pyx":252
  *             diff = time - end  # Time since infusion stopped
  * 
  *             if (time <= end) and (time >= start):             # <<<<<<<<<<<<<<
@@ -4245,7 +4245,7 @@ static double __pyx_f_8opentiva_4pkpd_9PkPdModel_calculate_cp(struct __pyx_obj_8
     __pyx_L6_bool_binop_done:;
     if (__pyx_t_15) {
 
-      /* "opentiva/pkpd.pyx":254
+      /* "opentiva/pkpd.pyx":253
  * 
  *             if (time <= end) and (time >= start):
  *                 cp += self.cp_increment(dose, elapsed)             # <<<<<<<<<<<<<<
@@ -4254,7 +4254,7 @@ static double __pyx_f_8opentiva_4pkpd_9PkPdModel_calculate_cp(struct __pyx_obj_8
  */
       __pyx_v_cp = (__pyx_v_cp + ((struct __pyx_vtabstruct_8opentiva_4pkpd_PkPdModel *)__pyx_v_self->__pyx_vtab)->cp_increment(__pyx_v_self, __pyx_v_dose, __pyx_v_elapsed));
 
-      /* "opentiva/pkpd.pyx":253
+      /* "opentiva/pkpd.pyx":252
  *             diff = time - end  # Time since infusion stopped
  * 
  *             if (time <= end) and (time >= start):             # <<<<<<<<<<<<<<
@@ -4264,7 +4264,7 @@ static double __pyx_f_8opentiva_4pkpd_9PkPdModel_calculate_cp(struct __pyx_obj_8
       goto __pyx_L5;
     }
 
-    /* "opentiva/pkpd.pyx":255
+    /* "opentiva/pkpd.pyx":254
  *             if (time <= end) and (time >= start):
  *                 cp += self.cp_increment(dose, elapsed)
  *             elif time > end:             # <<<<<<<<<<<<<<
@@ -4274,7 +4274,7 @@ static double __pyx_f_8opentiva_4pkpd_9PkPdModel_calculate_cp(struct __pyx_obj_8
     __pyx_t_15 = ((__pyx_v_time > __pyx_v_end) != 0);
     if (__pyx_t_15) {
 
-      /* "opentiva/pkpd.pyx":256
+      /* "opentiva/pkpd.pyx":255
  *                 cp += self.cp_increment(dose, elapsed)
  *             elif time > end:
  *                 cp += self.cp_decrement(dose, duration, diff)             # <<<<<<<<<<<<<<
@@ -4283,7 +4283,7 @@ static double __pyx_f_8opentiva_4pkpd_9PkPdModel_calculate_cp(struct __pyx_obj_8
  */
       __pyx_v_cp = (__pyx_v_cp + ((struct __pyx_vtabstruct_8opentiva_4pkpd_PkPdModel *)__pyx_v_self->__pyx_vtab)->cp_decrement(__pyx_v_self, __pyx_v_dose, __pyx_v_duration, __pyx_v_diff));
 
-      /* "opentiva/pkpd.pyx":255
+      /* "opentiva/pkpd.pyx":254
  *             if (time <= end) and (time >= start):
  *                 cp += self.cp_increment(dose, elapsed)
  *             elif time > end:             # <<<<<<<<<<<<<<
@@ -4294,7 +4294,7 @@ static double __pyx_f_8opentiva_4pkpd_9PkPdModel_calculate_cp(struct __pyx_obj_8
     __pyx_L5:;
   }
 
-  /* "opentiva/pkpd.pyx":258
+  /* "opentiva/pkpd.pyx":257
  *                 cp += self.cp_decrement(dose, duration, diff)
  * 
  *         return cp             # <<<<<<<<<<<<<<
@@ -4330,7 +4330,7 @@ static double __pyx_f_8opentiva_4pkpd_9PkPdModel_calculate_cp(struct __pyx_obj_8
 
 /* Python wrapper */
 static PyObject *__pyx_pw_8opentiva_4pkpd_9PkPdModel_7calculate_cp(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_8opentiva_4pkpd_9PkPdModel_6calculate_cp[] = "Takes an array of infusions and returns the plasma concentration\n        at a point in time\n\n\n        Parameters\n        ----------\n        infusion_list\n            2d array of infusions with each row containing:\n            [start time of infusion in seconds,\n            dose of infusion over 1 second,\n            duration of infusion in seconds,\n            end time of infusion in seconds]\n        time\n            time in seconds to calculate plasma concentration at\n\n        Returns\n        -------\n        double\n            plasma concentration at a point in time\n         ";
+static char __pyx_doc_8opentiva_4pkpd_9PkPdModel_6calculate_cp[] = "Takes an array of infusions and returns the plasma concentration\n        at a point in time\n\n        Parameters\n        ----------\n        infusion_list\n            2d array of infusions with each row containing:\n            [start time of infusion in seconds,\n            dose of infusion over 1 second,\n            duration of infusion in seconds,\n            end time of infusion in seconds]\n        time\n            time in seconds to calculate plasma concentration at\n\n        Returns\n        -------\n        double\n            plasma concentration at a point in time\n        ";
 static PyObject *__pyx_pw_8opentiva_4pkpd_9PkPdModel_7calculate_cp(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   __Pyx_memviewslice __pyx_v_infusion_list = { 0, 0, { 0 }, { 0 }, { 0 } };
   int __pyx_v_time;
@@ -4421,7 +4421,7 @@ static PyObject *__pyx_pf_8opentiva_4pkpd_9PkPdModel_6calculate_cp(struct __pyx_
   return __pyx_r;
 }
 
-/* "opentiva/pkpd.pyx":261
+/* "opentiva/pkpd.pyx":260
  * 
  * 
  *     cpdef cp_over_time(self, double[:, :] infusion_list, int start, int end):             # <<<<<<<<<<<<<<
@@ -4462,16 +4462,16 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_cp_over_time(struct __pyx_ob
     if (unlikely(!__Pyx_object_dict_version_matches(((PyObject *)__pyx_v_self), __pyx_tp_dict_version, __pyx_obj_dict_version))) {
       PY_UINT64_T __pyx_type_dict_guard = __Pyx_get_tp_dict_version(((PyObject *)__pyx_v_self));
       #endif
-      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_cp_over_time); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 261, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_cp_over_time); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 260, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)(void*)__pyx_pw_8opentiva_4pkpd_9PkPdModel_9cp_over_time)) {
         __Pyx_XDECREF(__pyx_r);
-        if (unlikely(!__pyx_v_infusion_list.memview)) { __Pyx_RaiseUnboundLocalError("infusion_list"); __PYX_ERR(0, 261, __pyx_L1_error) }
-        __pyx_t_3 = __pyx_memoryview_fromslice(__pyx_v_infusion_list, 2, (PyObject *(*)(char *)) __pyx_memview_get_double, (int (*)(char *, PyObject *)) __pyx_memview_set_double, 0);; if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 261, __pyx_L1_error)
+        if (unlikely(!__pyx_v_infusion_list.memview)) { __Pyx_RaiseUnboundLocalError("infusion_list"); __PYX_ERR(0, 260, __pyx_L1_error) }
+        __pyx_t_3 = __pyx_memoryview_fromslice(__pyx_v_infusion_list, 2, (PyObject *(*)(char *)) __pyx_memview_get_double, (int (*)(char *, PyObject *)) __pyx_memview_set_double, 0);; if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 260, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_3);
-        __pyx_t_4 = __Pyx_PyInt_From_int(__pyx_v_start); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 261, __pyx_L1_error)
+        __pyx_t_4 = __Pyx_PyInt_From_int(__pyx_v_start); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 260, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_4);
-        __pyx_t_5 = __Pyx_PyInt_From_int(__pyx_v_end); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 261, __pyx_L1_error)
+        __pyx_t_5 = __Pyx_PyInt_From_int(__pyx_v_end); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 260, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_5);
         __Pyx_INCREF(__pyx_t_1);
         __pyx_t_6 = __pyx_t_1; __pyx_t_7 = NULL;
@@ -4489,7 +4489,7 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_cp_over_time(struct __pyx_ob
         #if CYTHON_FAST_PYCALL
         if (PyFunction_Check(__pyx_t_6)) {
           PyObject *__pyx_temp[4] = {__pyx_t_7, __pyx_t_3, __pyx_t_4, __pyx_t_5};
-          __pyx_t_2 = __Pyx_PyFunction_FastCall(__pyx_t_6, __pyx_temp+1-__pyx_t_8, 3+__pyx_t_8); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 261, __pyx_L1_error)
+          __pyx_t_2 = __Pyx_PyFunction_FastCall(__pyx_t_6, __pyx_temp+1-__pyx_t_8, 3+__pyx_t_8); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 260, __pyx_L1_error)
           __Pyx_XDECREF(__pyx_t_7); __pyx_t_7 = 0;
           __Pyx_GOTREF(__pyx_t_2);
           __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
@@ -4500,7 +4500,7 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_cp_over_time(struct __pyx_ob
         #if CYTHON_FAST_PYCCALL
         if (__Pyx_PyFastCFunction_Check(__pyx_t_6)) {
           PyObject *__pyx_temp[4] = {__pyx_t_7, __pyx_t_3, __pyx_t_4, __pyx_t_5};
-          __pyx_t_2 = __Pyx_PyCFunction_FastCall(__pyx_t_6, __pyx_temp+1-__pyx_t_8, 3+__pyx_t_8); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 261, __pyx_L1_error)
+          __pyx_t_2 = __Pyx_PyCFunction_FastCall(__pyx_t_6, __pyx_temp+1-__pyx_t_8, 3+__pyx_t_8); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 260, __pyx_L1_error)
           __Pyx_XDECREF(__pyx_t_7); __pyx_t_7 = 0;
           __Pyx_GOTREF(__pyx_t_2);
           __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
@@ -4509,7 +4509,7 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_cp_over_time(struct __pyx_ob
         } else
         #endif
         {
-          __pyx_t_9 = PyTuple_New(3+__pyx_t_8); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 261, __pyx_L1_error)
+          __pyx_t_9 = PyTuple_New(3+__pyx_t_8); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 260, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_9);
           if (__pyx_t_7) {
             __Pyx_GIVEREF(__pyx_t_7); PyTuple_SET_ITEM(__pyx_t_9, 0, __pyx_t_7); __pyx_t_7 = NULL;
@@ -4523,7 +4523,7 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_cp_over_time(struct __pyx_ob
           __pyx_t_3 = 0;
           __pyx_t_4 = 0;
           __pyx_t_5 = 0;
-          __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_6, __pyx_t_9, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 261, __pyx_L1_error)
+          __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_6, __pyx_t_9, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 260, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_2);
           __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
         }
@@ -4546,7 +4546,7 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_cp_over_time(struct __pyx_ob
     #endif
   }
 
-  /* "opentiva/pkpd.pyx":287
+  /* "opentiva/pkpd.pyx":286
  *         """
  * 
  *         cdef int x = 0, delta             # <<<<<<<<<<<<<<
@@ -4555,7 +4555,7 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_cp_over_time(struct __pyx_ob
  */
   __pyx_v_x = 0;
 
-  /* "opentiva/pkpd.pyx":291
+  /* "opentiva/pkpd.pyx":290
  *         cdef Py_ssize_t t
  * 
  *         delta = end - start             # <<<<<<<<<<<<<<
@@ -4564,21 +4564,21 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_cp_over_time(struct __pyx_ob
  */
   __pyx_v_delta = (__pyx_v_end - __pyx_v_start);
 
-  /* "opentiva/pkpd.pyx":292
+  /* "opentiva/pkpd.pyx":291
  * 
  *         delta = end - start
  *         cp_arr = np.empty((delta, 2), dtype=np.float64)             # <<<<<<<<<<<<<<
  * 
  *         for t in range(start, end):
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 292, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 291, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_empty); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 292, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_empty); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 291, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_PyInt_From_int(__pyx_v_delta); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 292, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_From_int(__pyx_v_delta); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 291, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_6 = PyTuple_New(2); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 292, __pyx_L1_error)
+  __pyx_t_6 = PyTuple_New(2); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 291, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
   __Pyx_GIVEREF(__pyx_t_1);
   PyTuple_SET_ITEM(__pyx_t_6, 0, __pyx_t_1);
@@ -4586,21 +4586,21 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_cp_over_time(struct __pyx_ob
   __Pyx_GIVEREF(__pyx_int_2);
   PyTuple_SET_ITEM(__pyx_t_6, 1, __pyx_int_2);
   __pyx_t_1 = 0;
-  __pyx_t_1 = PyTuple_New(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 292, __pyx_L1_error)
+  __pyx_t_1 = PyTuple_New(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 291, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_GIVEREF(__pyx_t_6);
   PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_t_6);
   __pyx_t_6 = 0;
-  __pyx_t_6 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 292, __pyx_L1_error)
+  __pyx_t_6 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 291, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
-  __Pyx_GetModuleGlobalName(__pyx_t_9, __pyx_n_s_np); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 292, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_9, __pyx_n_s_np); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 291, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_9);
-  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_9, __pyx_n_s_float64); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 292, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_9, __pyx_n_s_float64); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 291, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
-  if (PyDict_SetItem(__pyx_t_6, __pyx_n_s_dtype, __pyx_t_5) < 0) __PYX_ERR(0, 292, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_6, __pyx_n_s_dtype, __pyx_t_5) < 0) __PYX_ERR(0, 291, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  __pyx_t_5 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_1, __pyx_t_6); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 292, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_1, __pyx_t_6); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 291, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
@@ -4608,7 +4608,7 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_cp_over_time(struct __pyx_ob
   __pyx_v_cp_arr = __pyx_t_5;
   __pyx_t_5 = 0;
 
-  /* "opentiva/pkpd.pyx":294
+  /* "opentiva/pkpd.pyx":293
  *         cp_arr = np.empty((delta, 2), dtype=np.float64)
  * 
  *         for t in range(start, end):             # <<<<<<<<<<<<<<
@@ -4620,7 +4620,7 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_cp_over_time(struct __pyx_ob
   for (__pyx_t_11 = __pyx_v_start; __pyx_t_11 < __pyx_t_10; __pyx_t_11+=1) {
     __pyx_v_t = __pyx_t_11;
 
-    /* "opentiva/pkpd.pyx":295
+    /* "opentiva/pkpd.pyx":294
  * 
  *         for t in range(start, end):
  *             cp = self.calculate_cp(infusion_list, t)             # <<<<<<<<<<<<<<
@@ -4629,18 +4629,18 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_cp_over_time(struct __pyx_ob
  */
     __pyx_v_cp = ((struct __pyx_vtabstruct_8opentiva_4pkpd_PkPdModel *)__pyx_v_self->__pyx_vtab)->calculate_cp(__pyx_v_self, __pyx_v_infusion_list, __pyx_v_t, 0);
 
-    /* "opentiva/pkpd.pyx":297
+    /* "opentiva/pkpd.pyx":296
  *             cp = self.calculate_cp(infusion_list, t)
  * 
  *             cp_arr[x, 0] = t             # <<<<<<<<<<<<<<
  *             cp_arr[x, 1] = cp
  *             x += 1
  */
-    __pyx_t_5 = PyInt_FromSsize_t(__pyx_v_t); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 297, __pyx_L1_error)
+    __pyx_t_5 = PyInt_FromSsize_t(__pyx_v_t); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 296, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
-    __pyx_t_6 = __Pyx_PyInt_From_int(__pyx_v_x); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 297, __pyx_L1_error)
+    __pyx_t_6 = __Pyx_PyInt_From_int(__pyx_v_x); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 296, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
-    __pyx_t_1 = PyTuple_New(2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 297, __pyx_L1_error)
+    __pyx_t_1 = PyTuple_New(2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 296, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_GIVEREF(__pyx_t_6);
     PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_t_6);
@@ -4648,22 +4648,22 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_cp_over_time(struct __pyx_ob
     __Pyx_GIVEREF(__pyx_int_0);
     PyTuple_SET_ITEM(__pyx_t_1, 1, __pyx_int_0);
     __pyx_t_6 = 0;
-    if (unlikely(PyObject_SetItem(__pyx_v_cp_arr, __pyx_t_1, __pyx_t_5) < 0)) __PYX_ERR(0, 297, __pyx_L1_error)
+    if (unlikely(PyObject_SetItem(__pyx_v_cp_arr, __pyx_t_1, __pyx_t_5) < 0)) __PYX_ERR(0, 296, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-    /* "opentiva/pkpd.pyx":298
+    /* "opentiva/pkpd.pyx":297
  * 
  *             cp_arr[x, 0] = t
  *             cp_arr[x, 1] = cp             # <<<<<<<<<<<<<<
  *             x += 1
  * 
  */
-    __pyx_t_5 = PyFloat_FromDouble(__pyx_v_cp); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 298, __pyx_L1_error)
+    __pyx_t_5 = PyFloat_FromDouble(__pyx_v_cp); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 297, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
-    __pyx_t_1 = __Pyx_PyInt_From_int(__pyx_v_x); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 298, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyInt_From_int(__pyx_v_x); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 297, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_6 = PyTuple_New(2); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 298, __pyx_L1_error)
+    __pyx_t_6 = PyTuple_New(2); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 297, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
     __Pyx_GIVEREF(__pyx_t_1);
     PyTuple_SET_ITEM(__pyx_t_6, 0, __pyx_t_1);
@@ -4671,11 +4671,11 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_cp_over_time(struct __pyx_ob
     __Pyx_GIVEREF(__pyx_int_1);
     PyTuple_SET_ITEM(__pyx_t_6, 1, __pyx_int_1);
     __pyx_t_1 = 0;
-    if (unlikely(PyObject_SetItem(__pyx_v_cp_arr, __pyx_t_6, __pyx_t_5) < 0)) __PYX_ERR(0, 298, __pyx_L1_error)
+    if (unlikely(PyObject_SetItem(__pyx_v_cp_arr, __pyx_t_6, __pyx_t_5) < 0)) __PYX_ERR(0, 297, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-    /* "opentiva/pkpd.pyx":299
+    /* "opentiva/pkpd.pyx":298
  *             cp_arr[x, 0] = t
  *             cp_arr[x, 1] = cp
  *             x += 1             # <<<<<<<<<<<<<<
@@ -4685,7 +4685,7 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_cp_over_time(struct __pyx_ob
     __pyx_v_x = (__pyx_v_x + 1);
   }
 
-  /* "opentiva/pkpd.pyx":301
+  /* "opentiva/pkpd.pyx":300
  *             x += 1
  * 
  *         return cp_arr             # <<<<<<<<<<<<<<
@@ -4697,7 +4697,7 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_cp_over_time(struct __pyx_ob
   __pyx_r = __pyx_v_cp_arr;
   goto __pyx_L0;
 
-  /* "opentiva/pkpd.pyx":261
+  /* "opentiva/pkpd.pyx":260
  * 
  * 
  *     cpdef cp_over_time(self, double[:, :] infusion_list, int start, int end):             # <<<<<<<<<<<<<<
@@ -4762,17 +4762,17 @@ static PyObject *__pyx_pw_8opentiva_4pkpd_9PkPdModel_9cp_over_time(PyObject *__p
         case  1:
         if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_start)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("cp_over_time", 1, 3, 3, 1); __PYX_ERR(0, 261, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("cp_over_time", 1, 3, 3, 1); __PYX_ERR(0, 260, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  2:
         if (likely((values[2] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_end)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("cp_over_time", 1, 3, 3, 2); __PYX_ERR(0, 261, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("cp_over_time", 1, 3, 3, 2); __PYX_ERR(0, 260, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "cp_over_time") < 0)) __PYX_ERR(0, 261, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "cp_over_time") < 0)) __PYX_ERR(0, 260, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 3) {
       goto __pyx_L5_argtuple_error;
@@ -4781,13 +4781,13 @@ static PyObject *__pyx_pw_8opentiva_4pkpd_9PkPdModel_9cp_over_time(PyObject *__p
       values[1] = PyTuple_GET_ITEM(__pyx_args, 1);
       values[2] = PyTuple_GET_ITEM(__pyx_args, 2);
     }
-    __pyx_v_infusion_list = __Pyx_PyObject_to_MemoryviewSlice_dsds_double(values[0], PyBUF_WRITABLE); if (unlikely(!__pyx_v_infusion_list.memview)) __PYX_ERR(0, 261, __pyx_L3_error)
-    __pyx_v_start = __Pyx_PyInt_As_int(values[1]); if (unlikely((__pyx_v_start == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 261, __pyx_L3_error)
-    __pyx_v_end = __Pyx_PyInt_As_int(values[2]); if (unlikely((__pyx_v_end == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 261, __pyx_L3_error)
+    __pyx_v_infusion_list = __Pyx_PyObject_to_MemoryviewSlice_dsds_double(values[0], PyBUF_WRITABLE); if (unlikely(!__pyx_v_infusion_list.memview)) __PYX_ERR(0, 260, __pyx_L3_error)
+    __pyx_v_start = __Pyx_PyInt_As_int(values[1]); if (unlikely((__pyx_v_start == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 260, __pyx_L3_error)
+    __pyx_v_end = __Pyx_PyInt_As_int(values[2]); if (unlikely((__pyx_v_end == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 260, __pyx_L3_error)
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("cp_over_time", 1, 3, 3, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 261, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("cp_over_time", 1, 3, 3, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 260, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("opentiva.pkpd.PkPdModel.cp_over_time", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
@@ -4809,8 +4809,8 @@ static PyObject *__pyx_pf_8opentiva_4pkpd_9PkPdModel_8cp_over_time(struct __pyx_
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("cp_over_time", 0);
   __Pyx_XDECREF(__pyx_r);
-  if (unlikely(!__pyx_v_infusion_list.memview)) { __Pyx_RaiseUnboundLocalError("infusion_list"); __PYX_ERR(0, 261, __pyx_L1_error) }
-  __pyx_t_1 = __pyx_f_8opentiva_4pkpd_9PkPdModel_cp_over_time(__pyx_v_self, __pyx_v_infusion_list, __pyx_v_start, __pyx_v_end, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 261, __pyx_L1_error)
+  if (unlikely(!__pyx_v_infusion_list.memview)) { __Pyx_RaiseUnboundLocalError("infusion_list"); __PYX_ERR(0, 260, __pyx_L1_error) }
+  __pyx_t_1 = __pyx_f_8opentiva_4pkpd_9PkPdModel_cp_over_time(__pyx_v_self, __pyx_v_infusion_list, __pyx_v_start, __pyx_v_end, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 260, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -4828,7 +4828,7 @@ static PyObject *__pyx_pf_8opentiva_4pkpd_9PkPdModel_8cp_over_time(struct __pyx_
   return __pyx_r;
 }
 
-/* "opentiva/pkpd.pyx":304
+/* "opentiva/pkpd.pyx":303
  * 
  * 
  *     cdef double calculate_ce(self, double current_cp, double previous_cp,             # <<<<<<<<<<<<<<
@@ -4851,7 +4851,7 @@ static double __pyx_f_8opentiva_4pkpd_9PkPdModel_calculate_ce(struct __pyx_obj_8
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("calculate_ce", 0);
 
-  /* "opentiva/pkpd.pyx":324
+  /* "opentiva/pkpd.pyx":323
  * 
  *         cdef double current_ce, delta_cp
  *         cdef double delta = 0             # <<<<<<<<<<<<<<
@@ -4860,7 +4860,7 @@ static double __pyx_f_8opentiva_4pkpd_9PkPdModel_calculate_ce(struct __pyx_obj_8
  */
   __pyx_v_delta = 0.0;
 
-  /* "opentiva/pkpd.pyx":326
+  /* "opentiva/pkpd.pyx":325
  *         cdef double delta = 0
  * 
  *         delta_cp = current_cp - previous_cp             # <<<<<<<<<<<<<<
@@ -4869,7 +4869,7 @@ static double __pyx_f_8opentiva_4pkpd_9PkPdModel_calculate_ce(struct __pyx_obj_8
  */
   __pyx_v_delta_cp = (__pyx_v_current_cp - __pyx_v_previous_cp);
 
-  /* "opentiva/pkpd.pyx":328
+  /* "opentiva/pkpd.pyx":327
  *         delta_cp = current_cp - previous_cp
  * 
  *         if previous_cp == 0:             # <<<<<<<<<<<<<<
@@ -4879,7 +4879,7 @@ static double __pyx_f_8opentiva_4pkpd_9PkPdModel_calculate_ce(struct __pyx_obj_8
   __pyx_t_1 = ((__pyx_v_previous_cp == 0.0) != 0);
   if (__pyx_t_1) {
 
-    /* "opentiva/pkpd.pyx":329
+    /* "opentiva/pkpd.pyx":328
  * 
  *         if previous_cp == 0:
  *             return 0  # avoid divide by zero error             # <<<<<<<<<<<<<<
@@ -4889,7 +4889,7 @@ static double __pyx_f_8opentiva_4pkpd_9PkPdModel_calculate_ce(struct __pyx_obj_8
     __pyx_r = 0.0;
     goto __pyx_L0;
 
-    /* "opentiva/pkpd.pyx":328
+    /* "opentiva/pkpd.pyx":327
  *         delta_cp = current_cp - previous_cp
  * 
  *         if previous_cp == 0:             # <<<<<<<<<<<<<<
@@ -4898,7 +4898,7 @@ static double __pyx_f_8opentiva_4pkpd_9PkPdModel_calculate_ce(struct __pyx_obj_8
  */
   }
 
-  /* "opentiva/pkpd.pyx":331
+  /* "opentiva/pkpd.pyx":330
  *             return 0  # avoid divide by zero error
  * 
  *         if delta_cp > 0:             # <<<<<<<<<<<<<<
@@ -4908,7 +4908,7 @@ static double __pyx_f_8opentiva_4pkpd_9PkPdModel_calculate_ce(struct __pyx_obj_8
   __pyx_t_1 = ((__pyx_v_delta_cp > 0.0) != 0);
   if (__pyx_t_1) {
 
-    /* "opentiva/pkpd.pyx":332
+    /* "opentiva/pkpd.pyx":331
  * 
  *         if delta_cp > 0:
  *             slope = delta_cp             # <<<<<<<<<<<<<<
@@ -4917,7 +4917,7 @@ static double __pyx_f_8opentiva_4pkpd_9PkPdModel_calculate_ce(struct __pyx_obj_8
  */
     __pyx_v_slope = __pyx_v_delta_cp;
 
-    /* "opentiva/pkpd.pyx":333
+    /* "opentiva/pkpd.pyx":332
  *         if delta_cp > 0:
  *             slope = delta_cp
  *             delta =  (1 * slope + (self.ke0 * previous_cp - slope)) * \             # <<<<<<<<<<<<<<
@@ -4926,7 +4926,7 @@ static double __pyx_f_8opentiva_4pkpd_9PkPdModel_calculate_ce(struct __pyx_obj_8
  */
     __pyx_t_2 = (((1.0 * __pyx_v_slope) + ((__pyx_v_self->ke0 * __pyx_v_previous_cp) - __pyx_v_slope)) * (1.0 - exp(((-__pyx_v_self->ke0) * 1.0))));
 
-    /* "opentiva/pkpd.pyx":334
+    /* "opentiva/pkpd.pyx":333
  *             slope = delta_cp
  *             delta =  (1 * slope + (self.ke0 * previous_cp - slope)) * \
  *                      (1 - exp(-self.ke0 * 1)) / self.ke0             # <<<<<<<<<<<<<<
@@ -4935,11 +4935,11 @@ static double __pyx_f_8opentiva_4pkpd_9PkPdModel_calculate_ce(struct __pyx_obj_8
  */
     if (unlikely(__pyx_v_self->ke0 == 0)) {
       PyErr_SetString(PyExc_ZeroDivisionError, "float division");
-      __PYX_ERR(0, 334, __pyx_L1_error)
+      __PYX_ERR(0, 333, __pyx_L1_error)
     }
     __pyx_v_delta = (__pyx_t_2 / __pyx_v_self->ke0);
 
-    /* "opentiva/pkpd.pyx":331
+    /* "opentiva/pkpd.pyx":330
  *             return 0  # avoid divide by zero error
  * 
  *         if delta_cp > 0:             # <<<<<<<<<<<<<<
@@ -4949,7 +4949,7 @@ static double __pyx_f_8opentiva_4pkpd_9PkPdModel_calculate_ce(struct __pyx_obj_8
     goto __pyx_L4;
   }
 
-  /* "opentiva/pkpd.pyx":336
+  /* "opentiva/pkpd.pyx":335
  *                      (1 - exp(-self.ke0 * 1)) / self.ke0
  * 
  *         elif delta_cp <= 0:             # <<<<<<<<<<<<<<
@@ -4959,7 +4959,7 @@ static double __pyx_f_8opentiva_4pkpd_9PkPdModel_calculate_ce(struct __pyx_obj_8
   __pyx_t_1 = ((__pyx_v_delta_cp <= 0.0) != 0);
   if (__pyx_t_1) {
 
-    /* "opentiva/pkpd.pyx":337
+    /* "opentiva/pkpd.pyx":336
  * 
  *         elif delta_cp <= 0:
  *             slope = log(current_cp) - log(previous_cp)             # <<<<<<<<<<<<<<
@@ -4968,7 +4968,7 @@ static double __pyx_f_8opentiva_4pkpd_9PkPdModel_calculate_ce(struct __pyx_obj_8
  */
     __pyx_v_slope = (log(__pyx_v_current_cp) - log(__pyx_v_previous_cp));
 
-    /* "opentiva/pkpd.pyx":338
+    /* "opentiva/pkpd.pyx":337
  *         elif delta_cp <= 0:
  *             slope = log(current_cp) - log(previous_cp)
  *             delta =  previous_cp * self.ke0 / (self.ke0 + slope) * \             # <<<<<<<<<<<<<<
@@ -4979,10 +4979,10 @@ static double __pyx_f_8opentiva_4pkpd_9PkPdModel_calculate_ce(struct __pyx_obj_8
     __pyx_t_3 = (__pyx_v_self->ke0 + __pyx_v_slope);
     if (unlikely(__pyx_t_3 == 0)) {
       PyErr_SetString(PyExc_ZeroDivisionError, "float division");
-      __PYX_ERR(0, 338, __pyx_L1_error)
+      __PYX_ERR(0, 337, __pyx_L1_error)
     }
 
-    /* "opentiva/pkpd.pyx":339
+    /* "opentiva/pkpd.pyx":338
  *             slope = log(current_cp) - log(previous_cp)
  *             delta =  previous_cp * self.ke0 / (self.ke0 + slope) * \
  *                      (exp(1 * slope) - exp(-self.ke0 * 1))             # <<<<<<<<<<<<<<
@@ -4991,7 +4991,7 @@ static double __pyx_f_8opentiva_4pkpd_9PkPdModel_calculate_ce(struct __pyx_obj_8
  */
     __pyx_v_delta = ((__pyx_t_2 / __pyx_t_3) * (exp((1.0 * __pyx_v_slope)) - exp(((-__pyx_v_self->ke0) * 1.0))));
 
-    /* "opentiva/pkpd.pyx":336
+    /* "opentiva/pkpd.pyx":335
  *                      (1 - exp(-self.ke0 * 1)) / self.ke0
  * 
  *         elif delta_cp <= 0:             # <<<<<<<<<<<<<<
@@ -5001,7 +5001,7 @@ static double __pyx_f_8opentiva_4pkpd_9PkPdModel_calculate_ce(struct __pyx_obj_8
   }
   __pyx_L4:;
 
-  /* "opentiva/pkpd.pyx":341
+  /* "opentiva/pkpd.pyx":340
  *                      (exp(1 * slope) - exp(-self.ke0 * 1))
  * 
  *         current_ce = previous_ce * exp(-self.ke0) + delta             # <<<<<<<<<<<<<<
@@ -5010,7 +5010,7 @@ static double __pyx_f_8opentiva_4pkpd_9PkPdModel_calculate_ce(struct __pyx_obj_8
  */
   __pyx_v_current_ce = ((__pyx_v_previous_ce * exp((-__pyx_v_self->ke0))) + __pyx_v_delta);
 
-  /* "opentiva/pkpd.pyx":343
+  /* "opentiva/pkpd.pyx":342
  *         current_ce = previous_ce * exp(-self.ke0) + delta
  * 
  *         return current_ce             # <<<<<<<<<<<<<<
@@ -5020,7 +5020,7 @@ static double __pyx_f_8opentiva_4pkpd_9PkPdModel_calculate_ce(struct __pyx_obj_8
   __pyx_r = __pyx_v_current_ce;
   goto __pyx_L0;
 
-  /* "opentiva/pkpd.pyx":304
+  /* "opentiva/pkpd.pyx":303
  * 
  * 
  *     cdef double calculate_ce(self, double current_cp, double previous_cp,             # <<<<<<<<<<<<<<
@@ -5037,7 +5037,7 @@ static double __pyx_f_8opentiva_4pkpd_9PkPdModel_calculate_ce(struct __pyx_obj_8
   return __pyx_r;
 }
 
-/* "opentiva/pkpd.pyx":346
+/* "opentiva/pkpd.pyx":345
  * 
  * 
  *     cpdef ce_over_time(self, double[:, :] cp_arr):             # <<<<<<<<<<<<<<
@@ -5081,12 +5081,12 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_ce_over_time(struct __pyx_ob
     if (unlikely(!__Pyx_object_dict_version_matches(((PyObject *)__pyx_v_self), __pyx_tp_dict_version, __pyx_obj_dict_version))) {
       PY_UINT64_T __pyx_type_dict_guard = __Pyx_get_tp_dict_version(((PyObject *)__pyx_v_self));
       #endif
-      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_ce_over_time); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 346, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_ce_over_time); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 345, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)(void*)__pyx_pw_8opentiva_4pkpd_9PkPdModel_11ce_over_time)) {
         __Pyx_XDECREF(__pyx_r);
-        if (unlikely(!__pyx_v_cp_arr.memview)) { __Pyx_RaiseUnboundLocalError("cp_arr"); __PYX_ERR(0, 346, __pyx_L1_error) }
-        __pyx_t_3 = __pyx_memoryview_fromslice(__pyx_v_cp_arr, 2, (PyObject *(*)(char *)) __pyx_memview_get_double, (int (*)(char *, PyObject *)) __pyx_memview_set_double, 0);; if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 346, __pyx_L1_error)
+        if (unlikely(!__pyx_v_cp_arr.memview)) { __Pyx_RaiseUnboundLocalError("cp_arr"); __PYX_ERR(0, 345, __pyx_L1_error) }
+        __pyx_t_3 = __pyx_memoryview_fromslice(__pyx_v_cp_arr, 2, (PyObject *(*)(char *)) __pyx_memview_get_double, (int (*)(char *, PyObject *)) __pyx_memview_set_double, 0);; if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 345, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_3);
         __Pyx_INCREF(__pyx_t_1);
         __pyx_t_4 = __pyx_t_1; __pyx_t_5 = NULL;
@@ -5102,7 +5102,7 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_ce_over_time(struct __pyx_ob
         __pyx_t_2 = (__pyx_t_5) ? __Pyx_PyObject_Call2Args(__pyx_t_4, __pyx_t_5, __pyx_t_3) : __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_t_3);
         __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
         __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-        if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 346, __pyx_L1_error)
+        if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 345, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_2);
         __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
         __pyx_r = __pyx_t_2;
@@ -5123,7 +5123,7 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_ce_over_time(struct __pyx_ob
     #endif
   }
 
-  /* "opentiva/pkpd.pyx":365
+  /* "opentiva/pkpd.pyx":364
  * 
  *         cdef double current_cp, previous_cp, delta_cp, current_ce, previous_ce
  *         cdef Py_ssize_t x_max = int(cp_arr.shape[0])             # <<<<<<<<<<<<<<
@@ -5132,21 +5132,21 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_ce_over_time(struct __pyx_ob
  */
   __pyx_v_x_max = (__pyx_v_cp_arr.shape[0]);
 
-  /* "opentiva/pkpd.pyx":368
+  /* "opentiva/pkpd.pyx":367
  *         cdef Py_ssize_t x
  * 
  *         ce = np.zeros((x_max, 1), dtype=np.float64)             # <<<<<<<<<<<<<<
  * 
  *         previous_ce = 0
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 368, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 367, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_zeros); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 368, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_zeros); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 367, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = PyInt_FromSsize_t(__pyx_v_x_max); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 368, __pyx_L1_error)
+  __pyx_t_1 = PyInt_FromSsize_t(__pyx_v_x_max); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 367, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_4 = PyTuple_New(2); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 368, __pyx_L1_error)
+  __pyx_t_4 = PyTuple_New(2); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 367, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_GIVEREF(__pyx_t_1);
   PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_t_1);
@@ -5154,21 +5154,21 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_ce_over_time(struct __pyx_ob
   __Pyx_GIVEREF(__pyx_int_1);
   PyTuple_SET_ITEM(__pyx_t_4, 1, __pyx_int_1);
   __pyx_t_1 = 0;
-  __pyx_t_1 = PyTuple_New(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 368, __pyx_L1_error)
+  __pyx_t_1 = PyTuple_New(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 367, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_GIVEREF(__pyx_t_4);
   PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_t_4);
   __pyx_t_4 = 0;
-  __pyx_t_4 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 368, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 367, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 368, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 367, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_float64); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 368, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_float64); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 367, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_dtype, __pyx_t_5) < 0) __PYX_ERR(0, 368, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_dtype, __pyx_t_5) < 0) __PYX_ERR(0, 367, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  __pyx_t_5 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_1, __pyx_t_4); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 368, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_1, __pyx_t_4); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 367, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
@@ -5176,7 +5176,7 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_ce_over_time(struct __pyx_ob
   __pyx_v_ce = __pyx_t_5;
   __pyx_t_5 = 0;
 
-  /* "opentiva/pkpd.pyx":370
+  /* "opentiva/pkpd.pyx":369
  *         ce = np.zeros((x_max, 1), dtype=np.float64)
  * 
  *         previous_ce = 0             # <<<<<<<<<<<<<<
@@ -5185,7 +5185,7 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_ce_over_time(struct __pyx_ob
  */
   __pyx_v_previous_ce = 0.0;
 
-  /* "opentiva/pkpd.pyx":371
+  /* "opentiva/pkpd.pyx":370
  * 
  *         previous_ce = 0
  *         current_ce = 0             # <<<<<<<<<<<<<<
@@ -5194,7 +5194,7 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_ce_over_time(struct __pyx_ob
  */
   __pyx_v_current_ce = 0.0;
 
-  /* "opentiva/pkpd.pyx":373
+  /* "opentiva/pkpd.pyx":372
  *         current_ce = 0
  * 
  *         for x in range(x_max):             # <<<<<<<<<<<<<<
@@ -5206,7 +5206,7 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_ce_over_time(struct __pyx_ob
   for (__pyx_t_8 = 0; __pyx_t_8 < __pyx_t_7; __pyx_t_8+=1) {
     __pyx_v_x = __pyx_t_8;
 
-    /* "opentiva/pkpd.pyx":375
+    /* "opentiva/pkpd.pyx":374
  *         for x in range(x_max):
  * 
  *             if x == 0:             # <<<<<<<<<<<<<<
@@ -5216,7 +5216,7 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_ce_over_time(struct __pyx_ob
     __pyx_t_9 = ((__pyx_v_x == 0) != 0);
     if (__pyx_t_9) {
 
-      /* "opentiva/pkpd.pyx":376
+      /* "opentiva/pkpd.pyx":375
  * 
  *             if x == 0:
  *                 continue  # skip first cp             # <<<<<<<<<<<<<<
@@ -5225,7 +5225,7 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_ce_over_time(struct __pyx_ob
  */
       goto __pyx_L3_continue;
 
-      /* "opentiva/pkpd.pyx":375
+      /* "opentiva/pkpd.pyx":374
  *         for x in range(x_max):
  * 
  *             if x == 0:             # <<<<<<<<<<<<<<
@@ -5234,7 +5234,7 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_ce_over_time(struct __pyx_ob
  */
     }
 
-    /* "opentiva/pkpd.pyx":378
+    /* "opentiva/pkpd.pyx":377
  *                 continue  # skip first cp
  * 
  *             previous_cp = cp_arr[x - 1, 1]             # <<<<<<<<<<<<<<
@@ -5254,11 +5254,11 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_ce_over_time(struct __pyx_ob
     } else if (unlikely(__pyx_t_11 >= __pyx_v_cp_arr.shape[1])) __pyx_t_12 = 1;
     if (unlikely(__pyx_t_12 != -1)) {
       __Pyx_RaiseBufferIndexError(__pyx_t_12);
-      __PYX_ERR(0, 378, __pyx_L1_error)
+      __PYX_ERR(0, 377, __pyx_L1_error)
     }
     __pyx_v_previous_cp = (*((double *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_cp_arr.data + __pyx_t_10 * __pyx_v_cp_arr.strides[0]) ) + __pyx_t_11 * __pyx_v_cp_arr.strides[1]) )));
 
-    /* "opentiva/pkpd.pyx":379
+    /* "opentiva/pkpd.pyx":378
  * 
  *             previous_cp = cp_arr[x - 1, 1]
  *             current_cp = cp_arr[x, 1]             # <<<<<<<<<<<<<<
@@ -5278,11 +5278,11 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_ce_over_time(struct __pyx_ob
     } else if (unlikely(__pyx_t_10 >= __pyx_v_cp_arr.shape[1])) __pyx_t_12 = 1;
     if (unlikely(__pyx_t_12 != -1)) {
       __Pyx_RaiseBufferIndexError(__pyx_t_12);
-      __PYX_ERR(0, 379, __pyx_L1_error)
+      __PYX_ERR(0, 378, __pyx_L1_error)
     }
     __pyx_v_current_cp = (*((double *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_cp_arr.data + __pyx_t_11 * __pyx_v_cp_arr.strides[0]) ) + __pyx_t_10 * __pyx_v_cp_arr.strides[1]) )));
 
-    /* "opentiva/pkpd.pyx":381
+    /* "opentiva/pkpd.pyx":380
  *             current_cp = cp_arr[x, 1]
  * 
  *             current_ce = self.calculate_ce(current_cp, previous_cp,             # <<<<<<<<<<<<<<
@@ -5291,7 +5291,7 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_ce_over_time(struct __pyx_ob
  */
     __pyx_v_current_ce = ((struct __pyx_vtabstruct_8opentiva_4pkpd_PkPdModel *)__pyx_v_self->__pyx_vtab)->calculate_ce(__pyx_v_self, __pyx_v_current_cp, __pyx_v_previous_cp, __pyx_v_previous_ce);
 
-    /* "opentiva/pkpd.pyx":384
+    /* "opentiva/pkpd.pyx":383
  *                                            previous_ce)
  * 
  *             previous_ce = current_ce             # <<<<<<<<<<<<<<
@@ -5300,21 +5300,21 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_ce_over_time(struct __pyx_ob
  */
     __pyx_v_previous_ce = __pyx_v_current_ce;
 
-    /* "opentiva/pkpd.pyx":386
+    /* "opentiva/pkpd.pyx":385
  *             previous_ce = current_ce
  * 
  *             ce[x] = current_ce             # <<<<<<<<<<<<<<
  * 
  *         return ce
  */
-    __pyx_t_5 = PyFloat_FromDouble(__pyx_v_current_ce); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 386, __pyx_L1_error)
+    __pyx_t_5 = PyFloat_FromDouble(__pyx_v_current_ce); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 385, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
-    if (unlikely(__Pyx_SetItemInt(__pyx_v_ce, __pyx_v_x, __pyx_t_5, Py_ssize_t, 1, PyInt_FromSsize_t, 0, 1, 1) < 0)) __PYX_ERR(0, 386, __pyx_L1_error)
+    if (unlikely(__Pyx_SetItemInt(__pyx_v_ce, __pyx_v_x, __pyx_t_5, Py_ssize_t, 1, PyInt_FromSsize_t, 0, 1, 1) < 0)) __PYX_ERR(0, 385, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     __pyx_L3_continue:;
   }
 
-  /* "opentiva/pkpd.pyx":388
+  /* "opentiva/pkpd.pyx":387
  *             ce[x] = current_ce
  * 
  *         return ce             # <<<<<<<<<<<<<<
@@ -5326,7 +5326,7 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_ce_over_time(struct __pyx_ob
   __pyx_r = __pyx_v_ce;
   goto __pyx_L0;
 
-  /* "opentiva/pkpd.pyx":346
+  /* "opentiva/pkpd.pyx":345
  * 
  * 
  *     cpdef ce_over_time(self, double[:, :] cp_arr):             # <<<<<<<<<<<<<<
@@ -5362,7 +5362,7 @@ static PyObject *__pyx_pw_8opentiva_4pkpd_9PkPdModel_11ce_over_time(PyObject *__
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("ce_over_time (wrapper)", 0);
   assert(__pyx_arg_cp_arr); {
-    __pyx_v_cp_arr = __Pyx_PyObject_to_MemoryviewSlice_dsds_double(__pyx_arg_cp_arr, PyBUF_WRITABLE); if (unlikely(!__pyx_v_cp_arr.memview)) __PYX_ERR(0, 346, __pyx_L3_error)
+    __pyx_v_cp_arr = __Pyx_PyObject_to_MemoryviewSlice_dsds_double(__pyx_arg_cp_arr, PyBUF_WRITABLE); if (unlikely(!__pyx_v_cp_arr.memview)) __PYX_ERR(0, 345, __pyx_L3_error)
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
@@ -5386,8 +5386,8 @@ static PyObject *__pyx_pf_8opentiva_4pkpd_9PkPdModel_10ce_over_time(struct __pyx
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("ce_over_time", 0);
   __Pyx_XDECREF(__pyx_r);
-  if (unlikely(!__pyx_v_cp_arr.memview)) { __Pyx_RaiseUnboundLocalError("cp_arr"); __PYX_ERR(0, 346, __pyx_L1_error) }
-  __pyx_t_1 = __pyx_f_8opentiva_4pkpd_9PkPdModel_ce_over_time(__pyx_v_self, __pyx_v_cp_arr, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 346, __pyx_L1_error)
+  if (unlikely(!__pyx_v_cp_arr.memview)) { __Pyx_RaiseUnboundLocalError("cp_arr"); __PYX_ERR(0, 345, __pyx_L1_error) }
+  __pyx_t_1 = __pyx_f_8opentiva_4pkpd_9PkPdModel_ce_over_time(__pyx_v_self, __pyx_v_cp_arr, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 345, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -5405,7 +5405,7 @@ static PyObject *__pyx_pf_8opentiva_4pkpd_9PkPdModel_10ce_over_time(struct __pyx
   return __pyx_r;
 }
 
-/* "opentiva/pkpd.pyx":391
+/* "opentiva/pkpd.pyx":390
  * 
  * 
  *     cpdef ce_dose(self, double [:, :] infusion_list, double target,             # <<<<<<<<<<<<<<
@@ -5467,28 +5467,28 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_ce_dose(struct __pyx_obj_8op
     if (unlikely(!__Pyx_object_dict_version_matches(((PyObject *)__pyx_v_self), __pyx_tp_dict_version, __pyx_obj_dict_version))) {
       PY_UINT64_T __pyx_type_dict_guard = __Pyx_get_tp_dict_version(((PyObject *)__pyx_v_self));
       #endif
-      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_ce_dose); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 391, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_ce_dose); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 390, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)(void*)__pyx_pw_8opentiva_4pkpd_9PkPdModel_13ce_dose)) {
         __Pyx_XDECREF(__pyx_r);
-        if (unlikely(!__pyx_v_infusion_list.memview)) { __Pyx_RaiseUnboundLocalError("infusion_list"); __PYX_ERR(0, 391, __pyx_L1_error) }
-        __pyx_t_3 = __pyx_memoryview_fromslice(__pyx_v_infusion_list, 2, (PyObject *(*)(char *)) __pyx_memview_get_double, (int (*)(char *, PyObject *)) __pyx_memview_set_double, 0);; if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 391, __pyx_L1_error)
+        if (unlikely(!__pyx_v_infusion_list.memview)) { __Pyx_RaiseUnboundLocalError("infusion_list"); __PYX_ERR(0, 390, __pyx_L1_error) }
+        __pyx_t_3 = __pyx_memoryview_fromslice(__pyx_v_infusion_list, 2, (PyObject *(*)(char *)) __pyx_memview_get_double, (int (*)(char *, PyObject *)) __pyx_memview_set_double, 0);; if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 390, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_3);
-        __pyx_t_4 = PyFloat_FromDouble(__pyx_v_target); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 391, __pyx_L1_error)
+        __pyx_t_4 = PyFloat_FromDouble(__pyx_v_target); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 390, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_4);
-        __pyx_t_5 = PyFloat_FromDouble(__pyx_v_limit); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 391, __pyx_L1_error)
+        __pyx_t_5 = PyFloat_FromDouble(__pyx_v_limit); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 390, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_5);
-        __pyx_t_6 = __Pyx_PyInt_From_int(__pyx_v_duration_b); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 391, __pyx_L1_error)
+        __pyx_t_6 = __Pyx_PyInt_From_int(__pyx_v_duration_b); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 390, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_6);
-        __pyx_t_7 = __Pyx_PyInt_From_int(__pyx_v_start_b); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 391, __pyx_L1_error)
+        __pyx_t_7 = __Pyx_PyInt_From_int(__pyx_v_start_b); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 390, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_7);
-        __pyx_t_8 = __Pyx_PyInt_From_int(__pyx_v_duration_ce); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 391, __pyx_L1_error)
+        __pyx_t_8 = __Pyx_PyInt_From_int(__pyx_v_duration_ce); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 390, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_8);
-        __pyx_t_9 = PyFloat_FromDouble(__pyx_v_drug_concentration); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 391, __pyx_L1_error)
+        __pyx_t_9 = PyFloat_FromDouble(__pyx_v_drug_concentration); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 390, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_9);
-        __pyx_t_10 = __Pyx_PyInt_From_int(__pyx_v_max_infusion_rate); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 391, __pyx_L1_error)
+        __pyx_t_10 = __Pyx_PyInt_From_int(__pyx_v_max_infusion_rate); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 390, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_10);
-        __pyx_t_11 = __Pyx_PyInt_From_int(__pyx_v_bolus_time); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 391, __pyx_L1_error)
+        __pyx_t_11 = __Pyx_PyInt_From_int(__pyx_v_bolus_time); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 390, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_11);
         __Pyx_INCREF(__pyx_t_1);
         __pyx_t_12 = __pyx_t_1; __pyx_t_13 = NULL;
@@ -5506,7 +5506,7 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_ce_dose(struct __pyx_obj_8op
         #if CYTHON_FAST_PYCALL
         if (PyFunction_Check(__pyx_t_12)) {
           PyObject *__pyx_temp[10] = {__pyx_t_13, __pyx_t_3, __pyx_t_4, __pyx_t_5, __pyx_t_6, __pyx_t_7, __pyx_t_8, __pyx_t_9, __pyx_t_10, __pyx_t_11};
-          __pyx_t_2 = __Pyx_PyFunction_FastCall(__pyx_t_12, __pyx_temp+1-__pyx_t_14, 9+__pyx_t_14); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 391, __pyx_L1_error)
+          __pyx_t_2 = __Pyx_PyFunction_FastCall(__pyx_t_12, __pyx_temp+1-__pyx_t_14, 9+__pyx_t_14); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 390, __pyx_L1_error)
           __Pyx_XDECREF(__pyx_t_13); __pyx_t_13 = 0;
           __Pyx_GOTREF(__pyx_t_2);
           __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
@@ -5523,7 +5523,7 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_ce_dose(struct __pyx_obj_8op
         #if CYTHON_FAST_PYCCALL
         if (__Pyx_PyFastCFunction_Check(__pyx_t_12)) {
           PyObject *__pyx_temp[10] = {__pyx_t_13, __pyx_t_3, __pyx_t_4, __pyx_t_5, __pyx_t_6, __pyx_t_7, __pyx_t_8, __pyx_t_9, __pyx_t_10, __pyx_t_11};
-          __pyx_t_2 = __Pyx_PyCFunction_FastCall(__pyx_t_12, __pyx_temp+1-__pyx_t_14, 9+__pyx_t_14); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 391, __pyx_L1_error)
+          __pyx_t_2 = __Pyx_PyCFunction_FastCall(__pyx_t_12, __pyx_temp+1-__pyx_t_14, 9+__pyx_t_14); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 390, __pyx_L1_error)
           __Pyx_XDECREF(__pyx_t_13); __pyx_t_13 = 0;
           __Pyx_GOTREF(__pyx_t_2);
           __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
@@ -5538,7 +5538,7 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_ce_dose(struct __pyx_obj_8op
         } else
         #endif
         {
-          __pyx_t_15 = PyTuple_New(9+__pyx_t_14); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 391, __pyx_L1_error)
+          __pyx_t_15 = PyTuple_New(9+__pyx_t_14); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 390, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_15);
           if (__pyx_t_13) {
             __Pyx_GIVEREF(__pyx_t_13); PyTuple_SET_ITEM(__pyx_t_15, 0, __pyx_t_13); __pyx_t_13 = NULL;
@@ -5570,7 +5570,7 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_ce_dose(struct __pyx_obj_8op
           __pyx_t_9 = 0;
           __pyx_t_10 = 0;
           __pyx_t_11 = 0;
-          __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_12, __pyx_t_15, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 391, __pyx_L1_error)
+          __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_12, __pyx_t_15, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 390, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_2);
           __Pyx_DECREF(__pyx_t_15); __pyx_t_15 = 0;
         }
@@ -5593,19 +5593,19 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_ce_dose(struct __pyx_obj_8op
     #endif
   }
 
-  /* "opentiva/pkpd.pyx":441
+  /* "opentiva/pkpd.pyx":440
  *         cdef int start_mi, duration_mi, end_mi, end_b
  *         cdef int target_time
  *         inf_out = infusion_list             # <<<<<<<<<<<<<<
  * 
  *         # Get dose to increment to max Cp limit over limit duration
  */
-  __pyx_t_1 = __pyx_memoryview_fromslice(__pyx_v_infusion_list, 2, (PyObject *(*)(char *)) __pyx_memview_get_double, (int (*)(char *, PyObject *)) __pyx_memview_set_double, 0);; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 441, __pyx_L1_error)
+  __pyx_t_1 = __pyx_memoryview_fromslice(__pyx_v_infusion_list, 2, (PyObject *(*)(char *)) __pyx_memview_get_double, (int (*)(char *, PyObject *)) __pyx_memview_set_double, 0);; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 440, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_v_inf_out = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "opentiva/pkpd.pyx":444
+  /* "opentiva/pkpd.pyx":443
  * 
  *         # Get dose to increment to max Cp limit over limit duration
  *         if start_b == 0:             # <<<<<<<<<<<<<<
@@ -5615,7 +5615,7 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_ce_dose(struct __pyx_obj_8op
   __pyx_t_16 = ((__pyx_v_start_b == 0) != 0);
   if (__pyx_t_16) {
 
-    /* "opentiva/pkpd.pyx":445
+    /* "opentiva/pkpd.pyx":444
  *         # Get dose to increment to max Cp limit over limit duration
  *         if start_b == 0:
  *             previous_cp = 0             # <<<<<<<<<<<<<<
@@ -5624,7 +5624,7 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_ce_dose(struct __pyx_obj_8op
  */
     __pyx_v_previous_cp = 0.0;
 
-    /* "opentiva/pkpd.pyx":444
+    /* "opentiva/pkpd.pyx":443
  * 
  *         # Get dose to increment to max Cp limit over limit duration
  *         if start_b == 0:             # <<<<<<<<<<<<<<
@@ -5634,7 +5634,7 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_ce_dose(struct __pyx_obj_8op
     goto __pyx_L3;
   }
 
-  /* "opentiva/pkpd.pyx":447
+  /* "opentiva/pkpd.pyx":446
  *             previous_cp = 0
  *         else:
  *             previous_cp = self.calculate_cp(inf_out, start_b)             # <<<<<<<<<<<<<<
@@ -5642,7 +5642,7 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_ce_dose(struct __pyx_obj_8op
  *         target_limit = target * limit
  */
   /*else*/ {
-    __pyx_t_17 = __Pyx_PyObject_to_MemoryviewSlice_dsds_double(__pyx_v_inf_out, PyBUF_WRITABLE); if (unlikely(!__pyx_t_17.memview)) __PYX_ERR(0, 447, __pyx_L1_error)
+    __pyx_t_17 = __Pyx_PyObject_to_MemoryviewSlice_dsds_double(__pyx_v_inf_out, PyBUF_WRITABLE); if (unlikely(!__pyx_t_17.memview)) __PYX_ERR(0, 446, __pyx_L1_error)
     __pyx_v_previous_cp = ((struct __pyx_vtabstruct_8opentiva_4pkpd_PkPdModel *)__pyx_v_self->__pyx_vtab)->calculate_cp(__pyx_v_self, __pyx_t_17, __pyx_v_start_b, 0);
     __PYX_XDEC_MEMVIEW(&__pyx_t_17, 1);
     __pyx_t_17.memview = NULL;
@@ -5650,7 +5650,7 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_ce_dose(struct __pyx_obj_8op
   }
   __pyx_L3:;
 
-  /* "opentiva/pkpd.pyx":449
+  /* "opentiva/pkpd.pyx":448
  *             previous_cp = self.calculate_cp(inf_out, start_b)
  * 
  *         target_limit = target * limit             # <<<<<<<<<<<<<<
@@ -5659,7 +5659,7 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_ce_dose(struct __pyx_obj_8op
  */
   __pyx_v_target_limit = (__pyx_v_target * __pyx_v_limit);
 
-  /* "opentiva/pkpd.pyx":450
+  /* "opentiva/pkpd.pyx":449
  * 
  *         target_limit = target * limit
  *         delta_cp = target_limit - previous_cp             # <<<<<<<<<<<<<<
@@ -5668,7 +5668,7 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_ce_dose(struct __pyx_obj_8op
  */
   __pyx_v_delta_cp = (__pyx_v_target_limit - __pyx_v_previous_cp);
 
-  /* "opentiva/pkpd.pyx":452
+  /* "opentiva/pkpd.pyx":451
  *         delta_cp = target_limit - previous_cp
  * 
  *         while True:  # Extend bolus dose to max infusion rate             # <<<<<<<<<<<<<<
@@ -5677,7 +5677,7 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_ce_dose(struct __pyx_obj_8op
  */
   while (1) {
 
-    /* "opentiva/pkpd.pyx":453
+    /* "opentiva/pkpd.pyx":452
  * 
  *         while True:  # Extend bolus dose to max infusion rate
  *             dose_cp = delta_cp / self.integral_exp_decline(0, duration_b)             # <<<<<<<<<<<<<<
@@ -5687,11 +5687,11 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_ce_dose(struct __pyx_obj_8op
     __pyx_t_18 = ((struct __pyx_vtabstruct_8opentiva_4pkpd_PkPdModel *)__pyx_v_self->__pyx_vtab)->integral_exp_decline(__pyx_v_self, 0.0, __pyx_v_duration_b, 0);
     if (unlikely(__pyx_t_18 == 0)) {
       PyErr_SetString(PyExc_ZeroDivisionError, "float division");
-      __PYX_ERR(0, 453, __pyx_L1_error)
+      __PYX_ERR(0, 452, __pyx_L1_error)
     }
     __pyx_v_dose_cp = (__pyx_v_delta_cp / __pyx_t_18);
 
-    /* "opentiva/pkpd.pyx":454
+    /* "opentiva/pkpd.pyx":453
  *         while True:  # Extend bolus dose to max infusion rate
  *             dose_cp = delta_cp / self.integral_exp_decline(0, duration_b)
  *             rate = (dose_cp / drug_concentration) * 60 * 60             # <<<<<<<<<<<<<<
@@ -5700,11 +5700,11 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_ce_dose(struct __pyx_obj_8op
  */
     if (unlikely(__pyx_v_drug_concentration == 0)) {
       PyErr_SetString(PyExc_ZeroDivisionError, "float division");
-      __PYX_ERR(0, 454, __pyx_L1_error)
+      __PYX_ERR(0, 453, __pyx_L1_error)
     }
     __pyx_v_rate = (((__pyx_v_dose_cp / __pyx_v_drug_concentration) * 60.0) * 60.0);
 
-    /* "opentiva/pkpd.pyx":456
+    /* "opentiva/pkpd.pyx":455
  *             rate = (dose_cp / drug_concentration) * 60 * 60
  * 
  *             if duration_b <= bolus_time:             # <<<<<<<<<<<<<<
@@ -5714,7 +5714,7 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_ce_dose(struct __pyx_obj_8op
     __pyx_t_16 = ((__pyx_v_duration_b <= __pyx_v_bolus_time) != 0);
     if (__pyx_t_16) {
 
-      /* "opentiva/pkpd.pyx":457
+      /* "opentiva/pkpd.pyx":456
  * 
  *             if duration_b <= bolus_time:
  *                 break             # <<<<<<<<<<<<<<
@@ -5723,7 +5723,7 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_ce_dose(struct __pyx_obj_8op
  */
       goto __pyx_L5_break;
 
-      /* "opentiva/pkpd.pyx":456
+      /* "opentiva/pkpd.pyx":455
  *             rate = (dose_cp / drug_concentration) * 60 * 60
  * 
  *             if duration_b <= bolus_time:             # <<<<<<<<<<<<<<
@@ -5732,7 +5732,7 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_ce_dose(struct __pyx_obj_8op
  */
     }
 
-    /* "opentiva/pkpd.pyx":458
+    /* "opentiva/pkpd.pyx":457
  *             if duration_b <= bolus_time:
  *                 break
  *             elif max_infusion_rate == -1:             # <<<<<<<<<<<<<<
@@ -5742,7 +5742,7 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_ce_dose(struct __pyx_obj_8op
     __pyx_t_16 = ((__pyx_v_max_infusion_rate == -1L) != 0);
     if (__pyx_t_16) {
 
-      /* "opentiva/pkpd.pyx":459
+      /* "opentiva/pkpd.pyx":458
  *                 break
  *             elif max_infusion_rate == -1:
  *                 break             # <<<<<<<<<<<<<<
@@ -5751,7 +5751,7 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_ce_dose(struct __pyx_obj_8op
  */
       goto __pyx_L5_break;
 
-      /* "opentiva/pkpd.pyx":458
+      /* "opentiva/pkpd.pyx":457
  *             if duration_b <= bolus_time:
  *                 break
  *             elif max_infusion_rate == -1:             # <<<<<<<<<<<<<<
@@ -5760,7 +5760,7 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_ce_dose(struct __pyx_obj_8op
  */
     }
 
-    /* "opentiva/pkpd.pyx":460
+    /* "opentiva/pkpd.pyx":459
  *             elif max_infusion_rate == -1:
  *                 break
  *             elif rate <= max_infusion_rate:             # <<<<<<<<<<<<<<
@@ -5770,7 +5770,7 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_ce_dose(struct __pyx_obj_8op
     __pyx_t_16 = ((__pyx_v_rate <= __pyx_v_max_infusion_rate) != 0);
     if (__pyx_t_16) {
 
-      /* "opentiva/pkpd.pyx":461
+      /* "opentiva/pkpd.pyx":460
  *                 break
  *             elif rate <= max_infusion_rate:
  *                 break             # <<<<<<<<<<<<<<
@@ -5779,7 +5779,7 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_ce_dose(struct __pyx_obj_8op
  */
       goto __pyx_L5_break;
 
-      /* "opentiva/pkpd.pyx":460
+      /* "opentiva/pkpd.pyx":459
  *             elif max_infusion_rate == -1:
  *                 break
  *             elif rate <= max_infusion_rate:             # <<<<<<<<<<<<<<
@@ -5788,7 +5788,7 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_ce_dose(struct __pyx_obj_8op
  */
     }
 
-    /* "opentiva/pkpd.pyx":463
+    /* "opentiva/pkpd.pyx":462
  *                 break
  *             else:
  *                 duration_b += 1             # <<<<<<<<<<<<<<
@@ -5801,7 +5801,7 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_ce_dose(struct __pyx_obj_8op
   }
   __pyx_L5_break:;
 
-  /* "opentiva/pkpd.pyx":466
+  /* "opentiva/pkpd.pyx":465
  * 
  *         # Add starting bolus dose to array
  *         end_b = start_b + duration_b             # <<<<<<<<<<<<<<
@@ -5810,27 +5810,27 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_ce_dose(struct __pyx_obj_8op
  */
   __pyx_v_end_b = (__pyx_v_start_b + __pyx_v_duration_b);
 
-  /* "opentiva/pkpd.pyx":467
+  /* "opentiva/pkpd.pyx":466
  *         # Add starting bolus dose to array
  *         end_b = start_b + duration_b
  *         inf_v = np.array([start_b, dose_cp, duration_b, end_b], dtype=np.float64)             # <<<<<<<<<<<<<<
  *         inf_out = np.vstack((inf_out, inf_v))
  * 
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 467, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 466, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_array); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 467, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_array); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 466, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_PyInt_From_int(__pyx_v_start_b); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 467, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_From_int(__pyx_v_start_b); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 466, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_12 = PyFloat_FromDouble(__pyx_v_dose_cp); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 467, __pyx_L1_error)
+  __pyx_t_12 = PyFloat_FromDouble(__pyx_v_dose_cp); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 466, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_12);
-  __pyx_t_15 = __Pyx_PyInt_From_int(__pyx_v_duration_b); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 467, __pyx_L1_error)
+  __pyx_t_15 = __Pyx_PyInt_From_int(__pyx_v_duration_b); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 466, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_15);
-  __pyx_t_11 = __Pyx_PyInt_From_int(__pyx_v_end_b); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 467, __pyx_L1_error)
+  __pyx_t_11 = __Pyx_PyInt_From_int(__pyx_v_end_b); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 466, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_11);
-  __pyx_t_10 = PyList_New(4); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 467, __pyx_L1_error)
+  __pyx_t_10 = PyList_New(4); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 466, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_10);
   __Pyx_GIVEREF(__pyx_t_1);
   PyList_SET_ITEM(__pyx_t_10, 0, __pyx_t_1);
@@ -5844,21 +5844,21 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_ce_dose(struct __pyx_obj_8op
   __pyx_t_12 = 0;
   __pyx_t_15 = 0;
   __pyx_t_11 = 0;
-  __pyx_t_11 = PyTuple_New(1); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 467, __pyx_L1_error)
+  __pyx_t_11 = PyTuple_New(1); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 466, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_11);
   __Pyx_GIVEREF(__pyx_t_10);
   PyTuple_SET_ITEM(__pyx_t_11, 0, __pyx_t_10);
   __pyx_t_10 = 0;
-  __pyx_t_10 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 467, __pyx_L1_error)
+  __pyx_t_10 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 466, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_10);
-  __Pyx_GetModuleGlobalName(__pyx_t_15, __pyx_n_s_np); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 467, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_15, __pyx_n_s_np); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 466, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_15);
-  __pyx_t_12 = __Pyx_PyObject_GetAttrStr(__pyx_t_15, __pyx_n_s_float64); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 467, __pyx_L1_error)
+  __pyx_t_12 = __Pyx_PyObject_GetAttrStr(__pyx_t_15, __pyx_n_s_float64); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 466, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_12);
   __Pyx_DECREF(__pyx_t_15); __pyx_t_15 = 0;
-  if (PyDict_SetItem(__pyx_t_10, __pyx_n_s_dtype, __pyx_t_12) < 0) __PYX_ERR(0, 467, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_10, __pyx_n_s_dtype, __pyx_t_12) < 0) __PYX_ERR(0, 466, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
-  __pyx_t_12 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_11, __pyx_t_10); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 467, __pyx_L1_error)
+  __pyx_t_12 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_11, __pyx_t_10); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 466, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_12);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
@@ -5866,19 +5866,19 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_ce_dose(struct __pyx_obj_8op
   __pyx_v_inf_v = __pyx_t_12;
   __pyx_t_12 = 0;
 
-  /* "opentiva/pkpd.pyx":468
+  /* "opentiva/pkpd.pyx":467
  *         end_b = start_b + duration_b
  *         inf_v = np.array([start_b, dose_cp, duration_b, end_b], dtype=np.float64)
  *         inf_out = np.vstack((inf_out, inf_v))             # <<<<<<<<<<<<<<
  * 
  *         # Use newton secant to find duration required for Ce to reach target
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_10, __pyx_n_s_np); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 468, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_10, __pyx_n_s_np); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 467, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_10);
-  __pyx_t_11 = __Pyx_PyObject_GetAttrStr(__pyx_t_10, __pyx_n_s_vstack); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 468, __pyx_L1_error)
+  __pyx_t_11 = __Pyx_PyObject_GetAttrStr(__pyx_t_10, __pyx_n_s_vstack); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 467, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_11);
   __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
-  __pyx_t_10 = PyTuple_New(2); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 468, __pyx_L1_error)
+  __pyx_t_10 = PyTuple_New(2); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 467, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_10);
   __Pyx_INCREF(__pyx_v_inf_out);
   __Pyx_GIVEREF(__pyx_v_inf_out);
@@ -5899,13 +5899,13 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_ce_dose(struct __pyx_obj_8op
   __pyx_t_12 = (__pyx_t_2) ? __Pyx_PyObject_Call2Args(__pyx_t_11, __pyx_t_2, __pyx_t_10) : __Pyx_PyObject_CallOneArg(__pyx_t_11, __pyx_t_10);
   __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
-  if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 468, __pyx_L1_error)
+  if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 467, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_12);
   __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
   __Pyx_DECREF_SET(__pyx_v_inf_out, __pyx_t_12);
   __pyx_t_12 = 0;
 
-  /* "opentiva/pkpd.pyx":471
+  /* "opentiva/pkpd.pyx":470
  * 
  *         # Use newton secant to find duration required for Ce to reach target
  *         start_mi = end_b             # <<<<<<<<<<<<<<
@@ -5914,7 +5914,7 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_ce_dose(struct __pyx_obj_8op
  */
   __pyx_v_start_mi = __pyx_v_end_b;
 
-  /* "opentiva/pkpd.pyx":473
+  /* "opentiva/pkpd.pyx":472
  *         start_mi = end_b
  * 
  *         try:             # <<<<<<<<<<<<<<
@@ -5930,56 +5930,56 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_ce_dose(struct __pyx_obj_8op
     __Pyx_XGOTREF(__pyx_t_21);
     /*try:*/ {
 
-      /* "opentiva/pkpd.pyx":474
+      /* "opentiva/pkpd.pyx":473
  * 
  *         try:
  *             root = optimize.newton(self.ce_duration_minimise,             # <<<<<<<<<<<<<<
  *                                    x0 = 1, x1 = duration_b * 2, tol=1,
  *                                    args=(inf_out, target, limit, start_mi))
  */
-      __Pyx_GetModuleGlobalName(__pyx_t_12, __pyx_n_s_optimize); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 474, __pyx_L7_error)
+      __Pyx_GetModuleGlobalName(__pyx_t_12, __pyx_n_s_optimize); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 473, __pyx_L7_error)
       __Pyx_GOTREF(__pyx_t_12);
-      __pyx_t_11 = __Pyx_PyObject_GetAttrStr(__pyx_t_12, __pyx_n_s_newton); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 474, __pyx_L7_error)
+      __pyx_t_11 = __Pyx_PyObject_GetAttrStr(__pyx_t_12, __pyx_n_s_newton); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 473, __pyx_L7_error)
       __Pyx_GOTREF(__pyx_t_11);
       __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
-      __pyx_t_12 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_ce_duration_minimise); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 474, __pyx_L7_error)
+      __pyx_t_12 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_ce_duration_minimise); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 473, __pyx_L7_error)
       __Pyx_GOTREF(__pyx_t_12);
-      __pyx_t_10 = PyTuple_New(1); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 474, __pyx_L7_error)
+      __pyx_t_10 = PyTuple_New(1); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 473, __pyx_L7_error)
       __Pyx_GOTREF(__pyx_t_10);
       __Pyx_GIVEREF(__pyx_t_12);
       PyTuple_SET_ITEM(__pyx_t_10, 0, __pyx_t_12);
       __pyx_t_12 = 0;
 
-      /* "opentiva/pkpd.pyx":475
+      /* "opentiva/pkpd.pyx":474
  *         try:
  *             root = optimize.newton(self.ce_duration_minimise,
  *                                    x0 = 1, x1 = duration_b * 2, tol=1,             # <<<<<<<<<<<<<<
  *                                    args=(inf_out, target, limit, start_mi))
  *         except (RuntimeError, OverflowError):
  */
-      __pyx_t_12 = __Pyx_PyDict_NewPresized(4); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 475, __pyx_L7_error)
+      __pyx_t_12 = __Pyx_PyDict_NewPresized(4); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 474, __pyx_L7_error)
       __Pyx_GOTREF(__pyx_t_12);
-      if (PyDict_SetItem(__pyx_t_12, __pyx_n_s_x0, __pyx_int_1) < 0) __PYX_ERR(0, 475, __pyx_L7_error)
-      __pyx_t_2 = __Pyx_PyInt_From_long((__pyx_v_duration_b * 2)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 475, __pyx_L7_error)
+      if (PyDict_SetItem(__pyx_t_12, __pyx_n_s_x0, __pyx_int_1) < 0) __PYX_ERR(0, 474, __pyx_L7_error)
+      __pyx_t_2 = __Pyx_PyInt_From_long((__pyx_v_duration_b * 2)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 474, __pyx_L7_error)
       __Pyx_GOTREF(__pyx_t_2);
-      if (PyDict_SetItem(__pyx_t_12, __pyx_n_s_x1, __pyx_t_2) < 0) __PYX_ERR(0, 475, __pyx_L7_error)
+      if (PyDict_SetItem(__pyx_t_12, __pyx_n_s_x1, __pyx_t_2) < 0) __PYX_ERR(0, 474, __pyx_L7_error)
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-      if (PyDict_SetItem(__pyx_t_12, __pyx_n_s_tol, __pyx_int_1) < 0) __PYX_ERR(0, 475, __pyx_L7_error)
+      if (PyDict_SetItem(__pyx_t_12, __pyx_n_s_tol, __pyx_int_1) < 0) __PYX_ERR(0, 474, __pyx_L7_error)
 
-      /* "opentiva/pkpd.pyx":476
+      /* "opentiva/pkpd.pyx":475
  *             root = optimize.newton(self.ce_duration_minimise,
  *                                    x0 = 1, x1 = duration_b * 2, tol=1,
  *                                    args=(inf_out, target, limit, start_mi))             # <<<<<<<<<<<<<<
  *         except (RuntimeError, OverflowError):
  *             warnings.warn("Failed to converge on infusion time.", RuntimeWarning)
  */
-      __pyx_t_2 = PyFloat_FromDouble(__pyx_v_target); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 476, __pyx_L7_error)
+      __pyx_t_2 = PyFloat_FromDouble(__pyx_v_target); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 475, __pyx_L7_error)
       __Pyx_GOTREF(__pyx_t_2);
-      __pyx_t_15 = PyFloat_FromDouble(__pyx_v_limit); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 476, __pyx_L7_error)
+      __pyx_t_15 = PyFloat_FromDouble(__pyx_v_limit); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 475, __pyx_L7_error)
       __Pyx_GOTREF(__pyx_t_15);
-      __pyx_t_1 = __Pyx_PyInt_From_int(__pyx_v_start_mi); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 476, __pyx_L7_error)
+      __pyx_t_1 = __Pyx_PyInt_From_int(__pyx_v_start_mi); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 475, __pyx_L7_error)
       __Pyx_GOTREF(__pyx_t_1);
-      __pyx_t_9 = PyTuple_New(4); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 476, __pyx_L7_error)
+      __pyx_t_9 = PyTuple_New(4); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 475, __pyx_L7_error)
       __Pyx_GOTREF(__pyx_t_9);
       __Pyx_INCREF(__pyx_v_inf_out);
       __Pyx_GIVEREF(__pyx_v_inf_out);
@@ -5993,26 +5993,26 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_ce_dose(struct __pyx_obj_8op
       __pyx_t_2 = 0;
       __pyx_t_15 = 0;
       __pyx_t_1 = 0;
-      if (PyDict_SetItem(__pyx_t_12, __pyx_n_s_args, __pyx_t_9) < 0) __PYX_ERR(0, 475, __pyx_L7_error)
+      if (PyDict_SetItem(__pyx_t_12, __pyx_n_s_args, __pyx_t_9) < 0) __PYX_ERR(0, 474, __pyx_L7_error)
       __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
 
-      /* "opentiva/pkpd.pyx":474
+      /* "opentiva/pkpd.pyx":473
  * 
  *         try:
  *             root = optimize.newton(self.ce_duration_minimise,             # <<<<<<<<<<<<<<
  *                                    x0 = 1, x1 = duration_b * 2, tol=1,
  *                                    args=(inf_out, target, limit, start_mi))
  */
-      __pyx_t_9 = __Pyx_PyObject_Call(__pyx_t_11, __pyx_t_10, __pyx_t_12); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 474, __pyx_L7_error)
+      __pyx_t_9 = __Pyx_PyObject_Call(__pyx_t_11, __pyx_t_10, __pyx_t_12); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 473, __pyx_L7_error)
       __Pyx_GOTREF(__pyx_t_9);
       __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
       __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
       __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
-      __pyx_t_18 = __pyx_PyFloat_AsDouble(__pyx_t_9); if (unlikely((__pyx_t_18 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 474, __pyx_L7_error)
+      __pyx_t_18 = __pyx_PyFloat_AsDouble(__pyx_t_9); if (unlikely((__pyx_t_18 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 473, __pyx_L7_error)
       __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
       __pyx_v_root = __pyx_t_18;
 
-      /* "opentiva/pkpd.pyx":473
+      /* "opentiva/pkpd.pyx":472
  *         start_mi = end_b
  * 
  *         try:             # <<<<<<<<<<<<<<
@@ -6021,7 +6021,7 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_ce_dose(struct __pyx_obj_8op
  */
     }
 
-    /* "opentiva/pkpd.pyx":481
+    /* "opentiva/pkpd.pyx":480
  *             end_mi = end_b
  *         else:
  *             duration_mi = int(root)             # <<<<<<<<<<<<<<
@@ -6031,7 +6031,7 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_ce_dose(struct __pyx_obj_8op
     /*else:*/ {
       __pyx_v_duration_mi = ((int)__pyx_v_root);
 
-      /* "opentiva/pkpd.pyx":484
+      /* "opentiva/pkpd.pyx":483
  * 
  *             # Stop negative durations
  *             if duration_mi < 0:             # <<<<<<<<<<<<<<
@@ -6041,7 +6041,7 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_ce_dose(struct __pyx_obj_8op
       __pyx_t_16 = ((__pyx_v_duration_mi < 0) != 0);
       if (__pyx_t_16) {
 
-        /* "opentiva/pkpd.pyx":485
+        /* "opentiva/pkpd.pyx":484
  *             # Stop negative durations
  *             if duration_mi < 0:
  *                 duration_mi = 0             # <<<<<<<<<<<<<<
@@ -6050,7 +6050,7 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_ce_dose(struct __pyx_obj_8op
  */
         __pyx_v_duration_mi = 0;
 
-        /* "opentiva/pkpd.pyx":484
+        /* "opentiva/pkpd.pyx":483
  * 
  *             # Stop negative durations
  *             if duration_mi < 0:             # <<<<<<<<<<<<<<
@@ -6059,40 +6059,40 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_ce_dose(struct __pyx_obj_8op
  */
       }
 
-      /* "opentiva/pkpd.pyx":487
+      /* "opentiva/pkpd.pyx":486
  *                 duration_mi = 0
  * 
  *             dose_mi = self.maintenance_infusion(inf_out, target_limit,             # <<<<<<<<<<<<<<
  *                                                 start_mi, duration_mi)
  *             end_mi = start_mi + duration_mi
  */
-      __pyx_t_17 = __Pyx_PyObject_to_MemoryviewSlice_dsds_double(__pyx_v_inf_out, PyBUF_WRITABLE); if (unlikely(!__pyx_t_17.memview)) __PYX_ERR(0, 487, __pyx_L9_except_error)
+      __pyx_t_17 = __Pyx_PyObject_to_MemoryviewSlice_dsds_double(__pyx_v_inf_out, PyBUF_WRITABLE); if (unlikely(!__pyx_t_17.memview)) __PYX_ERR(0, 486, __pyx_L9_except_error)
 
-      /* "opentiva/pkpd.pyx":488
+      /* "opentiva/pkpd.pyx":487
  * 
  *             dose_mi = self.maintenance_infusion(inf_out, target_limit,
  *                                                 start_mi, duration_mi)             # <<<<<<<<<<<<<<
  *             end_mi = start_mi + duration_mi
  * 
  */
-      __pyx_t_9 = ((struct __pyx_vtabstruct_8opentiva_4pkpd_PkPdModel *)__pyx_v_self->__pyx_vtab)->maintenance_infusion(__pyx_v_self, __pyx_t_17, __pyx_v_target_limit, __pyx_v_start_mi, __pyx_v_duration_mi, 0); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 487, __pyx_L9_except_error)
+      __pyx_t_9 = ((struct __pyx_vtabstruct_8opentiva_4pkpd_PkPdModel *)__pyx_v_self->__pyx_vtab)->maintenance_infusion(__pyx_v_self, __pyx_t_17, __pyx_v_target_limit, __pyx_v_start_mi, __pyx_v_duration_mi, 0); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 486, __pyx_L9_except_error)
       __Pyx_GOTREF(__pyx_t_9);
       __PYX_XDEC_MEMVIEW(&__pyx_t_17, 1);
       __pyx_t_17.memview = NULL;
       __pyx_t_17.data = NULL;
 
-      /* "opentiva/pkpd.pyx":487
+      /* "opentiva/pkpd.pyx":486
  *                 duration_mi = 0
  * 
  *             dose_mi = self.maintenance_infusion(inf_out, target_limit,             # <<<<<<<<<<<<<<
  *                                                 start_mi, duration_mi)
  *             end_mi = start_mi + duration_mi
  */
-      __pyx_t_18 = __pyx_PyFloat_AsDouble(__pyx_t_9); if (unlikely((__pyx_t_18 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 487, __pyx_L9_except_error)
+      __pyx_t_18 = __pyx_PyFloat_AsDouble(__pyx_t_9); if (unlikely((__pyx_t_18 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 486, __pyx_L9_except_error)
       __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
       __pyx_v_dose_mi = __pyx_t_18;
 
-      /* "opentiva/pkpd.pyx":489
+      /* "opentiva/pkpd.pyx":488
  *             dose_mi = self.maintenance_infusion(inf_out, target_limit,
  *                                                 start_mi, duration_mi)
  *             end_mi = start_mi + duration_mi             # <<<<<<<<<<<<<<
@@ -6101,7 +6101,7 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_ce_dose(struct __pyx_obj_8op
  */
       __pyx_v_end_mi = (__pyx_v_start_mi + __pyx_v_duration_mi);
 
-      /* "opentiva/pkpd.pyx":492
+      /* "opentiva/pkpd.pyx":491
  * 
  *             # If rate above max rate match match max infusion rate
  *             rate = (dose_mi / drug_concentration) * 60 * 60             # <<<<<<<<<<<<<<
@@ -6110,11 +6110,11 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_ce_dose(struct __pyx_obj_8op
  */
       if (unlikely(__pyx_v_drug_concentration == 0)) {
         PyErr_SetString(PyExc_ZeroDivisionError, "float division");
-        __PYX_ERR(0, 492, __pyx_L9_except_error)
+        __PYX_ERR(0, 491, __pyx_L9_except_error)
       }
       __pyx_v_rate = (((__pyx_v_dose_mi / __pyx_v_drug_concentration) * 60.0) * 60.0);
 
-      /* "opentiva/pkpd.pyx":493
+      /* "opentiva/pkpd.pyx":492
  *             # If rate above max rate match match max infusion rate
  *             rate = (dose_mi / drug_concentration) * 60 * 60
  *             if rate > max_infusion_rate:             # <<<<<<<<<<<<<<
@@ -6124,7 +6124,7 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_ce_dose(struct __pyx_obj_8op
       __pyx_t_16 = ((__pyx_v_rate > __pyx_v_max_infusion_rate) != 0);
       if (__pyx_t_16) {
 
-        /* "opentiva/pkpd.pyx":494
+        /* "opentiva/pkpd.pyx":493
  *             rate = (dose_mi / drug_concentration) * 60 * 60
  *             if rate > max_infusion_rate:
  *                 dose_mi = rate / (60 * 60) * drug_concentration             # <<<<<<<<<<<<<<
@@ -6133,7 +6133,7 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_ce_dose(struct __pyx_obj_8op
  */
         __pyx_v_dose_mi = ((__pyx_v_rate / 3600.0) * __pyx_v_drug_concentration);
 
-        /* "opentiva/pkpd.pyx":493
+        /* "opentiva/pkpd.pyx":492
  *             # If rate above max rate match match max infusion rate
  *             rate = (dose_mi / drug_concentration) * 60 * 60
  *             if rate > max_infusion_rate:             # <<<<<<<<<<<<<<
@@ -6142,27 +6142,27 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_ce_dose(struct __pyx_obj_8op
  */
       }
 
-      /* "opentiva/pkpd.pyx":496
+      /* "opentiva/pkpd.pyx":495
  *                 dose_mi = rate / (60 * 60) * drug_concentration
  * 
  *             inf_v = np.array([start_mi, dose_mi, duration_mi, end_mi],             # <<<<<<<<<<<<<<
  *                               dtype=np.float64)
  * 
  */
-      __Pyx_GetModuleGlobalName(__pyx_t_9, __pyx_n_s_np); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 496, __pyx_L9_except_error)
+      __Pyx_GetModuleGlobalName(__pyx_t_9, __pyx_n_s_np); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 495, __pyx_L9_except_error)
       __Pyx_GOTREF(__pyx_t_9);
-      __pyx_t_12 = __Pyx_PyObject_GetAttrStr(__pyx_t_9, __pyx_n_s_array); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 496, __pyx_L9_except_error)
+      __pyx_t_12 = __Pyx_PyObject_GetAttrStr(__pyx_t_9, __pyx_n_s_array); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 495, __pyx_L9_except_error)
       __Pyx_GOTREF(__pyx_t_12);
       __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
-      __pyx_t_9 = __Pyx_PyInt_From_int(__pyx_v_start_mi); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 496, __pyx_L9_except_error)
+      __pyx_t_9 = __Pyx_PyInt_From_int(__pyx_v_start_mi); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 495, __pyx_L9_except_error)
       __Pyx_GOTREF(__pyx_t_9);
-      __pyx_t_10 = PyFloat_FromDouble(__pyx_v_dose_mi); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 496, __pyx_L9_except_error)
+      __pyx_t_10 = PyFloat_FromDouble(__pyx_v_dose_mi); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 495, __pyx_L9_except_error)
       __Pyx_GOTREF(__pyx_t_10);
-      __pyx_t_11 = __Pyx_PyInt_From_int(__pyx_v_duration_mi); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 496, __pyx_L9_except_error)
+      __pyx_t_11 = __Pyx_PyInt_From_int(__pyx_v_duration_mi); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 495, __pyx_L9_except_error)
       __Pyx_GOTREF(__pyx_t_11);
-      __pyx_t_1 = __Pyx_PyInt_From_int(__pyx_v_end_mi); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 496, __pyx_L9_except_error)
+      __pyx_t_1 = __Pyx_PyInt_From_int(__pyx_v_end_mi); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 495, __pyx_L9_except_error)
       __Pyx_GOTREF(__pyx_t_1);
-      __pyx_t_15 = PyList_New(4); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 496, __pyx_L9_except_error)
+      __pyx_t_15 = PyList_New(4); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 495, __pyx_L9_except_error)
       __Pyx_GOTREF(__pyx_t_15);
       __Pyx_GIVEREF(__pyx_t_9);
       PyList_SET_ITEM(__pyx_t_15, 0, __pyx_t_9);
@@ -6176,37 +6176,37 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_ce_dose(struct __pyx_obj_8op
       __pyx_t_10 = 0;
       __pyx_t_11 = 0;
       __pyx_t_1 = 0;
-      __pyx_t_1 = PyTuple_New(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 496, __pyx_L9_except_error)
+      __pyx_t_1 = PyTuple_New(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 495, __pyx_L9_except_error)
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_GIVEREF(__pyx_t_15);
       PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_t_15);
       __pyx_t_15 = 0;
 
-      /* "opentiva/pkpd.pyx":497
+      /* "opentiva/pkpd.pyx":496
  * 
  *             inf_v = np.array([start_mi, dose_mi, duration_mi, end_mi],
  *                               dtype=np.float64)             # <<<<<<<<<<<<<<
  * 
  *             # Add infusion if duration_mi > 0
  */
-      __pyx_t_15 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 497, __pyx_L9_except_error)
+      __pyx_t_15 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 496, __pyx_L9_except_error)
       __Pyx_GOTREF(__pyx_t_15);
-      __Pyx_GetModuleGlobalName(__pyx_t_11, __pyx_n_s_np); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 497, __pyx_L9_except_error)
+      __Pyx_GetModuleGlobalName(__pyx_t_11, __pyx_n_s_np); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 496, __pyx_L9_except_error)
       __Pyx_GOTREF(__pyx_t_11);
-      __pyx_t_10 = __Pyx_PyObject_GetAttrStr(__pyx_t_11, __pyx_n_s_float64); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 497, __pyx_L9_except_error)
+      __pyx_t_10 = __Pyx_PyObject_GetAttrStr(__pyx_t_11, __pyx_n_s_float64); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 496, __pyx_L9_except_error)
       __Pyx_GOTREF(__pyx_t_10);
       __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
-      if (PyDict_SetItem(__pyx_t_15, __pyx_n_s_dtype, __pyx_t_10) < 0) __PYX_ERR(0, 497, __pyx_L9_except_error)
+      if (PyDict_SetItem(__pyx_t_15, __pyx_n_s_dtype, __pyx_t_10) < 0) __PYX_ERR(0, 496, __pyx_L9_except_error)
       __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
 
-      /* "opentiva/pkpd.pyx":496
+      /* "opentiva/pkpd.pyx":495
  *                 dose_mi = rate / (60 * 60) * drug_concentration
  * 
  *             inf_v = np.array([start_mi, dose_mi, duration_mi, end_mi],             # <<<<<<<<<<<<<<
  *                               dtype=np.float64)
  * 
  */
-      __pyx_t_10 = __Pyx_PyObject_Call(__pyx_t_12, __pyx_t_1, __pyx_t_15); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 496, __pyx_L9_except_error)
+      __pyx_t_10 = __Pyx_PyObject_Call(__pyx_t_12, __pyx_t_1, __pyx_t_15); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 495, __pyx_L9_except_error)
       __Pyx_GOTREF(__pyx_t_10);
       __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
@@ -6214,7 +6214,7 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_ce_dose(struct __pyx_obj_8op
       __Pyx_DECREF_SET(__pyx_v_inf_v, __pyx_t_10);
       __pyx_t_10 = 0;
 
-      /* "opentiva/pkpd.pyx":500
+      /* "opentiva/pkpd.pyx":499
  * 
  *             # Add infusion if duration_mi > 0
  *             if duration_mi:             # <<<<<<<<<<<<<<
@@ -6224,19 +6224,19 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_ce_dose(struct __pyx_obj_8op
       __pyx_t_16 = (__pyx_v_duration_mi != 0);
       if (__pyx_t_16) {
 
-        /* "opentiva/pkpd.pyx":501
+        /* "opentiva/pkpd.pyx":500
  *             # Add infusion if duration_mi > 0
  *             if duration_mi:
  *                 inf_out = np.vstack((inf_out, inf_v))             # <<<<<<<<<<<<<<
  * 
  *         # Find time at which Ce reaches target
  */
-        __Pyx_GetModuleGlobalName(__pyx_t_15, __pyx_n_s_np); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 501, __pyx_L9_except_error)
+        __Pyx_GetModuleGlobalName(__pyx_t_15, __pyx_n_s_np); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 500, __pyx_L9_except_error)
         __Pyx_GOTREF(__pyx_t_15);
-        __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_15, __pyx_n_s_vstack); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 501, __pyx_L9_except_error)
+        __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_15, __pyx_n_s_vstack); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 500, __pyx_L9_except_error)
         __Pyx_GOTREF(__pyx_t_1);
         __Pyx_DECREF(__pyx_t_15); __pyx_t_15 = 0;
-        __pyx_t_15 = PyTuple_New(2); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 501, __pyx_L9_except_error)
+        __pyx_t_15 = PyTuple_New(2); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 500, __pyx_L9_except_error)
         __Pyx_GOTREF(__pyx_t_15);
         __Pyx_INCREF(__pyx_v_inf_out);
         __Pyx_GIVEREF(__pyx_v_inf_out);
@@ -6257,13 +6257,13 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_ce_dose(struct __pyx_obj_8op
         __pyx_t_10 = (__pyx_t_12) ? __Pyx_PyObject_Call2Args(__pyx_t_1, __pyx_t_12, __pyx_t_15) : __Pyx_PyObject_CallOneArg(__pyx_t_1, __pyx_t_15);
         __Pyx_XDECREF(__pyx_t_12); __pyx_t_12 = 0;
         __Pyx_DECREF(__pyx_t_15); __pyx_t_15 = 0;
-        if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 501, __pyx_L9_except_error)
+        if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 500, __pyx_L9_except_error)
         __Pyx_GOTREF(__pyx_t_10);
         __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
         __Pyx_DECREF_SET(__pyx_v_inf_out, __pyx_t_10);
         __pyx_t_10 = 0;
 
-        /* "opentiva/pkpd.pyx":500
+        /* "opentiva/pkpd.pyx":499
  * 
  *             # Add infusion if duration_mi > 0
  *             if duration_mi:             # <<<<<<<<<<<<<<
@@ -6293,7 +6293,7 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_ce_dose(struct __pyx_obj_8op
     __Pyx_XDECREF(__pyx_t_8); __pyx_t_8 = 0;
     __Pyx_XDECREF(__pyx_t_9); __pyx_t_9 = 0;
 
-    /* "opentiva/pkpd.pyx":477
+    /* "opentiva/pkpd.pyx":476
  *                                    x0 = 1, x1 = duration_b * 2, tol=1,
  *                                    args=(inf_out, target, limit, start_mi))
  *         except (RuntimeError, OverflowError):             # <<<<<<<<<<<<<<
@@ -6303,29 +6303,29 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_ce_dose(struct __pyx_obj_8op
     __pyx_t_14 = __Pyx_PyErr_ExceptionMatches(__pyx_builtin_RuntimeError) || __Pyx_PyErr_ExceptionMatches(__pyx_builtin_OverflowError);
     if (__pyx_t_14) {
       __Pyx_AddTraceback("opentiva.pkpd.PkPdModel.ce_dose", __pyx_clineno, __pyx_lineno, __pyx_filename);
-      if (__Pyx_GetException(&__pyx_t_10, &__pyx_t_1, &__pyx_t_15) < 0) __PYX_ERR(0, 477, __pyx_L9_except_error)
+      if (__Pyx_GetException(&__pyx_t_10, &__pyx_t_1, &__pyx_t_15) < 0) __PYX_ERR(0, 476, __pyx_L9_except_error)
       __Pyx_GOTREF(__pyx_t_10);
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_GOTREF(__pyx_t_15);
 
-      /* "opentiva/pkpd.pyx":478
+      /* "opentiva/pkpd.pyx":477
  *                                    args=(inf_out, target, limit, start_mi))
  *         except (RuntimeError, OverflowError):
  *             warnings.warn("Failed to converge on infusion time.", RuntimeWarning)             # <<<<<<<<<<<<<<
  *             end_mi = end_b
  *         else:
  */
-      __Pyx_GetModuleGlobalName(__pyx_t_12, __pyx_n_s_warnings); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 478, __pyx_L9_except_error)
+      __Pyx_GetModuleGlobalName(__pyx_t_12, __pyx_n_s_warnings); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 477, __pyx_L9_except_error)
       __Pyx_GOTREF(__pyx_t_12);
-      __pyx_t_11 = __Pyx_PyObject_GetAttrStr(__pyx_t_12, __pyx_n_s_warn); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 478, __pyx_L9_except_error)
+      __pyx_t_11 = __Pyx_PyObject_GetAttrStr(__pyx_t_12, __pyx_n_s_warn); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 477, __pyx_L9_except_error)
       __Pyx_GOTREF(__pyx_t_11);
       __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
-      __pyx_t_12 = __Pyx_PyObject_Call(__pyx_t_11, __pyx_tuple__2, NULL); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 478, __pyx_L9_except_error)
+      __pyx_t_12 = __Pyx_PyObject_Call(__pyx_t_11, __pyx_tuple__2, NULL); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 477, __pyx_L9_except_error)
       __Pyx_GOTREF(__pyx_t_12);
       __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
       __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
 
-      /* "opentiva/pkpd.pyx":479
+      /* "opentiva/pkpd.pyx":478
  *         except (RuntimeError, OverflowError):
  *             warnings.warn("Failed to converge on infusion time.", RuntimeWarning)
  *             end_mi = end_b             # <<<<<<<<<<<<<<
@@ -6341,7 +6341,7 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_ce_dose(struct __pyx_obj_8op
     goto __pyx_L9_except_error;
     __pyx_L9_except_error:;
 
-    /* "opentiva/pkpd.pyx":473
+    /* "opentiva/pkpd.pyx":472
  *         start_mi = end_b
  * 
  *         try:             # <<<<<<<<<<<<<<
@@ -6361,7 +6361,7 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_ce_dose(struct __pyx_obj_8op
     __pyx_L12_try_end:;
   }
 
-  /* "opentiva/pkpd.pyx":504
+  /* "opentiva/pkpd.pyx":503
  * 
  *         # Find time at which Ce reaches target
  *         target_time = end_mi             # <<<<<<<<<<<<<<
@@ -6370,7 +6370,7 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_ce_dose(struct __pyx_obj_8op
  */
   __pyx_v_target_time = __pyx_v_end_mi;
 
-  /* "opentiva/pkpd.pyx":505
+  /* "opentiva/pkpd.pyx":504
  *         # Find time at which Ce reaches target
  *         target_time = end_mi
  *         cp = target + limit             # <<<<<<<<<<<<<<
@@ -6379,7 +6379,7 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_ce_dose(struct __pyx_obj_8op
  */
   __pyx_v_cp = (__pyx_v_target + __pyx_v_limit);
 
-  /* "opentiva/pkpd.pyx":506
+  /* "opentiva/pkpd.pyx":505
  *         target_time = end_mi
  *         cp = target + limit
  *         while cp >= target:             # <<<<<<<<<<<<<<
@@ -6390,20 +6390,20 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_ce_dose(struct __pyx_obj_8op
     __pyx_t_16 = ((__pyx_v_cp >= __pyx_v_target) != 0);
     if (!__pyx_t_16) break;
 
-    /* "opentiva/pkpd.pyx":507
+    /* "opentiva/pkpd.pyx":506
  *         cp = target + limit
  *         while cp >= target:
  *             cp = self.calculate_cp(inf_out, target_time)             # <<<<<<<<<<<<<<
  *             target_time += 1
  * 
  */
-    __pyx_t_17 = __Pyx_PyObject_to_MemoryviewSlice_dsds_double(__pyx_v_inf_out, PyBUF_WRITABLE); if (unlikely(!__pyx_t_17.memview)) __PYX_ERR(0, 507, __pyx_L1_error)
+    __pyx_t_17 = __Pyx_PyObject_to_MemoryviewSlice_dsds_double(__pyx_v_inf_out, PyBUF_WRITABLE); if (unlikely(!__pyx_t_17.memview)) __PYX_ERR(0, 506, __pyx_L1_error)
     __pyx_v_cp = ((struct __pyx_vtabstruct_8opentiva_4pkpd_PkPdModel *)__pyx_v_self->__pyx_vtab)->calculate_cp(__pyx_v_self, __pyx_t_17, __pyx_v_target_time, 0);
     __PYX_XDEC_MEMVIEW(&__pyx_t_17, 1);
     __pyx_t_17.memview = NULL;
     __pyx_t_17.data = NULL;
 
-    /* "opentiva/pkpd.pyx":508
+    /* "opentiva/pkpd.pyx":507
  *         while cp >= target:
  *             cp = self.calculate_cp(inf_out, target_time)
  *             target_time += 1             # <<<<<<<<<<<<<<
@@ -6413,25 +6413,25 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_ce_dose(struct __pyx_obj_8op
     __pyx_v_target_time = (__pyx_v_target_time + 1);
   }
 
-  /* "opentiva/pkpd.pyx":511
+  /* "opentiva/pkpd.pyx":510
  * 
  *         # Add zero infusion til ce reached if maintenance infusion required
  *         inf_0 = np.array([end_mi, 0, (target_time - end_mi), target_time])             # <<<<<<<<<<<<<<
  *         inf_out = np.vstack((inf_out, inf_0))
  * 
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 511, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 510, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_10 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_array); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 511, __pyx_L1_error)
+  __pyx_t_10 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_array); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 510, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_10);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_PyInt_From_int(__pyx_v_end_mi); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 511, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_From_int(__pyx_v_end_mi); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 510, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_12 = __Pyx_PyInt_From_int((__pyx_v_target_time - __pyx_v_end_mi)); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 511, __pyx_L1_error)
+  __pyx_t_12 = __Pyx_PyInt_From_int((__pyx_v_target_time - __pyx_v_end_mi)); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 510, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_12);
-  __pyx_t_11 = __Pyx_PyInt_From_int(__pyx_v_target_time); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 511, __pyx_L1_error)
+  __pyx_t_11 = __Pyx_PyInt_From_int(__pyx_v_target_time); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 510, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_11);
-  __pyx_t_9 = PyList_New(4); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 511, __pyx_L1_error)
+  __pyx_t_9 = PyList_New(4); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 510, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_9);
   __Pyx_GIVEREF(__pyx_t_1);
   PyList_SET_ITEM(__pyx_t_9, 0, __pyx_t_1);
@@ -6458,25 +6458,25 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_ce_dose(struct __pyx_obj_8op
   __pyx_t_15 = (__pyx_t_11) ? __Pyx_PyObject_Call2Args(__pyx_t_10, __pyx_t_11, __pyx_t_9) : __Pyx_PyObject_CallOneArg(__pyx_t_10, __pyx_t_9);
   __Pyx_XDECREF(__pyx_t_11); __pyx_t_11 = 0;
   __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
-  if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 511, __pyx_L1_error)
+  if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 510, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_15);
   __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
   __pyx_v_inf_0 = __pyx_t_15;
   __pyx_t_15 = 0;
 
-  /* "opentiva/pkpd.pyx":512
+  /* "opentiva/pkpd.pyx":511
  *         # Add zero infusion til ce reached if maintenance infusion required
  *         inf_0 = np.array([end_mi, 0, (target_time - end_mi), target_time])
  *         inf_out = np.vstack((inf_out, inf_0))             # <<<<<<<<<<<<<<
  * 
  *         return inf_out, target_time
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_10, __pyx_n_s_np); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 512, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_10, __pyx_n_s_np); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 511, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_10);
-  __pyx_t_9 = __Pyx_PyObject_GetAttrStr(__pyx_t_10, __pyx_n_s_vstack); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 512, __pyx_L1_error)
+  __pyx_t_9 = __Pyx_PyObject_GetAttrStr(__pyx_t_10, __pyx_n_s_vstack); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 511, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_9);
   __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
-  __pyx_t_10 = PyTuple_New(2); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 512, __pyx_L1_error)
+  __pyx_t_10 = PyTuple_New(2); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 511, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_10);
   __Pyx_INCREF(__pyx_v_inf_out);
   __Pyx_GIVEREF(__pyx_v_inf_out);
@@ -6497,13 +6497,13 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_ce_dose(struct __pyx_obj_8op
   __pyx_t_15 = (__pyx_t_11) ? __Pyx_PyObject_Call2Args(__pyx_t_9, __pyx_t_11, __pyx_t_10) : __Pyx_PyObject_CallOneArg(__pyx_t_9, __pyx_t_10);
   __Pyx_XDECREF(__pyx_t_11); __pyx_t_11 = 0;
   __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
-  if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 512, __pyx_L1_error)
+  if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 511, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_15);
   __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
   __Pyx_DECREF_SET(__pyx_v_inf_out, __pyx_t_15);
   __pyx_t_15 = 0;
 
-  /* "opentiva/pkpd.pyx":514
+  /* "opentiva/pkpd.pyx":513
  *         inf_out = np.vstack((inf_out, inf_0))
  * 
  *         return inf_out, target_time             # <<<<<<<<<<<<<<
@@ -6511,9 +6511,9 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_ce_dose(struct __pyx_obj_8op
  * 
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_15 = __Pyx_PyInt_From_int(__pyx_v_target_time); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 514, __pyx_L1_error)
+  __pyx_t_15 = __Pyx_PyInt_From_int(__pyx_v_target_time); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 513, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_15);
-  __pyx_t_9 = PyTuple_New(2); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 514, __pyx_L1_error)
+  __pyx_t_9 = PyTuple_New(2); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 513, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_9);
   __Pyx_INCREF(__pyx_v_inf_out);
   __Pyx_GIVEREF(__pyx_v_inf_out);
@@ -6525,7 +6525,7 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_ce_dose(struct __pyx_obj_8op
   __pyx_t_9 = 0;
   goto __pyx_L0;
 
-  /* "opentiva/pkpd.pyx":391
+  /* "opentiva/pkpd.pyx":390
  * 
  * 
  *     cpdef ce_dose(self, double [:, :] infusion_list, double target,             # <<<<<<<<<<<<<<
@@ -6617,53 +6617,53 @@ static PyObject *__pyx_pw_8opentiva_4pkpd_9PkPdModel_13ce_dose(PyObject *__pyx_v
         case  1:
         if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_target)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("ce_dose", 1, 9, 9, 1); __PYX_ERR(0, 391, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("ce_dose", 1, 9, 9, 1); __PYX_ERR(0, 390, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  2:
         if (likely((values[2] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_limit)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("ce_dose", 1, 9, 9, 2); __PYX_ERR(0, 391, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("ce_dose", 1, 9, 9, 2); __PYX_ERR(0, 390, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  3:
         if (likely((values[3] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_duration_b)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("ce_dose", 1, 9, 9, 3); __PYX_ERR(0, 391, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("ce_dose", 1, 9, 9, 3); __PYX_ERR(0, 390, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  4:
         if (likely((values[4] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_start_b)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("ce_dose", 1, 9, 9, 4); __PYX_ERR(0, 391, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("ce_dose", 1, 9, 9, 4); __PYX_ERR(0, 390, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  5:
         if (likely((values[5] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_duration_ce)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("ce_dose", 1, 9, 9, 5); __PYX_ERR(0, 391, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("ce_dose", 1, 9, 9, 5); __PYX_ERR(0, 390, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  6:
         if (likely((values[6] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_drug_concentration)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("ce_dose", 1, 9, 9, 6); __PYX_ERR(0, 391, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("ce_dose", 1, 9, 9, 6); __PYX_ERR(0, 390, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  7:
         if (likely((values[7] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_max_infusion_rate)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("ce_dose", 1, 9, 9, 7); __PYX_ERR(0, 391, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("ce_dose", 1, 9, 9, 7); __PYX_ERR(0, 390, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  8:
         if (likely((values[8] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_bolus_time)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("ce_dose", 1, 9, 9, 8); __PYX_ERR(0, 391, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("ce_dose", 1, 9, 9, 8); __PYX_ERR(0, 390, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "ce_dose") < 0)) __PYX_ERR(0, 391, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "ce_dose") < 0)) __PYX_ERR(0, 390, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 9) {
       goto __pyx_L5_argtuple_error;
@@ -6678,19 +6678,19 @@ static PyObject *__pyx_pw_8opentiva_4pkpd_9PkPdModel_13ce_dose(PyObject *__pyx_v
       values[7] = PyTuple_GET_ITEM(__pyx_args, 7);
       values[8] = PyTuple_GET_ITEM(__pyx_args, 8);
     }
-    __pyx_v_infusion_list = __Pyx_PyObject_to_MemoryviewSlice_dsds_double(values[0], PyBUF_WRITABLE); if (unlikely(!__pyx_v_infusion_list.memview)) __PYX_ERR(0, 391, __pyx_L3_error)
-    __pyx_v_target = __pyx_PyFloat_AsDouble(values[1]); if (unlikely((__pyx_v_target == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 391, __pyx_L3_error)
-    __pyx_v_limit = __pyx_PyFloat_AsDouble(values[2]); if (unlikely((__pyx_v_limit == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 392, __pyx_L3_error)
-    __pyx_v_duration_b = __Pyx_PyInt_As_int(values[3]); if (unlikely((__pyx_v_duration_b == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 392, __pyx_L3_error)
-    __pyx_v_start_b = __Pyx_PyInt_As_int(values[4]); if (unlikely((__pyx_v_start_b == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 392, __pyx_L3_error)
-    __pyx_v_duration_ce = __Pyx_PyInt_As_int(values[5]); if (unlikely((__pyx_v_duration_ce == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 392, __pyx_L3_error)
-    __pyx_v_drug_concentration = __pyx_PyFloat_AsDouble(values[6]); if (unlikely((__pyx_v_drug_concentration == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 393, __pyx_L3_error)
-    __pyx_v_max_infusion_rate = __Pyx_PyInt_As_int(values[7]); if (unlikely((__pyx_v_max_infusion_rate == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 393, __pyx_L3_error)
-    __pyx_v_bolus_time = __Pyx_PyInt_As_int(values[8]); if (unlikely((__pyx_v_bolus_time == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 394, __pyx_L3_error)
+    __pyx_v_infusion_list = __Pyx_PyObject_to_MemoryviewSlice_dsds_double(values[0], PyBUF_WRITABLE); if (unlikely(!__pyx_v_infusion_list.memview)) __PYX_ERR(0, 390, __pyx_L3_error)
+    __pyx_v_target = __pyx_PyFloat_AsDouble(values[1]); if (unlikely((__pyx_v_target == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 390, __pyx_L3_error)
+    __pyx_v_limit = __pyx_PyFloat_AsDouble(values[2]); if (unlikely((__pyx_v_limit == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 391, __pyx_L3_error)
+    __pyx_v_duration_b = __Pyx_PyInt_As_int(values[3]); if (unlikely((__pyx_v_duration_b == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 391, __pyx_L3_error)
+    __pyx_v_start_b = __Pyx_PyInt_As_int(values[4]); if (unlikely((__pyx_v_start_b == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 391, __pyx_L3_error)
+    __pyx_v_duration_ce = __Pyx_PyInt_As_int(values[5]); if (unlikely((__pyx_v_duration_ce == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 391, __pyx_L3_error)
+    __pyx_v_drug_concentration = __pyx_PyFloat_AsDouble(values[6]); if (unlikely((__pyx_v_drug_concentration == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 392, __pyx_L3_error)
+    __pyx_v_max_infusion_rate = __Pyx_PyInt_As_int(values[7]); if (unlikely((__pyx_v_max_infusion_rate == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 392, __pyx_L3_error)
+    __pyx_v_bolus_time = __Pyx_PyInt_As_int(values[8]); if (unlikely((__pyx_v_bolus_time == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 393, __pyx_L3_error)
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("ce_dose", 1, 9, 9, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 391, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("ce_dose", 1, 9, 9, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 390, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("opentiva.pkpd.PkPdModel.ce_dose", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
@@ -6712,8 +6712,8 @@ static PyObject *__pyx_pf_8opentiva_4pkpd_9PkPdModel_12ce_dose(struct __pyx_obj_
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("ce_dose", 0);
   __Pyx_XDECREF(__pyx_r);
-  if (unlikely(!__pyx_v_infusion_list.memview)) { __Pyx_RaiseUnboundLocalError("infusion_list"); __PYX_ERR(0, 391, __pyx_L1_error) }
-  __pyx_t_1 = __pyx_f_8opentiva_4pkpd_9PkPdModel_ce_dose(__pyx_v_self, __pyx_v_infusion_list, __pyx_v_target, __pyx_v_limit, __pyx_v_duration_b, __pyx_v_start_b, __pyx_v_duration_ce, __pyx_v_drug_concentration, __pyx_v_max_infusion_rate, __pyx_v_bolus_time, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 391, __pyx_L1_error)
+  if (unlikely(!__pyx_v_infusion_list.memview)) { __Pyx_RaiseUnboundLocalError("infusion_list"); __PYX_ERR(0, 390, __pyx_L1_error) }
+  __pyx_t_1 = __pyx_f_8opentiva_4pkpd_9PkPdModel_ce_dose(__pyx_v_self, __pyx_v_infusion_list, __pyx_v_target, __pyx_v_limit, __pyx_v_duration_b, __pyx_v_start_b, __pyx_v_duration_ce, __pyx_v_drug_concentration, __pyx_v_max_infusion_rate, __pyx_v_bolus_time, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 390, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -6731,12 +6731,12 @@ static PyObject *__pyx_pf_8opentiva_4pkpd_9PkPdModel_12ce_dose(struct __pyx_obj_
   return __pyx_r;
 }
 
-/* "opentiva/pkpd.pyx":517
+/* "opentiva/pkpd.pyx":516
  * 
  * 
- *     cpdef double ce_duration_minimise(self, int duration, double [:, :] infusion_list,             # <<<<<<<<<<<<<<
+ *     cpdef double ce_duration_minimise(self, int duration,             # <<<<<<<<<<<<<<
+ *                                       double [:, :] infusion_list,
  *                                       double target, double limit, int start):
- *         """ Minimisation function to calculate duration of Tinf
  */
 
 static PyObject *__pyx_pw_8opentiva_4pkpd_9PkPdModel_15ce_duration_minimise(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
@@ -6782,19 +6782,19 @@ static double __pyx_f_8opentiva_4pkpd_9PkPdModel_ce_duration_minimise(struct __p
     if (unlikely(!__Pyx_object_dict_version_matches(((PyObject *)__pyx_v_self), __pyx_tp_dict_version, __pyx_obj_dict_version))) {
       PY_UINT64_T __pyx_type_dict_guard = __Pyx_get_tp_dict_version(((PyObject *)__pyx_v_self));
       #endif
-      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_ce_duration_minimise); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 517, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_ce_duration_minimise); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 516, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)(void*)__pyx_pw_8opentiva_4pkpd_9PkPdModel_15ce_duration_minimise)) {
-        __pyx_t_3 = __Pyx_PyInt_From_int(__pyx_v_duration); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 517, __pyx_L1_error)
+        __pyx_t_3 = __Pyx_PyInt_From_int(__pyx_v_duration); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 516, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_3);
-        if (unlikely(!__pyx_v_infusion_list.memview)) { __Pyx_RaiseUnboundLocalError("infusion_list"); __PYX_ERR(0, 517, __pyx_L1_error) }
-        __pyx_t_4 = __pyx_memoryview_fromslice(__pyx_v_infusion_list, 2, (PyObject *(*)(char *)) __pyx_memview_get_double, (int (*)(char *, PyObject *)) __pyx_memview_set_double, 0);; if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 517, __pyx_L1_error)
+        if (unlikely(!__pyx_v_infusion_list.memview)) { __Pyx_RaiseUnboundLocalError("infusion_list"); __PYX_ERR(0, 516, __pyx_L1_error) }
+        __pyx_t_4 = __pyx_memoryview_fromslice(__pyx_v_infusion_list, 2, (PyObject *(*)(char *)) __pyx_memview_get_double, (int (*)(char *, PyObject *)) __pyx_memview_set_double, 0);; if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 516, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_4);
-        __pyx_t_5 = PyFloat_FromDouble(__pyx_v_target); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 517, __pyx_L1_error)
+        __pyx_t_5 = PyFloat_FromDouble(__pyx_v_target); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 516, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_5);
-        __pyx_t_6 = PyFloat_FromDouble(__pyx_v_limit); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 517, __pyx_L1_error)
+        __pyx_t_6 = PyFloat_FromDouble(__pyx_v_limit); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 516, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_6);
-        __pyx_t_7 = __Pyx_PyInt_From_int(__pyx_v_start); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 517, __pyx_L1_error)
+        __pyx_t_7 = __Pyx_PyInt_From_int(__pyx_v_start); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 516, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_7);
         __Pyx_INCREF(__pyx_t_1);
         __pyx_t_8 = __pyx_t_1; __pyx_t_9 = NULL;
@@ -6812,7 +6812,7 @@ static double __pyx_f_8opentiva_4pkpd_9PkPdModel_ce_duration_minimise(struct __p
         #if CYTHON_FAST_PYCALL
         if (PyFunction_Check(__pyx_t_8)) {
           PyObject *__pyx_temp[6] = {__pyx_t_9, __pyx_t_3, __pyx_t_4, __pyx_t_5, __pyx_t_6, __pyx_t_7};
-          __pyx_t_2 = __Pyx_PyFunction_FastCall(__pyx_t_8, __pyx_temp+1-__pyx_t_10, 5+__pyx_t_10); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 517, __pyx_L1_error)
+          __pyx_t_2 = __Pyx_PyFunction_FastCall(__pyx_t_8, __pyx_temp+1-__pyx_t_10, 5+__pyx_t_10); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 516, __pyx_L1_error)
           __Pyx_XDECREF(__pyx_t_9); __pyx_t_9 = 0;
           __Pyx_GOTREF(__pyx_t_2);
           __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
@@ -6825,7 +6825,7 @@ static double __pyx_f_8opentiva_4pkpd_9PkPdModel_ce_duration_minimise(struct __p
         #if CYTHON_FAST_PYCCALL
         if (__Pyx_PyFastCFunction_Check(__pyx_t_8)) {
           PyObject *__pyx_temp[6] = {__pyx_t_9, __pyx_t_3, __pyx_t_4, __pyx_t_5, __pyx_t_6, __pyx_t_7};
-          __pyx_t_2 = __Pyx_PyCFunction_FastCall(__pyx_t_8, __pyx_temp+1-__pyx_t_10, 5+__pyx_t_10); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 517, __pyx_L1_error)
+          __pyx_t_2 = __Pyx_PyCFunction_FastCall(__pyx_t_8, __pyx_temp+1-__pyx_t_10, 5+__pyx_t_10); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 516, __pyx_L1_error)
           __Pyx_XDECREF(__pyx_t_9); __pyx_t_9 = 0;
           __Pyx_GOTREF(__pyx_t_2);
           __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
@@ -6836,7 +6836,7 @@ static double __pyx_f_8opentiva_4pkpd_9PkPdModel_ce_duration_minimise(struct __p
         } else
         #endif
         {
-          __pyx_t_11 = PyTuple_New(5+__pyx_t_10); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 517, __pyx_L1_error)
+          __pyx_t_11 = PyTuple_New(5+__pyx_t_10); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 516, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_11);
           if (__pyx_t_9) {
             __Pyx_GIVEREF(__pyx_t_9); PyTuple_SET_ITEM(__pyx_t_11, 0, __pyx_t_9); __pyx_t_9 = NULL;
@@ -6856,12 +6856,12 @@ static double __pyx_f_8opentiva_4pkpd_9PkPdModel_ce_duration_minimise(struct __p
           __pyx_t_5 = 0;
           __pyx_t_6 = 0;
           __pyx_t_7 = 0;
-          __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_8, __pyx_t_11, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 517, __pyx_L1_error)
+          __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_8, __pyx_t_11, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 516, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_2);
           __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
         }
         __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
-        __pyx_t_12 = __pyx_PyFloat_AsDouble(__pyx_t_2); if (unlikely((__pyx_t_12 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 517, __pyx_L1_error)
+        __pyx_t_12 = __pyx_PyFloat_AsDouble(__pyx_t_2); if (unlikely((__pyx_t_12 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 516, __pyx_L1_error)
         __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
         __pyx_r = __pyx_t_12;
         __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
@@ -6880,7 +6880,7 @@ static double __pyx_f_8opentiva_4pkpd_9PkPdModel_ce_duration_minimise(struct __p
     #endif
   }
 
-  /* "opentiva/pkpd.pyx":553
+  /* "opentiva/pkpd.pyx":554
  *         cdef double target_limit, current_ce, previous_ce, delta_ce
  *         cdef double current_cp, previous_cp
  *         cdef int t = 1, end             # <<<<<<<<<<<<<<
@@ -6889,7 +6889,7 @@ static double __pyx_f_8opentiva_4pkpd_9PkPdModel_ce_duration_minimise(struct __p
  */
   __pyx_v_t = 1;
 
-  /* "opentiva/pkpd.pyx":555
+  /* "opentiva/pkpd.pyx":556
  *         cdef int t = 1, end
  * 
  *         target_limit = target * limit             # <<<<<<<<<<<<<<
@@ -6898,7 +6898,7 @@ static double __pyx_f_8opentiva_4pkpd_9PkPdModel_ce_duration_minimise(struct __p
  */
   __pyx_v_target_limit = (__pyx_v_target * __pyx_v_limit);
 
-  /* "opentiva/pkpd.pyx":556
+  /* "opentiva/pkpd.pyx":557
  * 
  *         target_limit = target * limit
  *         previous_ce = 0             # <<<<<<<<<<<<<<
@@ -6907,7 +6907,7 @@ static double __pyx_f_8opentiva_4pkpd_9PkPdModel_ce_duration_minimise(struct __p
  */
   __pyx_v_previous_ce = 0.0;
 
-  /* "opentiva/pkpd.pyx":557
+  /* "opentiva/pkpd.pyx":558
  *         target_limit = target * limit
  *         previous_ce = 0
  *         current_cp = 0             # <<<<<<<<<<<<<<
@@ -6916,7 +6916,7 @@ static double __pyx_f_8opentiva_4pkpd_9PkPdModel_ce_duration_minimise(struct __p
  */
   __pyx_v_current_cp = 0.0;
 
-  /* "opentiva/pkpd.pyx":558
+  /* "opentiva/pkpd.pyx":559
  *         previous_ce = 0
  *         current_cp = 0
  *         end = start + duration             # <<<<<<<<<<<<<<
@@ -6925,37 +6925,37 @@ static double __pyx_f_8opentiva_4pkpd_9PkPdModel_ce_duration_minimise(struct __p
  */
   __pyx_v_end = (__pyx_v_start + __pyx_v_duration);
 
-  /* "opentiva/pkpd.pyx":560
+  /* "opentiva/pkpd.pyx":561
  *         end = start + duration
  * 
  *         dose = self.maintenance_infusion(infusion_list, target_limit,             # <<<<<<<<<<<<<<
  *                                          start, duration)
  * 
  */
-  __pyx_t_1 = ((struct __pyx_vtabstruct_8opentiva_4pkpd_PkPdModel *)__pyx_v_self->__pyx_vtab)->maintenance_infusion(__pyx_v_self, __pyx_v_infusion_list, __pyx_v_target_limit, __pyx_v_start, __pyx_v_duration, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 560, __pyx_L1_error)
+  __pyx_t_1 = ((struct __pyx_vtabstruct_8opentiva_4pkpd_PkPdModel *)__pyx_v_self->__pyx_vtab)->maintenance_infusion(__pyx_v_self, __pyx_v_infusion_list, __pyx_v_target_limit, __pyx_v_start, __pyx_v_duration, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 561, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_v_dose = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "opentiva/pkpd.pyx":563
+  /* "opentiva/pkpd.pyx":564
  *                                          start, duration)
  * 
  *         inf_v = np.array([start, dose, duration, end], dtype=np.float64)             # <<<<<<<<<<<<<<
  *         inf_tmp = np.vstack((infusion_list, inf_v))
  * 
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 563, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 564, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_array); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 563, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_array); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 564, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_PyInt_From_int(__pyx_v_start); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 563, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_From_int(__pyx_v_start); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 564, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_8 = __Pyx_PyInt_From_int(__pyx_v_duration); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 563, __pyx_L1_error)
+  __pyx_t_8 = __Pyx_PyInt_From_int(__pyx_v_duration); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 564, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_8);
-  __pyx_t_11 = __Pyx_PyInt_From_int(__pyx_v_end); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 563, __pyx_L1_error)
+  __pyx_t_11 = __Pyx_PyInt_From_int(__pyx_v_end); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 564, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_11);
-  __pyx_t_7 = PyList_New(4); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 563, __pyx_L1_error)
+  __pyx_t_7 = PyList_New(4); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 564, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
   __Pyx_GIVEREF(__pyx_t_1);
   PyList_SET_ITEM(__pyx_t_7, 0, __pyx_t_1);
@@ -6969,21 +6969,21 @@ static double __pyx_f_8opentiva_4pkpd_9PkPdModel_ce_duration_minimise(struct __p
   __pyx_t_1 = 0;
   __pyx_t_8 = 0;
   __pyx_t_11 = 0;
-  __pyx_t_11 = PyTuple_New(1); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 563, __pyx_L1_error)
+  __pyx_t_11 = PyTuple_New(1); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 564, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_11);
   __Pyx_GIVEREF(__pyx_t_7);
   PyTuple_SET_ITEM(__pyx_t_11, 0, __pyx_t_7);
   __pyx_t_7 = 0;
-  __pyx_t_7 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 563, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 564, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
-  __Pyx_GetModuleGlobalName(__pyx_t_8, __pyx_n_s_np); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 563, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_8, __pyx_n_s_np); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 564, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_8);
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_8, __pyx_n_s_float64); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 563, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_8, __pyx_n_s_float64); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 564, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
-  if (PyDict_SetItem(__pyx_t_7, __pyx_n_s_dtype, __pyx_t_1) < 0) __PYX_ERR(0, 563, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_7, __pyx_n_s_dtype, __pyx_t_1) < 0) __PYX_ERR(0, 564, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_11, __pyx_t_7); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 563, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_11, __pyx_t_7); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 564, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
@@ -6991,21 +6991,21 @@ static double __pyx_f_8opentiva_4pkpd_9PkPdModel_ce_duration_minimise(struct __p
   __pyx_v_inf_v = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "opentiva/pkpd.pyx":564
+  /* "opentiva/pkpd.pyx":565
  * 
  *         inf_v = np.array([start, dose, duration, end], dtype=np.float64)
  *         inf_tmp = np.vstack((infusion_list, inf_v))             # <<<<<<<<<<<<<<
  * 
  *         while True:
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_7, __pyx_n_s_np); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 564, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_7, __pyx_n_s_np); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 565, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
-  __pyx_t_11 = __Pyx_PyObject_GetAttrStr(__pyx_t_7, __pyx_n_s_vstack); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 564, __pyx_L1_error)
+  __pyx_t_11 = __Pyx_PyObject_GetAttrStr(__pyx_t_7, __pyx_n_s_vstack); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 565, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_11);
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-  __pyx_t_7 = __pyx_memoryview_fromslice(__pyx_v_infusion_list, 2, (PyObject *(*)(char *)) __pyx_memview_get_double, (int (*)(char *, PyObject *)) __pyx_memview_set_double, 0);; if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 564, __pyx_L1_error)
+  __pyx_t_7 = __pyx_memoryview_fromslice(__pyx_v_infusion_list, 2, (PyObject *(*)(char *)) __pyx_memview_get_double, (int (*)(char *, PyObject *)) __pyx_memview_set_double, 0);; if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 565, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
-  __pyx_t_2 = PyTuple_New(2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 564, __pyx_L1_error)
+  __pyx_t_2 = PyTuple_New(2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 565, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_GIVEREF(__pyx_t_7);
   PyTuple_SET_ITEM(__pyx_t_2, 0, __pyx_t_7);
@@ -7026,13 +7026,13 @@ static double __pyx_f_8opentiva_4pkpd_9PkPdModel_ce_duration_minimise(struct __p
   __pyx_t_1 = (__pyx_t_7) ? __Pyx_PyObject_Call2Args(__pyx_t_11, __pyx_t_7, __pyx_t_2) : __Pyx_PyObject_CallOneArg(__pyx_t_11, __pyx_t_2);
   __Pyx_XDECREF(__pyx_t_7); __pyx_t_7 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 564, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 565, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
   __pyx_v_inf_tmp = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "opentiva/pkpd.pyx":566
+  /* "opentiva/pkpd.pyx":567
  *         inf_tmp = np.vstack((infusion_list, inf_v))
  * 
  *         while True:             # <<<<<<<<<<<<<<
@@ -7041,7 +7041,7 @@ static double __pyx_f_8opentiva_4pkpd_9PkPdModel_ce_duration_minimise(struct __p
  */
   while (1) {
 
-    /* "opentiva/pkpd.pyx":567
+    /* "opentiva/pkpd.pyx":568
  * 
  *         while True:
  *             previous_cp = current_cp             # <<<<<<<<<<<<<<
@@ -7050,20 +7050,20 @@ static double __pyx_f_8opentiva_4pkpd_9PkPdModel_ce_duration_minimise(struct __p
  */
     __pyx_v_previous_cp = __pyx_v_current_cp;
 
-    /* "opentiva/pkpd.pyx":568
+    /* "opentiva/pkpd.pyx":569
  *         while True:
  *             previous_cp = current_cp
  *             current_cp = self.calculate_cp(inf_tmp, t)             # <<<<<<<<<<<<<<
  * 
  *             current_ce = self.calculate_ce(current_cp, previous_cp,
  */
-    __pyx_t_13 = __Pyx_PyObject_to_MemoryviewSlice_dsds_double(__pyx_v_inf_tmp, PyBUF_WRITABLE); if (unlikely(!__pyx_t_13.memview)) __PYX_ERR(0, 568, __pyx_L1_error)
+    __pyx_t_13 = __Pyx_PyObject_to_MemoryviewSlice_dsds_double(__pyx_v_inf_tmp, PyBUF_WRITABLE); if (unlikely(!__pyx_t_13.memview)) __PYX_ERR(0, 569, __pyx_L1_error)
     __pyx_v_current_cp = ((struct __pyx_vtabstruct_8opentiva_4pkpd_PkPdModel *)__pyx_v_self->__pyx_vtab)->calculate_cp(__pyx_v_self, __pyx_t_13, __pyx_v_t, 0);
     __PYX_XDEC_MEMVIEW(&__pyx_t_13, 1);
     __pyx_t_13.memview = NULL;
     __pyx_t_13.data = NULL;
 
-    /* "opentiva/pkpd.pyx":570
+    /* "opentiva/pkpd.pyx":571
  *             current_cp = self.calculate_cp(inf_tmp, t)
  * 
  *             current_ce = self.calculate_ce(current_cp, previous_cp,             # <<<<<<<<<<<<<<
@@ -7072,7 +7072,7 @@ static double __pyx_f_8opentiva_4pkpd_9PkPdModel_ce_duration_minimise(struct __p
  */
     __pyx_v_current_ce = ((struct __pyx_vtabstruct_8opentiva_4pkpd_PkPdModel *)__pyx_v_self->__pyx_vtab)->calculate_ce(__pyx_v_self, __pyx_v_current_cp, __pyx_v_previous_cp, __pyx_v_previous_ce);
 
-    /* "opentiva/pkpd.pyx":573
+    /* "opentiva/pkpd.pyx":574
  *                                            previous_ce)
  * 
  *             delta_ce = previous_ce - current_ce             # <<<<<<<<<<<<<<
@@ -7081,7 +7081,7 @@ static double __pyx_f_8opentiva_4pkpd_9PkPdModel_ce_duration_minimise(struct __p
  */
     __pyx_v_delta_ce = (__pyx_v_previous_ce - __pyx_v_current_ce);
 
-    /* "opentiva/pkpd.pyx":574
+    /* "opentiva/pkpd.pyx":575
  * 
  *             delta_ce = previous_ce - current_ce
  *             previous_ce = current_ce             # <<<<<<<<<<<<<<
@@ -7090,7 +7090,7 @@ static double __pyx_f_8opentiva_4pkpd_9PkPdModel_ce_duration_minimise(struct __p
  */
     __pyx_v_previous_ce = __pyx_v_current_ce;
 
-    /* "opentiva/pkpd.pyx":576
+    /* "opentiva/pkpd.pyx":577
  *             previous_ce = current_ce
  * 
  *             if delta_ce >= 0 and  t > end:             # <<<<<<<<<<<<<<
@@ -7108,7 +7108,7 @@ static double __pyx_f_8opentiva_4pkpd_9PkPdModel_ce_duration_minimise(struct __p
     __pyx_L6_bool_binop_done:;
     if (__pyx_t_14) {
 
-      /* "opentiva/pkpd.pyx":577
+      /* "opentiva/pkpd.pyx":578
  * 
  *             if delta_ce >= 0 and  t > end:
  *                 break             # <<<<<<<<<<<<<<
@@ -7117,7 +7117,7 @@ static double __pyx_f_8opentiva_4pkpd_9PkPdModel_ce_duration_minimise(struct __p
  */
       goto __pyx_L4_break;
 
-      /* "opentiva/pkpd.pyx":576
+      /* "opentiva/pkpd.pyx":577
  *             previous_ce = current_ce
  * 
  *             if delta_ce >= 0 and  t > end:             # <<<<<<<<<<<<<<
@@ -7126,7 +7126,7 @@ static double __pyx_f_8opentiva_4pkpd_9PkPdModel_ce_duration_minimise(struct __p
  */
     }
 
-    /* "opentiva/pkpd.pyx":579
+    /* "opentiva/pkpd.pyx":580
  *                 break
  * 
  *             t += 1             # <<<<<<<<<<<<<<
@@ -7137,7 +7137,7 @@ static double __pyx_f_8opentiva_4pkpd_9PkPdModel_ce_duration_minimise(struct __p
   }
   __pyx_L4_break:;
 
-  /* "opentiva/pkpd.pyx":581
+  /* "opentiva/pkpd.pyx":582
  *             t += 1
  * 
  *         return target - current_ce             # <<<<<<<<<<<<<<
@@ -7147,12 +7147,12 @@ static double __pyx_f_8opentiva_4pkpd_9PkPdModel_ce_duration_minimise(struct __p
   __pyx_r = (__pyx_v_target - __pyx_v_current_ce);
   goto __pyx_L0;
 
-  /* "opentiva/pkpd.pyx":517
+  /* "opentiva/pkpd.pyx":516
  * 
  * 
- *     cpdef double ce_duration_minimise(self, int duration, double [:, :] infusion_list,             # <<<<<<<<<<<<<<
+ *     cpdef double ce_duration_minimise(self, int duration,             # <<<<<<<<<<<<<<
+ *                                       double [:, :] infusion_list,
  *                                       double target, double limit, int start):
- *         """ Minimisation function to calculate duration of Tinf
  */
 
   /* function exit code */
@@ -7180,7 +7180,7 @@ static double __pyx_f_8opentiva_4pkpd_9PkPdModel_ce_duration_minimise(struct __p
 
 /* Python wrapper */
 static PyObject *__pyx_pw_8opentiva_4pkpd_9PkPdModel_15ce_duration_minimise(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_8opentiva_4pkpd_9PkPdModel_14ce_duration_minimise[] = " Minimisation function to calculate duration of Tinf\n\n        Method when minimised by changing the duration variable\n        will give the duration of the Tinf phase used to to reach an\n        effect site target using the method described by\n        Van Poucke et al (2004, PMID: 15536889 DOI: 10.1109/TBME.2004.827935)\n\n        Parameters\n        ----------\n        duration\n            duration in seconds of Tcoast phase of the revised effect site targeting\n        infusion_list\n            2d array of infusions with each row containing:\n            [start time of infusion in seconds,\n            dose of infusion over 1 second,\n            duration of infusion in seconds,\n            end time of infusion in seconds]\n        target\n            effect site concentration to reach\n        limit\n            multiplied by target to give the max plasma concentration\n            during the targetting\n        start\n            time in seconds of the start of the effect site targetting\n\n        Returns\n        -------\n        double\n            minimisation target\n\n        ";
+static char __pyx_doc_8opentiva_4pkpd_9PkPdModel_14ce_duration_minimise[] = " Minimisation function to calculate duration of Tinf\n\n        Method when minimised by changing the duration variable\n        will give the duration of the Tinf phase used to to reach an\n        effect site target using the method described by\n        Van Poucke et al (2004, PMID: 15536889 DOI: 10.1109/TBME.2004.827935)\n\n        Parameters\n        ----------\n        duration\n            duration in seconds of Tcoast phase of the revised effect site\n            targeting\n        infusion_list\n            2d array of infusions with each row containing:\n            [start time of infusion in seconds,\n            dose of infusion over 1 second,\n            duration of infusion in seconds,\n            end time of infusion in seconds]\n        target\n            effect site concentration to reach\n        limit\n            multiplied by target to give the max plasma concentration\n            during the targetting\n        start\n            time in seconds of the start of the effect site targetting\n\n        Returns\n        -------\n        double\n            minimisation target\n\n        ";
 static PyObject *__pyx_pw_8opentiva_4pkpd_9PkPdModel_15ce_duration_minimise(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   int __pyx_v_duration;
   __Pyx_memviewslice __pyx_v_infusion_list = { 0, 0, { 0 }, { 0 }, { 0 } };
@@ -7222,29 +7222,29 @@ static PyObject *__pyx_pw_8opentiva_4pkpd_9PkPdModel_15ce_duration_minimise(PyOb
         case  1:
         if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_infusion_list)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("ce_duration_minimise", 1, 5, 5, 1); __PYX_ERR(0, 517, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("ce_duration_minimise", 1, 5, 5, 1); __PYX_ERR(0, 516, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  2:
         if (likely((values[2] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_target)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("ce_duration_minimise", 1, 5, 5, 2); __PYX_ERR(0, 517, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("ce_duration_minimise", 1, 5, 5, 2); __PYX_ERR(0, 516, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  3:
         if (likely((values[3] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_limit)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("ce_duration_minimise", 1, 5, 5, 3); __PYX_ERR(0, 517, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("ce_duration_minimise", 1, 5, 5, 3); __PYX_ERR(0, 516, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  4:
         if (likely((values[4] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_start)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("ce_duration_minimise", 1, 5, 5, 4); __PYX_ERR(0, 517, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("ce_duration_minimise", 1, 5, 5, 4); __PYX_ERR(0, 516, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "ce_duration_minimise") < 0)) __PYX_ERR(0, 517, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "ce_duration_minimise") < 0)) __PYX_ERR(0, 516, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 5) {
       goto __pyx_L5_argtuple_error;
@@ -7255,7 +7255,7 @@ static PyObject *__pyx_pw_8opentiva_4pkpd_9PkPdModel_15ce_duration_minimise(PyOb
       values[3] = PyTuple_GET_ITEM(__pyx_args, 3);
       values[4] = PyTuple_GET_ITEM(__pyx_args, 4);
     }
-    __pyx_v_duration = __Pyx_PyInt_As_int(values[0]); if (unlikely((__pyx_v_duration == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 517, __pyx_L3_error)
+    __pyx_v_duration = __Pyx_PyInt_As_int(values[0]); if (unlikely((__pyx_v_duration == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 516, __pyx_L3_error)
     __pyx_v_infusion_list = __Pyx_PyObject_to_MemoryviewSlice_dsds_double(values[1], PyBUF_WRITABLE); if (unlikely(!__pyx_v_infusion_list.memview)) __PYX_ERR(0, 517, __pyx_L3_error)
     __pyx_v_target = __pyx_PyFloat_AsDouble(values[2]); if (unlikely((__pyx_v_target == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 518, __pyx_L3_error)
     __pyx_v_limit = __pyx_PyFloat_AsDouble(values[3]); if (unlikely((__pyx_v_limit == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 518, __pyx_L3_error)
@@ -7263,7 +7263,7 @@ static PyObject *__pyx_pw_8opentiva_4pkpd_9PkPdModel_15ce_duration_minimise(PyOb
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("ce_duration_minimise", 1, 5, 5, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 517, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("ce_duration_minimise", 1, 5, 5, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 516, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("opentiva.pkpd.PkPdModel.ce_duration_minimise", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
@@ -7285,8 +7285,8 @@ static PyObject *__pyx_pf_8opentiva_4pkpd_9PkPdModel_14ce_duration_minimise(stru
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("ce_duration_minimise", 0);
   __Pyx_XDECREF(__pyx_r);
-  if (unlikely(!__pyx_v_infusion_list.memview)) { __Pyx_RaiseUnboundLocalError("infusion_list"); __PYX_ERR(0, 517, __pyx_L1_error) }
-  __pyx_t_1 = PyFloat_FromDouble(__pyx_f_8opentiva_4pkpd_9PkPdModel_ce_duration_minimise(__pyx_v_self, __pyx_v_duration, __pyx_v_infusion_list, __pyx_v_target, __pyx_v_limit, __pyx_v_start, 1)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 517, __pyx_L1_error)
+  if (unlikely(!__pyx_v_infusion_list.memview)) { __Pyx_RaiseUnboundLocalError("infusion_list"); __PYX_ERR(0, 516, __pyx_L1_error) }
+  __pyx_t_1 = PyFloat_FromDouble(__pyx_f_8opentiva_4pkpd_9PkPdModel_ce_duration_minimise(__pyx_v_self, __pyx_v_duration, __pyx_v_infusion_list, __pyx_v_target, __pyx_v_limit, __pyx_v_start, 1)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 516, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -7304,12 +7304,12 @@ static PyObject *__pyx_pf_8opentiva_4pkpd_9PkPdModel_14ce_duration_minimise(stru
   return __pyx_r;
 }
 
-/* "opentiva/pkpd.pyx":584
+/* "opentiva/pkpd.pyx":585
  * 
  * 
  *     cpdef ce_cplimit_minimise(self, double limit, double [:, :] infusion_list,             # <<<<<<<<<<<<<<
  *                   double target, int duration_b, int start_b,
- *                   int duration_ce, double drug_concentration, int max_infusion_rate,
+ *                   int duration_ce, double drug_concentration,
  */
 
 static PyObject *__pyx_pw_8opentiva_4pkpd_9PkPdModel_17ce_cplimit_minimise(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
@@ -7361,28 +7361,28 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_ce_cplimit_minimise(struct _
     if (unlikely(!__Pyx_object_dict_version_matches(((PyObject *)__pyx_v_self), __pyx_tp_dict_version, __pyx_obj_dict_version))) {
       PY_UINT64_T __pyx_type_dict_guard = __Pyx_get_tp_dict_version(((PyObject *)__pyx_v_self));
       #endif
-      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_ce_cplimit_minimise); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 584, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_ce_cplimit_minimise); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 585, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)(void*)__pyx_pw_8opentiva_4pkpd_9PkPdModel_17ce_cplimit_minimise)) {
         __Pyx_XDECREF(__pyx_r);
-        __pyx_t_3 = PyFloat_FromDouble(__pyx_v_limit); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 584, __pyx_L1_error)
+        __pyx_t_3 = PyFloat_FromDouble(__pyx_v_limit); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 585, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_3);
-        if (unlikely(!__pyx_v_infusion_list.memview)) { __Pyx_RaiseUnboundLocalError("infusion_list"); __PYX_ERR(0, 584, __pyx_L1_error) }
-        __pyx_t_4 = __pyx_memoryview_fromslice(__pyx_v_infusion_list, 2, (PyObject *(*)(char *)) __pyx_memview_get_double, (int (*)(char *, PyObject *)) __pyx_memview_set_double, 0);; if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 584, __pyx_L1_error)
+        if (unlikely(!__pyx_v_infusion_list.memview)) { __Pyx_RaiseUnboundLocalError("infusion_list"); __PYX_ERR(0, 585, __pyx_L1_error) }
+        __pyx_t_4 = __pyx_memoryview_fromslice(__pyx_v_infusion_list, 2, (PyObject *(*)(char *)) __pyx_memview_get_double, (int (*)(char *, PyObject *)) __pyx_memview_set_double, 0);; if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 585, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_4);
-        __pyx_t_5 = PyFloat_FromDouble(__pyx_v_target); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 584, __pyx_L1_error)
+        __pyx_t_5 = PyFloat_FromDouble(__pyx_v_target); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 585, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_5);
-        __pyx_t_6 = __Pyx_PyInt_From_int(__pyx_v_duration_b); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 584, __pyx_L1_error)
+        __pyx_t_6 = __Pyx_PyInt_From_int(__pyx_v_duration_b); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 585, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_6);
-        __pyx_t_7 = __Pyx_PyInt_From_int(__pyx_v_start_b); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 584, __pyx_L1_error)
+        __pyx_t_7 = __Pyx_PyInt_From_int(__pyx_v_start_b); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 585, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_7);
-        __pyx_t_8 = __Pyx_PyInt_From_int(__pyx_v_duration_ce); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 584, __pyx_L1_error)
+        __pyx_t_8 = __Pyx_PyInt_From_int(__pyx_v_duration_ce); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 585, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_8);
-        __pyx_t_9 = PyFloat_FromDouble(__pyx_v_drug_concentration); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 584, __pyx_L1_error)
+        __pyx_t_9 = PyFloat_FromDouble(__pyx_v_drug_concentration); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 585, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_9);
-        __pyx_t_10 = __Pyx_PyInt_From_int(__pyx_v_max_infusion_rate); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 584, __pyx_L1_error)
+        __pyx_t_10 = __Pyx_PyInt_From_int(__pyx_v_max_infusion_rate); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 585, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_10);
-        __pyx_t_11 = __Pyx_PyInt_From_int(__pyx_v_bolus_time); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 584, __pyx_L1_error)
+        __pyx_t_11 = __Pyx_PyInt_From_int(__pyx_v_bolus_time); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 585, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_11);
         __Pyx_INCREF(__pyx_t_1);
         __pyx_t_12 = __pyx_t_1; __pyx_t_13 = NULL;
@@ -7400,7 +7400,7 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_ce_cplimit_minimise(struct _
         #if CYTHON_FAST_PYCALL
         if (PyFunction_Check(__pyx_t_12)) {
           PyObject *__pyx_temp[10] = {__pyx_t_13, __pyx_t_3, __pyx_t_4, __pyx_t_5, __pyx_t_6, __pyx_t_7, __pyx_t_8, __pyx_t_9, __pyx_t_10, __pyx_t_11};
-          __pyx_t_2 = __Pyx_PyFunction_FastCall(__pyx_t_12, __pyx_temp+1-__pyx_t_14, 9+__pyx_t_14); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 584, __pyx_L1_error)
+          __pyx_t_2 = __Pyx_PyFunction_FastCall(__pyx_t_12, __pyx_temp+1-__pyx_t_14, 9+__pyx_t_14); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 585, __pyx_L1_error)
           __Pyx_XDECREF(__pyx_t_13); __pyx_t_13 = 0;
           __Pyx_GOTREF(__pyx_t_2);
           __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
@@ -7417,7 +7417,7 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_ce_cplimit_minimise(struct _
         #if CYTHON_FAST_PYCCALL
         if (__Pyx_PyFastCFunction_Check(__pyx_t_12)) {
           PyObject *__pyx_temp[10] = {__pyx_t_13, __pyx_t_3, __pyx_t_4, __pyx_t_5, __pyx_t_6, __pyx_t_7, __pyx_t_8, __pyx_t_9, __pyx_t_10, __pyx_t_11};
-          __pyx_t_2 = __Pyx_PyCFunction_FastCall(__pyx_t_12, __pyx_temp+1-__pyx_t_14, 9+__pyx_t_14); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 584, __pyx_L1_error)
+          __pyx_t_2 = __Pyx_PyCFunction_FastCall(__pyx_t_12, __pyx_temp+1-__pyx_t_14, 9+__pyx_t_14); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 585, __pyx_L1_error)
           __Pyx_XDECREF(__pyx_t_13); __pyx_t_13 = 0;
           __Pyx_GOTREF(__pyx_t_2);
           __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
@@ -7432,7 +7432,7 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_ce_cplimit_minimise(struct _
         } else
         #endif
         {
-          __pyx_t_15 = PyTuple_New(9+__pyx_t_14); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 584, __pyx_L1_error)
+          __pyx_t_15 = PyTuple_New(9+__pyx_t_14); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 585, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_15);
           if (__pyx_t_13) {
             __Pyx_GIVEREF(__pyx_t_13); PyTuple_SET_ITEM(__pyx_t_15, 0, __pyx_t_13); __pyx_t_13 = NULL;
@@ -7464,7 +7464,7 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_ce_cplimit_minimise(struct _
           __pyx_t_9 = 0;
           __pyx_t_10 = 0;
           __pyx_t_11 = 0;
-          __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_12, __pyx_t_15, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 584, __pyx_L1_error)
+          __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_12, __pyx_t_15, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 585, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_2);
           __Pyx_DECREF(__pyx_t_15); __pyx_t_15 = 0;
         }
@@ -7487,7 +7487,7 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_ce_cplimit_minimise(struct _
     #endif
   }
 
-  /* "opentiva/pkpd.pyx":632
+  /* "opentiva/pkpd.pyx":633
  *         cdef double current_ce, previous_ce, delta_ce
  *         cdef int start_mi, duration_mi, end_mi, end_b
  *         cdef int t = 1             # <<<<<<<<<<<<<<
@@ -7496,19 +7496,19 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_ce_cplimit_minimise(struct _
  */
   __pyx_v_t = 1;
 
-  /* "opentiva/pkpd.pyx":634
+  /* "opentiva/pkpd.pyx":635
  *         cdef int t = 1
  * 
  *         inf_tmp = infusion_list             # <<<<<<<<<<<<<<
  * 
  *         # Get dose to increment to max Cp limit over limit duration
  */
-  __pyx_t_1 = __pyx_memoryview_fromslice(__pyx_v_infusion_list, 2, (PyObject *(*)(char *)) __pyx_memview_get_double, (int (*)(char *, PyObject *)) __pyx_memview_set_double, 0);; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 634, __pyx_L1_error)
+  __pyx_t_1 = __pyx_memoryview_fromslice(__pyx_v_infusion_list, 2, (PyObject *(*)(char *)) __pyx_memview_get_double, (int (*)(char *, PyObject *)) __pyx_memview_set_double, 0);; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 635, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_v_inf_tmp = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "opentiva/pkpd.pyx":637
+  /* "opentiva/pkpd.pyx":638
  * 
  *         # Get dose to increment to max Cp limit over limit duration
  *         if start_b == 0:             # <<<<<<<<<<<<<<
@@ -7518,7 +7518,7 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_ce_cplimit_minimise(struct _
   __pyx_t_16 = ((__pyx_v_start_b == 0) != 0);
   if (__pyx_t_16) {
 
-    /* "opentiva/pkpd.pyx":638
+    /* "opentiva/pkpd.pyx":639
  *         # Get dose to increment to max Cp limit over limit duration
  *         if start_b == 0:
  *             previous_cp = 0             # <<<<<<<<<<<<<<
@@ -7527,7 +7527,7 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_ce_cplimit_minimise(struct _
  */
     __pyx_v_previous_cp = 0.0;
 
-    /* "opentiva/pkpd.pyx":637
+    /* "opentiva/pkpd.pyx":638
  * 
  *         # Get dose to increment to max Cp limit over limit duration
  *         if start_b == 0:             # <<<<<<<<<<<<<<
@@ -7537,7 +7537,7 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_ce_cplimit_minimise(struct _
     goto __pyx_L3;
   }
 
-  /* "opentiva/pkpd.pyx":640
+  /* "opentiva/pkpd.pyx":641
  *             previous_cp = 0
  *         else:
  *             previous_cp = self.calculate_cp(inf_tmp, start_b)             # <<<<<<<<<<<<<<
@@ -7545,7 +7545,7 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_ce_cplimit_minimise(struct _
  *         target_limit = target * limit
  */
   /*else*/ {
-    __pyx_t_17 = __Pyx_PyObject_to_MemoryviewSlice_dsds_double(__pyx_v_inf_tmp, PyBUF_WRITABLE); if (unlikely(!__pyx_t_17.memview)) __PYX_ERR(0, 640, __pyx_L1_error)
+    __pyx_t_17 = __Pyx_PyObject_to_MemoryviewSlice_dsds_double(__pyx_v_inf_tmp, PyBUF_WRITABLE); if (unlikely(!__pyx_t_17.memview)) __PYX_ERR(0, 641, __pyx_L1_error)
     __pyx_v_previous_cp = ((struct __pyx_vtabstruct_8opentiva_4pkpd_PkPdModel *)__pyx_v_self->__pyx_vtab)->calculate_cp(__pyx_v_self, __pyx_t_17, __pyx_v_start_b, 0);
     __PYX_XDEC_MEMVIEW(&__pyx_t_17, 1);
     __pyx_t_17.memview = NULL;
@@ -7553,7 +7553,7 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_ce_cplimit_minimise(struct _
   }
   __pyx_L3:;
 
-  /* "opentiva/pkpd.pyx":642
+  /* "opentiva/pkpd.pyx":643
  *             previous_cp = self.calculate_cp(inf_tmp, start_b)
  * 
  *         target_limit = target * limit             # <<<<<<<<<<<<<<
@@ -7562,7 +7562,7 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_ce_cplimit_minimise(struct _
  */
   __pyx_v_target_limit = (__pyx_v_target * __pyx_v_limit);
 
-  /* "opentiva/pkpd.pyx":643
+  /* "opentiva/pkpd.pyx":644
  * 
  *         target_limit = target * limit
  *         delta_cp = target_limit - previous_cp             # <<<<<<<<<<<<<<
@@ -7571,7 +7571,7 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_ce_cplimit_minimise(struct _
  */
   __pyx_v_delta_cp = (__pyx_v_target_limit - __pyx_v_previous_cp);
 
-  /* "opentiva/pkpd.pyx":645
+  /* "opentiva/pkpd.pyx":646
  *         delta_cp = target_limit - previous_cp
  * 
  *         while True:  # Extend bolus dose to max infusion rate             # <<<<<<<<<<<<<<
@@ -7580,7 +7580,7 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_ce_cplimit_minimise(struct _
  */
   while (1) {
 
-    /* "opentiva/pkpd.pyx":646
+    /* "opentiva/pkpd.pyx":647
  * 
  *         while True:  # Extend bolus dose to max infusion rate
  *             dose_cp = delta_cp / self.integral_exp_decline(0, duration_b)             # <<<<<<<<<<<<<<
@@ -7590,11 +7590,11 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_ce_cplimit_minimise(struct _
     __pyx_t_18 = ((struct __pyx_vtabstruct_8opentiva_4pkpd_PkPdModel *)__pyx_v_self->__pyx_vtab)->integral_exp_decline(__pyx_v_self, 0.0, __pyx_v_duration_b, 0);
     if (unlikely(__pyx_t_18 == 0)) {
       PyErr_SetString(PyExc_ZeroDivisionError, "float division");
-      __PYX_ERR(0, 646, __pyx_L1_error)
+      __PYX_ERR(0, 647, __pyx_L1_error)
     }
     __pyx_v_dose_cp = (__pyx_v_delta_cp / __pyx_t_18);
 
-    /* "opentiva/pkpd.pyx":647
+    /* "opentiva/pkpd.pyx":648
  *         while True:  # Extend bolus dose to max infusion rate
  *             dose_cp = delta_cp / self.integral_exp_decline(0, duration_b)
  *             rate = (dose_cp / drug_concentration) * 60 * 60             # <<<<<<<<<<<<<<
@@ -7603,11 +7603,11 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_ce_cplimit_minimise(struct _
  */
     if (unlikely(__pyx_v_drug_concentration == 0)) {
       PyErr_SetString(PyExc_ZeroDivisionError, "float division");
-      __PYX_ERR(0, 647, __pyx_L1_error)
+      __PYX_ERR(0, 648, __pyx_L1_error)
     }
     __pyx_v_rate = (((__pyx_v_dose_cp / __pyx_v_drug_concentration) * 60.0) * 60.0);
 
-    /* "opentiva/pkpd.pyx":649
+    /* "opentiva/pkpd.pyx":650
  *             rate = (dose_cp / drug_concentration) * 60 * 60
  * 
  *             if duration_b <= bolus_time:             # <<<<<<<<<<<<<<
@@ -7617,7 +7617,7 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_ce_cplimit_minimise(struct _
     __pyx_t_16 = ((__pyx_v_duration_b <= __pyx_v_bolus_time) != 0);
     if (__pyx_t_16) {
 
-      /* "opentiva/pkpd.pyx":650
+      /* "opentiva/pkpd.pyx":651
  * 
  *             if duration_b <= bolus_time:
  *                 break             # <<<<<<<<<<<<<<
@@ -7626,7 +7626,7 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_ce_cplimit_minimise(struct _
  */
       goto __pyx_L5_break;
 
-      /* "opentiva/pkpd.pyx":649
+      /* "opentiva/pkpd.pyx":650
  *             rate = (dose_cp / drug_concentration) * 60 * 60
  * 
  *             if duration_b <= bolus_time:             # <<<<<<<<<<<<<<
@@ -7635,7 +7635,7 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_ce_cplimit_minimise(struct _
  */
     }
 
-    /* "opentiva/pkpd.pyx":651
+    /* "opentiva/pkpd.pyx":652
  *             if duration_b <= bolus_time:
  *                 break
  *             elif max_infusion_rate == -1:             # <<<<<<<<<<<<<<
@@ -7645,7 +7645,7 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_ce_cplimit_minimise(struct _
     __pyx_t_16 = ((__pyx_v_max_infusion_rate == -1L) != 0);
     if (__pyx_t_16) {
 
-      /* "opentiva/pkpd.pyx":652
+      /* "opentiva/pkpd.pyx":653
  *                 break
  *             elif max_infusion_rate == -1:
  *                 break             # <<<<<<<<<<<<<<
@@ -7654,7 +7654,7 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_ce_cplimit_minimise(struct _
  */
       goto __pyx_L5_break;
 
-      /* "opentiva/pkpd.pyx":651
+      /* "opentiva/pkpd.pyx":652
  *             if duration_b <= bolus_time:
  *                 break
  *             elif max_infusion_rate == -1:             # <<<<<<<<<<<<<<
@@ -7663,7 +7663,7 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_ce_cplimit_minimise(struct _
  */
     }
 
-    /* "opentiva/pkpd.pyx":653
+    /* "opentiva/pkpd.pyx":654
  *             elif max_infusion_rate == -1:
  *                 break
  *             elif rate <= max_infusion_rate:             # <<<<<<<<<<<<<<
@@ -7673,7 +7673,7 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_ce_cplimit_minimise(struct _
     __pyx_t_16 = ((__pyx_v_rate <= __pyx_v_max_infusion_rate) != 0);
     if (__pyx_t_16) {
 
-      /* "opentiva/pkpd.pyx":654
+      /* "opentiva/pkpd.pyx":655
  *                 break
  *             elif rate <= max_infusion_rate:
  *                 break             # <<<<<<<<<<<<<<
@@ -7682,7 +7682,7 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_ce_cplimit_minimise(struct _
  */
       goto __pyx_L5_break;
 
-      /* "opentiva/pkpd.pyx":653
+      /* "opentiva/pkpd.pyx":654
  *             elif max_infusion_rate == -1:
  *                 break
  *             elif rate <= max_infusion_rate:             # <<<<<<<<<<<<<<
@@ -7691,7 +7691,7 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_ce_cplimit_minimise(struct _
  */
     }
 
-    /* "opentiva/pkpd.pyx":656
+    /* "opentiva/pkpd.pyx":657
  *                 break
  *             else:
  *                 duration_b += 1             # <<<<<<<<<<<<<<
@@ -7704,36 +7704,36 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_ce_cplimit_minimise(struct _
   }
   __pyx_L5_break:;
 
-  /* "opentiva/pkpd.pyx":659
+  /* "opentiva/pkpd.pyx":660
  * 
  *         # Add bolus dose to array
  *         end_b = start_b + duration_b             # <<<<<<<<<<<<<<
- *         inf_v = np.array([start_b, dose_cp, duration_b, end_b], dtype=np.float64)
- *         inf_tmp = np.vstack((inf_tmp, inf_v))
+ *         inf_v = np.array([start_b, dose_cp, duration_b, end_b],
+ *                           dtype=np.float64)
  */
   __pyx_v_end_b = (__pyx_v_start_b + __pyx_v_duration_b);
 
-  /* "opentiva/pkpd.pyx":660
+  /* "opentiva/pkpd.pyx":661
  *         # Add bolus dose to array
  *         end_b = start_b + duration_b
- *         inf_v = np.array([start_b, dose_cp, duration_b, end_b], dtype=np.float64)             # <<<<<<<<<<<<<<
+ *         inf_v = np.array([start_b, dose_cp, duration_b, end_b],             # <<<<<<<<<<<<<<
+ *                           dtype=np.float64)
  *         inf_tmp = np.vstack((inf_tmp, inf_v))
- * 
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 660, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 661, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_array); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 660, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_array); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 661, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_PyInt_From_int(__pyx_v_start_b); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 660, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_From_int(__pyx_v_start_b); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 661, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_12 = PyFloat_FromDouble(__pyx_v_dose_cp); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 660, __pyx_L1_error)
+  __pyx_t_12 = PyFloat_FromDouble(__pyx_v_dose_cp); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 661, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_12);
-  __pyx_t_15 = __Pyx_PyInt_From_int(__pyx_v_duration_b); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 660, __pyx_L1_error)
+  __pyx_t_15 = __Pyx_PyInt_From_int(__pyx_v_duration_b); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 661, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_15);
-  __pyx_t_11 = __Pyx_PyInt_From_int(__pyx_v_end_b); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 660, __pyx_L1_error)
+  __pyx_t_11 = __Pyx_PyInt_From_int(__pyx_v_end_b); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 661, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_11);
-  __pyx_t_10 = PyList_New(4); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 660, __pyx_L1_error)
+  __pyx_t_10 = PyList_New(4); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 661, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_10);
   __Pyx_GIVEREF(__pyx_t_1);
   PyList_SET_ITEM(__pyx_t_10, 0, __pyx_t_1);
@@ -7747,21 +7747,37 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_ce_cplimit_minimise(struct _
   __pyx_t_12 = 0;
   __pyx_t_15 = 0;
   __pyx_t_11 = 0;
-  __pyx_t_11 = PyTuple_New(1); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 660, __pyx_L1_error)
+  __pyx_t_11 = PyTuple_New(1); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 661, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_11);
   __Pyx_GIVEREF(__pyx_t_10);
   PyTuple_SET_ITEM(__pyx_t_11, 0, __pyx_t_10);
   __pyx_t_10 = 0;
-  __pyx_t_10 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 660, __pyx_L1_error)
+
+  /* "opentiva/pkpd.pyx":662
+ *         end_b = start_b + duration_b
+ *         inf_v = np.array([start_b, dose_cp, duration_b, end_b],
+ *                           dtype=np.float64)             # <<<<<<<<<<<<<<
+ *         inf_tmp = np.vstack((inf_tmp, inf_v))
+ * 
+ */
+  __pyx_t_10 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 662, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_10);
-  __Pyx_GetModuleGlobalName(__pyx_t_15, __pyx_n_s_np); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 660, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_15, __pyx_n_s_np); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 662, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_15);
-  __pyx_t_12 = __Pyx_PyObject_GetAttrStr(__pyx_t_15, __pyx_n_s_float64); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 660, __pyx_L1_error)
+  __pyx_t_12 = __Pyx_PyObject_GetAttrStr(__pyx_t_15, __pyx_n_s_float64); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 662, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_12);
   __Pyx_DECREF(__pyx_t_15); __pyx_t_15 = 0;
-  if (PyDict_SetItem(__pyx_t_10, __pyx_n_s_dtype, __pyx_t_12) < 0) __PYX_ERR(0, 660, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_10, __pyx_n_s_dtype, __pyx_t_12) < 0) __PYX_ERR(0, 662, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
-  __pyx_t_12 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_11, __pyx_t_10); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 660, __pyx_L1_error)
+
+  /* "opentiva/pkpd.pyx":661
+ *         # Add bolus dose to array
+ *         end_b = start_b + duration_b
+ *         inf_v = np.array([start_b, dose_cp, duration_b, end_b],             # <<<<<<<<<<<<<<
+ *                           dtype=np.float64)
+ *         inf_tmp = np.vstack((inf_tmp, inf_v))
+ */
+  __pyx_t_12 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_11, __pyx_t_10); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 661, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_12);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
@@ -7769,19 +7785,19 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_ce_cplimit_minimise(struct _
   __pyx_v_inf_v = __pyx_t_12;
   __pyx_t_12 = 0;
 
-  /* "opentiva/pkpd.pyx":661
- *         end_b = start_b + duration_b
- *         inf_v = np.array([start_b, dose_cp, duration_b, end_b], dtype=np.float64)
+  /* "opentiva/pkpd.pyx":663
+ *         inf_v = np.array([start_b, dose_cp, duration_b, end_b],
+ *                           dtype=np.float64)
  *         inf_tmp = np.vstack((inf_tmp, inf_v))             # <<<<<<<<<<<<<<
  * 
  *         previous_ce = 0
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_10, __pyx_n_s_np); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 661, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_10, __pyx_n_s_np); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 663, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_10);
-  __pyx_t_11 = __Pyx_PyObject_GetAttrStr(__pyx_t_10, __pyx_n_s_vstack); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 661, __pyx_L1_error)
+  __pyx_t_11 = __Pyx_PyObject_GetAttrStr(__pyx_t_10, __pyx_n_s_vstack); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 663, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_11);
   __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
-  __pyx_t_10 = PyTuple_New(2); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 661, __pyx_L1_error)
+  __pyx_t_10 = PyTuple_New(2); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 663, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_10);
   __Pyx_INCREF(__pyx_v_inf_tmp);
   __Pyx_GIVEREF(__pyx_v_inf_tmp);
@@ -7802,13 +7818,13 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_ce_cplimit_minimise(struct _
   __pyx_t_12 = (__pyx_t_2) ? __Pyx_PyObject_Call2Args(__pyx_t_11, __pyx_t_2, __pyx_t_10) : __Pyx_PyObject_CallOneArg(__pyx_t_11, __pyx_t_10);
   __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
-  if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 661, __pyx_L1_error)
+  if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 663, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_12);
   __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
   __Pyx_DECREF_SET(__pyx_v_inf_tmp, __pyx_t_12);
   __pyx_t_12 = 0;
 
-  /* "opentiva/pkpd.pyx":663
+  /* "opentiva/pkpd.pyx":665
  *         inf_tmp = np.vstack((inf_tmp, inf_v))
  * 
  *         previous_ce = 0             # <<<<<<<<<<<<<<
@@ -7817,7 +7833,7 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_ce_cplimit_minimise(struct _
  */
   __pyx_v_previous_ce = 0.0;
 
-  /* "opentiva/pkpd.pyx":664
+  /* "opentiva/pkpd.pyx":666
  * 
  *         previous_ce = 0
  *         current_cp = 0             # <<<<<<<<<<<<<<
@@ -7826,7 +7842,7 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_ce_cplimit_minimise(struct _
  */
   __pyx_v_current_cp = 0.0;
 
-  /* "opentiva/pkpd.pyx":665
+  /* "opentiva/pkpd.pyx":667
  *         previous_ce = 0
  *         current_cp = 0
  *         while True:             # <<<<<<<<<<<<<<
@@ -7835,7 +7851,7 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_ce_cplimit_minimise(struct _
  */
   while (1) {
 
-    /* "opentiva/pkpd.pyx":666
+    /* "opentiva/pkpd.pyx":668
  *         current_cp = 0
  *         while True:
  *             previous_cp = current_cp             # <<<<<<<<<<<<<<
@@ -7844,20 +7860,20 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_ce_cplimit_minimise(struct _
  */
     __pyx_v_previous_cp = __pyx_v_current_cp;
 
-    /* "opentiva/pkpd.pyx":667
+    /* "opentiva/pkpd.pyx":669
  *         while True:
  *             previous_cp = current_cp
  *             current_cp = self.calculate_cp(inf_tmp, t)             # <<<<<<<<<<<<<<
  * 
  *             current_ce = self.calculate_ce(current_cp, previous_cp,
  */
-    __pyx_t_17 = __Pyx_PyObject_to_MemoryviewSlice_dsds_double(__pyx_v_inf_tmp, PyBUF_WRITABLE); if (unlikely(!__pyx_t_17.memview)) __PYX_ERR(0, 667, __pyx_L1_error)
+    __pyx_t_17 = __Pyx_PyObject_to_MemoryviewSlice_dsds_double(__pyx_v_inf_tmp, PyBUF_WRITABLE); if (unlikely(!__pyx_t_17.memview)) __PYX_ERR(0, 669, __pyx_L1_error)
     __pyx_v_current_cp = ((struct __pyx_vtabstruct_8opentiva_4pkpd_PkPdModel *)__pyx_v_self->__pyx_vtab)->calculate_cp(__pyx_v_self, __pyx_t_17, __pyx_v_t, 0);
     __PYX_XDEC_MEMVIEW(&__pyx_t_17, 1);
     __pyx_t_17.memview = NULL;
     __pyx_t_17.data = NULL;
 
-    /* "opentiva/pkpd.pyx":669
+    /* "opentiva/pkpd.pyx":671
  *             current_cp = self.calculate_cp(inf_tmp, t)
  * 
  *             current_ce = self.calculate_ce(current_cp, previous_cp,             # <<<<<<<<<<<<<<
@@ -7866,7 +7882,7 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_ce_cplimit_minimise(struct _
  */
     __pyx_v_current_ce = ((struct __pyx_vtabstruct_8opentiva_4pkpd_PkPdModel *)__pyx_v_self->__pyx_vtab)->calculate_ce(__pyx_v_self, __pyx_v_current_cp, __pyx_v_previous_cp, __pyx_v_previous_ce);
 
-    /* "opentiva/pkpd.pyx":672
+    /* "opentiva/pkpd.pyx":674
  *                                            previous_ce)
  * 
  *             delta_ce = previous_ce - current_ce             # <<<<<<<<<<<<<<
@@ -7875,7 +7891,7 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_ce_cplimit_minimise(struct _
  */
     __pyx_v_delta_ce = (__pyx_v_previous_ce - __pyx_v_current_ce);
 
-    /* "opentiva/pkpd.pyx":673
+    /* "opentiva/pkpd.pyx":675
  * 
  *             delta_ce = previous_ce - current_ce
  *             previous_ce = current_ce             # <<<<<<<<<<<<<<
@@ -7884,7 +7900,7 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_ce_cplimit_minimise(struct _
  */
     __pyx_v_previous_ce = __pyx_v_current_ce;
 
-    /* "opentiva/pkpd.pyx":675
+    /* "opentiva/pkpd.pyx":677
  *             previous_ce = current_ce
  * 
  *             if delta_ce > 0 and  t >= end_b:             # <<<<<<<<<<<<<<
@@ -7902,7 +7918,7 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_ce_cplimit_minimise(struct _
     __pyx_L10_bool_binop_done:;
     if (__pyx_t_16) {
 
-      /* "opentiva/pkpd.pyx":676
+      /* "opentiva/pkpd.pyx":678
  * 
  *             if delta_ce > 0 and  t >= end_b:
  *                 break             # <<<<<<<<<<<<<<
@@ -7911,7 +7927,7 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_ce_cplimit_minimise(struct _
  */
       goto __pyx_L8_break;
 
-      /* "opentiva/pkpd.pyx":675
+      /* "opentiva/pkpd.pyx":677
  *             previous_ce = current_ce
  * 
  *             if delta_ce > 0 and  t >= end_b:             # <<<<<<<<<<<<<<
@@ -7920,7 +7936,7 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_ce_cplimit_minimise(struct _
  */
     }
 
-    /* "opentiva/pkpd.pyx":678
+    /* "opentiva/pkpd.pyx":680
  *                 break
  * 
  *             t += 1             # <<<<<<<<<<<<<<
@@ -7931,7 +7947,7 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_ce_cplimit_minimise(struct _
   }
   __pyx_L8_break:;
 
-  /* "opentiva/pkpd.pyx":680
+  /* "opentiva/pkpd.pyx":682
  *             t += 1
  * 
  *         return target - current_ce             # <<<<<<<<<<<<<<
@@ -7939,18 +7955,18 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_ce_cplimit_minimise(struct _
  * 
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_12 = PyFloat_FromDouble((__pyx_v_target - __pyx_v_current_ce)); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 680, __pyx_L1_error)
+  __pyx_t_12 = PyFloat_FromDouble((__pyx_v_target - __pyx_v_current_ce)); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 682, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_12);
   __pyx_r = __pyx_t_12;
   __pyx_t_12 = 0;
   goto __pyx_L0;
 
-  /* "opentiva/pkpd.pyx":584
+  /* "opentiva/pkpd.pyx":585
  * 
  * 
  *     cpdef ce_cplimit_minimise(self, double limit, double [:, :] infusion_list,             # <<<<<<<<<<<<<<
  *                   double target, int duration_b, int start_b,
- *                   int duration_ce, double drug_concentration, int max_infusion_rate,
+ *                   int duration_ce, double drug_concentration,
  */
 
   /* function exit code */
@@ -8036,53 +8052,53 @@ static PyObject *__pyx_pw_8opentiva_4pkpd_9PkPdModel_17ce_cplimit_minimise(PyObj
         case  1:
         if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_infusion_list)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("ce_cplimit_minimise", 1, 9, 9, 1); __PYX_ERR(0, 584, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("ce_cplimit_minimise", 1, 9, 9, 1); __PYX_ERR(0, 585, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  2:
         if (likely((values[2] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_target)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("ce_cplimit_minimise", 1, 9, 9, 2); __PYX_ERR(0, 584, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("ce_cplimit_minimise", 1, 9, 9, 2); __PYX_ERR(0, 585, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  3:
         if (likely((values[3] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_duration_b)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("ce_cplimit_minimise", 1, 9, 9, 3); __PYX_ERR(0, 584, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("ce_cplimit_minimise", 1, 9, 9, 3); __PYX_ERR(0, 585, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  4:
         if (likely((values[4] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_start_b)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("ce_cplimit_minimise", 1, 9, 9, 4); __PYX_ERR(0, 584, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("ce_cplimit_minimise", 1, 9, 9, 4); __PYX_ERR(0, 585, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  5:
         if (likely((values[5] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_duration_ce)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("ce_cplimit_minimise", 1, 9, 9, 5); __PYX_ERR(0, 584, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("ce_cplimit_minimise", 1, 9, 9, 5); __PYX_ERR(0, 585, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  6:
         if (likely((values[6] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_drug_concentration)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("ce_cplimit_minimise", 1, 9, 9, 6); __PYX_ERR(0, 584, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("ce_cplimit_minimise", 1, 9, 9, 6); __PYX_ERR(0, 585, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  7:
         if (likely((values[7] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_max_infusion_rate)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("ce_cplimit_minimise", 1, 9, 9, 7); __PYX_ERR(0, 584, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("ce_cplimit_minimise", 1, 9, 9, 7); __PYX_ERR(0, 585, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  8:
         if (likely((values[8] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_bolus_time)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("ce_cplimit_minimise", 1, 9, 9, 8); __PYX_ERR(0, 584, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("ce_cplimit_minimise", 1, 9, 9, 8); __PYX_ERR(0, 585, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "ce_cplimit_minimise") < 0)) __PYX_ERR(0, 584, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "ce_cplimit_minimise") < 0)) __PYX_ERR(0, 585, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 9) {
       goto __pyx_L5_argtuple_error;
@@ -8097,19 +8113,19 @@ static PyObject *__pyx_pw_8opentiva_4pkpd_9PkPdModel_17ce_cplimit_minimise(PyObj
       values[7] = PyTuple_GET_ITEM(__pyx_args, 7);
       values[8] = PyTuple_GET_ITEM(__pyx_args, 8);
     }
-    __pyx_v_limit = __pyx_PyFloat_AsDouble(values[0]); if (unlikely((__pyx_v_limit == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 584, __pyx_L3_error)
-    __pyx_v_infusion_list = __Pyx_PyObject_to_MemoryviewSlice_dsds_double(values[1], PyBUF_WRITABLE); if (unlikely(!__pyx_v_infusion_list.memview)) __PYX_ERR(0, 584, __pyx_L3_error)
-    __pyx_v_target = __pyx_PyFloat_AsDouble(values[2]); if (unlikely((__pyx_v_target == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 585, __pyx_L3_error)
-    __pyx_v_duration_b = __Pyx_PyInt_As_int(values[3]); if (unlikely((__pyx_v_duration_b == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 585, __pyx_L3_error)
-    __pyx_v_start_b = __Pyx_PyInt_As_int(values[4]); if (unlikely((__pyx_v_start_b == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 585, __pyx_L3_error)
-    __pyx_v_duration_ce = __Pyx_PyInt_As_int(values[5]); if (unlikely((__pyx_v_duration_ce == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 586, __pyx_L3_error)
-    __pyx_v_drug_concentration = __pyx_PyFloat_AsDouble(values[6]); if (unlikely((__pyx_v_drug_concentration == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 586, __pyx_L3_error)
-    __pyx_v_max_infusion_rate = __Pyx_PyInt_As_int(values[7]); if (unlikely((__pyx_v_max_infusion_rate == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 586, __pyx_L3_error)
-    __pyx_v_bolus_time = __Pyx_PyInt_As_int(values[8]); if (unlikely((__pyx_v_bolus_time == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 587, __pyx_L3_error)
+    __pyx_v_limit = __pyx_PyFloat_AsDouble(values[0]); if (unlikely((__pyx_v_limit == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 585, __pyx_L3_error)
+    __pyx_v_infusion_list = __Pyx_PyObject_to_MemoryviewSlice_dsds_double(values[1], PyBUF_WRITABLE); if (unlikely(!__pyx_v_infusion_list.memview)) __PYX_ERR(0, 585, __pyx_L3_error)
+    __pyx_v_target = __pyx_PyFloat_AsDouble(values[2]); if (unlikely((__pyx_v_target == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 586, __pyx_L3_error)
+    __pyx_v_duration_b = __Pyx_PyInt_As_int(values[3]); if (unlikely((__pyx_v_duration_b == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 586, __pyx_L3_error)
+    __pyx_v_start_b = __Pyx_PyInt_As_int(values[4]); if (unlikely((__pyx_v_start_b == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 586, __pyx_L3_error)
+    __pyx_v_duration_ce = __Pyx_PyInt_As_int(values[5]); if (unlikely((__pyx_v_duration_ce == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 587, __pyx_L3_error)
+    __pyx_v_drug_concentration = __pyx_PyFloat_AsDouble(values[6]); if (unlikely((__pyx_v_drug_concentration == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 587, __pyx_L3_error)
+    __pyx_v_max_infusion_rate = __Pyx_PyInt_As_int(values[7]); if (unlikely((__pyx_v_max_infusion_rate == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 588, __pyx_L3_error)
+    __pyx_v_bolus_time = __Pyx_PyInt_As_int(values[8]); if (unlikely((__pyx_v_bolus_time == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 588, __pyx_L3_error)
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("ce_cplimit_minimise", 1, 9, 9, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 584, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("ce_cplimit_minimise", 1, 9, 9, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 585, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("opentiva.pkpd.PkPdModel.ce_cplimit_minimise", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
@@ -8131,8 +8147,8 @@ static PyObject *__pyx_pf_8opentiva_4pkpd_9PkPdModel_16ce_cplimit_minimise(struc
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("ce_cplimit_minimise", 0);
   __Pyx_XDECREF(__pyx_r);
-  if (unlikely(!__pyx_v_infusion_list.memview)) { __Pyx_RaiseUnboundLocalError("infusion_list"); __PYX_ERR(0, 584, __pyx_L1_error) }
-  __pyx_t_1 = __pyx_f_8opentiva_4pkpd_9PkPdModel_ce_cplimit_minimise(__pyx_v_self, __pyx_v_limit, __pyx_v_infusion_list, __pyx_v_target, __pyx_v_duration_b, __pyx_v_start_b, __pyx_v_duration_ce, __pyx_v_drug_concentration, __pyx_v_max_infusion_rate, __pyx_v_bolus_time, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 584, __pyx_L1_error)
+  if (unlikely(!__pyx_v_infusion_list.memview)) { __Pyx_RaiseUnboundLocalError("infusion_list"); __PYX_ERR(0, 585, __pyx_L1_error) }
+  __pyx_t_1 = __pyx_f_8opentiva_4pkpd_9PkPdModel_ce_cplimit_minimise(__pyx_v_self, __pyx_v_limit, __pyx_v_infusion_list, __pyx_v_target, __pyx_v_duration_b, __pyx_v_start_b, __pyx_v_duration_ce, __pyx_v_drug_concentration, __pyx_v_max_infusion_rate, __pyx_v_bolus_time, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 585, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -8150,12 +8166,12 @@ static PyObject *__pyx_pf_8opentiva_4pkpd_9PkPdModel_16ce_cplimit_minimise(struc
   return __pyx_r;
 }
 
-/* "opentiva/pkpd.pyx":683
+/* "opentiva/pkpd.pyx":685
  * 
  * 
  *     cpdef maintenance_infusion(self, double [:, :] infusion_list, double target,             # <<<<<<<<<<<<<<
  *                                int time, int duration):
- *         """Returns the dose over 1 second to make up for clearance and elimination
+ *         """Returns the dose over 1 second to make up for clearance and
  */
 
 static PyObject *__pyx_pw_8opentiva_4pkpd_9PkPdModel_19maintenance_infusion(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
@@ -8190,18 +8206,18 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_maintenance_infusion(struct 
     if (unlikely(!__Pyx_object_dict_version_matches(((PyObject *)__pyx_v_self), __pyx_tp_dict_version, __pyx_obj_dict_version))) {
       PY_UINT64_T __pyx_type_dict_guard = __Pyx_get_tp_dict_version(((PyObject *)__pyx_v_self));
       #endif
-      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_maintenance_infusion); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 683, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_maintenance_infusion); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 685, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)(void*)__pyx_pw_8opentiva_4pkpd_9PkPdModel_19maintenance_infusion)) {
         __Pyx_XDECREF(__pyx_r);
-        if (unlikely(!__pyx_v_infusion_list.memview)) { __Pyx_RaiseUnboundLocalError("infusion_list"); __PYX_ERR(0, 683, __pyx_L1_error) }
-        __pyx_t_3 = __pyx_memoryview_fromslice(__pyx_v_infusion_list, 2, (PyObject *(*)(char *)) __pyx_memview_get_double, (int (*)(char *, PyObject *)) __pyx_memview_set_double, 0);; if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 683, __pyx_L1_error)
+        if (unlikely(!__pyx_v_infusion_list.memview)) { __Pyx_RaiseUnboundLocalError("infusion_list"); __PYX_ERR(0, 685, __pyx_L1_error) }
+        __pyx_t_3 = __pyx_memoryview_fromslice(__pyx_v_infusion_list, 2, (PyObject *(*)(char *)) __pyx_memview_get_double, (int (*)(char *, PyObject *)) __pyx_memview_set_double, 0);; if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 685, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_3);
-        __pyx_t_4 = PyFloat_FromDouble(__pyx_v_target); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 683, __pyx_L1_error)
+        __pyx_t_4 = PyFloat_FromDouble(__pyx_v_target); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 685, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_4);
-        __pyx_t_5 = __Pyx_PyInt_From_int(__pyx_v_time); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 683, __pyx_L1_error)
+        __pyx_t_5 = __Pyx_PyInt_From_int(__pyx_v_time); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 685, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_5);
-        __pyx_t_6 = __Pyx_PyInt_From_int(__pyx_v_duration); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 683, __pyx_L1_error)
+        __pyx_t_6 = __Pyx_PyInt_From_int(__pyx_v_duration); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 685, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_6);
         __Pyx_INCREF(__pyx_t_1);
         __pyx_t_7 = __pyx_t_1; __pyx_t_8 = NULL;
@@ -8219,7 +8235,7 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_maintenance_infusion(struct 
         #if CYTHON_FAST_PYCALL
         if (PyFunction_Check(__pyx_t_7)) {
           PyObject *__pyx_temp[5] = {__pyx_t_8, __pyx_t_3, __pyx_t_4, __pyx_t_5, __pyx_t_6};
-          __pyx_t_2 = __Pyx_PyFunction_FastCall(__pyx_t_7, __pyx_temp+1-__pyx_t_9, 4+__pyx_t_9); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 683, __pyx_L1_error)
+          __pyx_t_2 = __Pyx_PyFunction_FastCall(__pyx_t_7, __pyx_temp+1-__pyx_t_9, 4+__pyx_t_9); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 685, __pyx_L1_error)
           __Pyx_XDECREF(__pyx_t_8); __pyx_t_8 = 0;
           __Pyx_GOTREF(__pyx_t_2);
           __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
@@ -8231,7 +8247,7 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_maintenance_infusion(struct 
         #if CYTHON_FAST_PYCCALL
         if (__Pyx_PyFastCFunction_Check(__pyx_t_7)) {
           PyObject *__pyx_temp[5] = {__pyx_t_8, __pyx_t_3, __pyx_t_4, __pyx_t_5, __pyx_t_6};
-          __pyx_t_2 = __Pyx_PyCFunction_FastCall(__pyx_t_7, __pyx_temp+1-__pyx_t_9, 4+__pyx_t_9); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 683, __pyx_L1_error)
+          __pyx_t_2 = __Pyx_PyCFunction_FastCall(__pyx_t_7, __pyx_temp+1-__pyx_t_9, 4+__pyx_t_9); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 685, __pyx_L1_error)
           __Pyx_XDECREF(__pyx_t_8); __pyx_t_8 = 0;
           __Pyx_GOTREF(__pyx_t_2);
           __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
@@ -8241,7 +8257,7 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_maintenance_infusion(struct 
         } else
         #endif
         {
-          __pyx_t_10 = PyTuple_New(4+__pyx_t_9); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 683, __pyx_L1_error)
+          __pyx_t_10 = PyTuple_New(4+__pyx_t_9); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 685, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_10);
           if (__pyx_t_8) {
             __Pyx_GIVEREF(__pyx_t_8); PyTuple_SET_ITEM(__pyx_t_10, 0, __pyx_t_8); __pyx_t_8 = NULL;
@@ -8258,7 +8274,7 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_maintenance_infusion(struct 
           __pyx_t_4 = 0;
           __pyx_t_5 = 0;
           __pyx_t_6 = 0;
-          __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_7, __pyx_t_10, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 683, __pyx_L1_error)
+          __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_7, __pyx_t_10, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 685, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_2);
           __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
         }
@@ -8281,7 +8297,7 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_maintenance_infusion(struct 
     #endif
   }
 
-  /* "opentiva/pkpd.pyx":713
+  /* "opentiva/pkpd.pyx":715
  *         cdef double dose, cp
  * 
  *         time += duration             # <<<<<<<<<<<<<<
@@ -8290,7 +8306,7 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_maintenance_infusion(struct 
  */
   __pyx_v_time = (__pyx_v_time + __pyx_v_duration);
 
-  /* "opentiva/pkpd.pyx":714
+  /* "opentiva/pkpd.pyx":716
  * 
  *         time += duration
  *         cp = self.calculate_cp(infusion_list, time)             # <<<<<<<<<<<<<<
@@ -8299,7 +8315,7 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_maintenance_infusion(struct 
  */
   __pyx_v_cp = ((struct __pyx_vtabstruct_8opentiva_4pkpd_PkPdModel *)__pyx_v_self->__pyx_vtab)->calculate_cp(__pyx_v_self, __pyx_v_infusion_list, __pyx_v_time, 0);
 
-  /* "opentiva/pkpd.pyx":716
+  /* "opentiva/pkpd.pyx":718
  *         cp = self.calculate_cp(infusion_list, time)
  * 
  *         if target - cp <= 0:             # <<<<<<<<<<<<<<
@@ -8309,7 +8325,7 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_maintenance_infusion(struct 
   __pyx_t_11 = (((__pyx_v_target - __pyx_v_cp) <= 0.0) != 0);
   if (__pyx_t_11) {
 
-    /* "opentiva/pkpd.pyx":717
+    /* "opentiva/pkpd.pyx":719
  * 
  *         if target - cp <= 0:
  *             return 0             # <<<<<<<<<<<<<<
@@ -8321,7 +8337,7 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_maintenance_infusion(struct 
     __pyx_r = __pyx_int_0;
     goto __pyx_L0;
 
-    /* "opentiva/pkpd.pyx":716
+    /* "opentiva/pkpd.pyx":718
  *         cp = self.calculate_cp(infusion_list, time)
  * 
  *         if target - cp <= 0:             # <<<<<<<<<<<<<<
@@ -8330,7 +8346,7 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_maintenance_infusion(struct 
  */
   }
 
-  /* "opentiva/pkpd.pyx":719
+  /* "opentiva/pkpd.pyx":721
  *             return 0
  * 
  *         if duration == 0:             # <<<<<<<<<<<<<<
@@ -8340,7 +8356,7 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_maintenance_infusion(struct 
   __pyx_t_11 = ((__pyx_v_duration == 0) != 0);
   if (__pyx_t_11) {
 
-    /* "opentiva/pkpd.pyx":720
+    /* "opentiva/pkpd.pyx":722
  * 
  *         if duration == 0:
  *             return 0  # avoid divide by zero error             # <<<<<<<<<<<<<<
@@ -8352,7 +8368,7 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_maintenance_infusion(struct 
     __pyx_r = __pyx_int_0;
     goto __pyx_L0;
 
-    /* "opentiva/pkpd.pyx":719
+    /* "opentiva/pkpd.pyx":721
  *             return 0
  * 
  *         if duration == 0:             # <<<<<<<<<<<<<<
@@ -8361,7 +8377,7 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_maintenance_infusion(struct 
  */
   }
 
-  /* "opentiva/pkpd.pyx":722
+  /* "opentiva/pkpd.pyx":724
  *             return 0  # avoid divide by zero error
  * 
  *         dose = (target - cp) / (             # <<<<<<<<<<<<<<
@@ -8370,7 +8386,7 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_maintenance_infusion(struct 
  */
   __pyx_t_12 = (__pyx_v_target - __pyx_v_cp);
 
-  /* "opentiva/pkpd.pyx":723
+  /* "opentiva/pkpd.pyx":725
  * 
  *         dose = (target - cp) / (
  *             (self.A / self.alpha) * (1 - exp(-self.alpha * duration)) +             # <<<<<<<<<<<<<<
@@ -8379,10 +8395,10 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_maintenance_infusion(struct 
  */
   if (unlikely(__pyx_v_self->alpha == 0)) {
     PyErr_SetString(PyExc_ZeroDivisionError, "float division");
-    __PYX_ERR(0, 723, __pyx_L1_error)
+    __PYX_ERR(0, 725, __pyx_L1_error)
   }
 
-  /* "opentiva/pkpd.pyx":724
+  /* "opentiva/pkpd.pyx":726
  *         dose = (target - cp) / (
  *             (self.A / self.alpha) * (1 - exp(-self.alpha * duration)) +
  *             (self.B / self.beta) * (1 - exp(-self.beta * duration)) +             # <<<<<<<<<<<<<<
@@ -8391,10 +8407,10 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_maintenance_infusion(struct 
  */
   if (unlikely(__pyx_v_self->beta == 0)) {
     PyErr_SetString(PyExc_ZeroDivisionError, "float division");
-    __PYX_ERR(0, 724, __pyx_L1_error)
+    __PYX_ERR(0, 726, __pyx_L1_error)
   }
 
-  /* "opentiva/pkpd.pyx":725
+  /* "opentiva/pkpd.pyx":727
  *             (self.A / self.alpha) * (1 - exp(-self.alpha * duration)) +
  *             (self.B / self.beta) * (1 - exp(-self.beta * duration)) +
  *             (self.C / self.gamma) * (1 - exp(-self.gamma * duration)))             # <<<<<<<<<<<<<<
@@ -8403,10 +8419,10 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_maintenance_infusion(struct 
  */
   if (unlikely(__pyx_v_self->gamma == 0)) {
     PyErr_SetString(PyExc_ZeroDivisionError, "float division");
-    __PYX_ERR(0, 725, __pyx_L1_error)
+    __PYX_ERR(0, 727, __pyx_L1_error)
   }
 
-  /* "opentiva/pkpd.pyx":724
+  /* "opentiva/pkpd.pyx":726
  *         dose = (target - cp) / (
  *             (self.A / self.alpha) * (1 - exp(-self.alpha * duration)) +
  *             (self.B / self.beta) * (1 - exp(-self.beta * duration)) +             # <<<<<<<<<<<<<<
@@ -8415,7 +8431,7 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_maintenance_infusion(struct 
  */
   __pyx_t_13 = ((((__pyx_v_self->A / __pyx_v_self->alpha) * (1.0 - exp(((-__pyx_v_self->alpha) * __pyx_v_duration)))) + ((__pyx_v_self->B / __pyx_v_self->beta) * (1.0 - exp(((-__pyx_v_self->beta) * __pyx_v_duration))))) + ((__pyx_v_self->C / __pyx_v_self->gamma) * (1.0 - exp(((-__pyx_v_self->gamma) * __pyx_v_duration)))));
 
-  /* "opentiva/pkpd.pyx":722
+  /* "opentiva/pkpd.pyx":724
  *             return 0  # avoid divide by zero error
  * 
  *         dose = (target - cp) / (             # <<<<<<<<<<<<<<
@@ -8424,11 +8440,11 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_maintenance_infusion(struct 
  */
   if (unlikely(__pyx_t_13 == 0)) {
     PyErr_SetString(PyExc_ZeroDivisionError, "float division");
-    __PYX_ERR(0, 722, __pyx_L1_error)
+    __PYX_ERR(0, 724, __pyx_L1_error)
   }
   __pyx_v_dose = (__pyx_t_12 / __pyx_t_13);
 
-  /* "opentiva/pkpd.pyx":727
+  /* "opentiva/pkpd.pyx":729
  *             (self.C / self.gamma) * (1 - exp(-self.gamma * duration)))
  * 
  *         return dose             # <<<<<<<<<<<<<<
@@ -8436,18 +8452,18 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_maintenance_infusion(struct 
  * 
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_dose); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 727, __pyx_L1_error)
+  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_dose); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 729, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "opentiva/pkpd.pyx":683
+  /* "opentiva/pkpd.pyx":685
  * 
  * 
  *     cpdef maintenance_infusion(self, double [:, :] infusion_list, double target,             # <<<<<<<<<<<<<<
  *                                int time, int duration):
- *         """Returns the dose over 1 second to make up for clearance and elimination
+ *         """Returns the dose over 1 second to make up for clearance and
  */
 
   /* function exit code */
@@ -8471,7 +8487,7 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_maintenance_infusion(struct 
 
 /* Python wrapper */
 static PyObject *__pyx_pw_8opentiva_4pkpd_9PkPdModel_19maintenance_infusion(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_8opentiva_4pkpd_9PkPdModel_18maintenance_infusion[] = "Returns the dose over 1 second to make up for clearance and elimination\n        loses starting at a point in time over a duration\n\n        Parameters\n        ----------\n        infusion_list\n            2d array of infusions with each row containing:\n            [start time of infusion in seconds,\n            dose of infusion over 1 second,\n            duration of infusion in seconds,\n            end time of infusion in seconds]\n        target\n            plasma/ effect site concentration to maintain at\n        time\n            start time in seconds to calculate maintenance infusion from\n        duration\n            time in seconds of the duration of the maintenance\n            infusion\n\n        Returns\n        -------\n        double\n            dose per 1 second that would maintain a steady state\n            concentration over the duration time period\n         ";
+static char __pyx_doc_8opentiva_4pkpd_9PkPdModel_18maintenance_infusion[] = "Returns the dose over 1 second to make up for clearance and \n        elimination loses starting at a point in time over a duration\n\n        Parameters\n        ----------\n        infusion_list\n            2d array of infusions with each row containing:\n            [start time of infusion in seconds,\n            dose of infusion over 1 second,\n            duration of infusion in seconds,\n            end time of infusion in seconds]\n        target\n            plasma/ effect site concentration to maintain at\n        time\n            start time in seconds to calculate maintenance infusion from\n        duration\n            time in seconds of the duration of the maintenance\n            infusion\n\n        Returns\n        -------\n        double\n            dose per 1 second that would maintain a steady state\n            concentration over the duration time period\n        ";
 static PyObject *__pyx_pw_8opentiva_4pkpd_9PkPdModel_19maintenance_infusion(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   __Pyx_memviewslice __pyx_v_infusion_list = { 0, 0, { 0 }, { 0 }, { 0 } };
   double __pyx_v_target;
@@ -8510,23 +8526,23 @@ static PyObject *__pyx_pw_8opentiva_4pkpd_9PkPdModel_19maintenance_infusion(PyOb
         case  1:
         if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_target)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("maintenance_infusion", 1, 4, 4, 1); __PYX_ERR(0, 683, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("maintenance_infusion", 1, 4, 4, 1); __PYX_ERR(0, 685, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  2:
         if (likely((values[2] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_time)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("maintenance_infusion", 1, 4, 4, 2); __PYX_ERR(0, 683, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("maintenance_infusion", 1, 4, 4, 2); __PYX_ERR(0, 685, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  3:
         if (likely((values[3] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_duration)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("maintenance_infusion", 1, 4, 4, 3); __PYX_ERR(0, 683, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("maintenance_infusion", 1, 4, 4, 3); __PYX_ERR(0, 685, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "maintenance_infusion") < 0)) __PYX_ERR(0, 683, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "maintenance_infusion") < 0)) __PYX_ERR(0, 685, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 4) {
       goto __pyx_L5_argtuple_error;
@@ -8536,14 +8552,14 @@ static PyObject *__pyx_pw_8opentiva_4pkpd_9PkPdModel_19maintenance_infusion(PyOb
       values[2] = PyTuple_GET_ITEM(__pyx_args, 2);
       values[3] = PyTuple_GET_ITEM(__pyx_args, 3);
     }
-    __pyx_v_infusion_list = __Pyx_PyObject_to_MemoryviewSlice_dsds_double(values[0], PyBUF_WRITABLE); if (unlikely(!__pyx_v_infusion_list.memview)) __PYX_ERR(0, 683, __pyx_L3_error)
-    __pyx_v_target = __pyx_PyFloat_AsDouble(values[1]); if (unlikely((__pyx_v_target == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 683, __pyx_L3_error)
-    __pyx_v_time = __Pyx_PyInt_As_int(values[2]); if (unlikely((__pyx_v_time == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 684, __pyx_L3_error)
-    __pyx_v_duration = __Pyx_PyInt_As_int(values[3]); if (unlikely((__pyx_v_duration == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 684, __pyx_L3_error)
+    __pyx_v_infusion_list = __Pyx_PyObject_to_MemoryviewSlice_dsds_double(values[0], PyBUF_WRITABLE); if (unlikely(!__pyx_v_infusion_list.memview)) __PYX_ERR(0, 685, __pyx_L3_error)
+    __pyx_v_target = __pyx_PyFloat_AsDouble(values[1]); if (unlikely((__pyx_v_target == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 685, __pyx_L3_error)
+    __pyx_v_time = __Pyx_PyInt_As_int(values[2]); if (unlikely((__pyx_v_time == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 686, __pyx_L3_error)
+    __pyx_v_duration = __Pyx_PyInt_As_int(values[3]); if (unlikely((__pyx_v_duration == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 686, __pyx_L3_error)
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("maintenance_infusion", 1, 4, 4, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 683, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("maintenance_infusion", 1, 4, 4, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 685, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("opentiva.pkpd.PkPdModel.maintenance_infusion", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
@@ -8565,8 +8581,8 @@ static PyObject *__pyx_pf_8opentiva_4pkpd_9PkPdModel_18maintenance_infusion(stru
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("maintenance_infusion", 0);
   __Pyx_XDECREF(__pyx_r);
-  if (unlikely(!__pyx_v_infusion_list.memview)) { __Pyx_RaiseUnboundLocalError("infusion_list"); __PYX_ERR(0, 683, __pyx_L1_error) }
-  __pyx_t_1 = __pyx_f_8opentiva_4pkpd_9PkPdModel_maintenance_infusion(__pyx_v_self, __pyx_v_infusion_list, __pyx_v_target, __pyx_v_time, __pyx_v_duration, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 683, __pyx_L1_error)
+  if (unlikely(!__pyx_v_infusion_list.memview)) { __Pyx_RaiseUnboundLocalError("infusion_list"); __PYX_ERR(0, 685, __pyx_L1_error) }
+  __pyx_t_1 = __pyx_f_8opentiva_4pkpd_9PkPdModel_maintenance_infusion(__pyx_v_self, __pyx_v_infusion_list, __pyx_v_target, __pyx_v_time, __pyx_v_duration, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 685, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -8584,7 +8600,7 @@ static PyObject *__pyx_pf_8opentiva_4pkpd_9PkPdModel_18maintenance_infusion(stru
   return __pyx_r;
 }
 
-/* "opentiva/pkpd.pyx":730
+/* "opentiva/pkpd.pyx":732
  * 
  * 
  *     cpdef maintenance_infusion_list(self, double [:] target_concentration,             # <<<<<<<<<<<<<<
@@ -8634,23 +8650,23 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_maintenance_infusion_list(st
     if (unlikely(!__Pyx_object_dict_version_matches(((PyObject *)__pyx_v_self), __pyx_tp_dict_version, __pyx_obj_dict_version))) {
       PY_UINT64_T __pyx_type_dict_guard = __Pyx_get_tp_dict_version(((PyObject *)__pyx_v_self));
       #endif
-      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_maintenance_infusion_list); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 730, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_maintenance_infusion_list); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 732, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)(void*)__pyx_pw_8opentiva_4pkpd_9PkPdModel_21maintenance_infusion_list)) {
         __Pyx_XDECREF(__pyx_r);
-        if (unlikely(!__pyx_v_target_concentration.memview)) { __Pyx_RaiseUnboundLocalError("target_concentration"); __PYX_ERR(0, 730, __pyx_L1_error) }
-        __pyx_t_3 = __pyx_memoryview_fromslice(__pyx_v_target_concentration, 1, (PyObject *(*)(char *)) __pyx_memview_get_double, (int (*)(char *, PyObject *)) __pyx_memview_set_double, 0);; if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 730, __pyx_L1_error)
+        if (unlikely(!__pyx_v_target_concentration.memview)) { __Pyx_RaiseUnboundLocalError("target_concentration"); __PYX_ERR(0, 732, __pyx_L1_error) }
+        __pyx_t_3 = __pyx_memoryview_fromslice(__pyx_v_target_concentration, 1, (PyObject *(*)(char *)) __pyx_memview_get_double, (int (*)(char *, PyObject *)) __pyx_memview_set_double, 0);; if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 732, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_3);
-        if (unlikely(!__pyx_v_infusion_list.memview)) { __Pyx_RaiseUnboundLocalError("infusion_list"); __PYX_ERR(0, 730, __pyx_L1_error) }
-        __pyx_t_4 = __pyx_memoryview_fromslice(__pyx_v_infusion_list, 2, (PyObject *(*)(char *)) __pyx_memview_get_double, (int (*)(char *, PyObject *)) __pyx_memview_set_double, 0);; if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 730, __pyx_L1_error)
+        if (unlikely(!__pyx_v_infusion_list.memview)) { __Pyx_RaiseUnboundLocalError("infusion_list"); __PYX_ERR(0, 732, __pyx_L1_error) }
+        __pyx_t_4 = __pyx_memoryview_fromslice(__pyx_v_infusion_list, 2, (PyObject *(*)(char *)) __pyx_memview_get_double, (int (*)(char *, PyObject *)) __pyx_memview_set_double, 0);; if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 732, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_4);
-        __pyx_t_5 = __Pyx_PyInt_From_int(__pyx_v_duration); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 730, __pyx_L1_error)
+        __pyx_t_5 = __Pyx_PyInt_From_int(__pyx_v_duration); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 732, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_5);
-        __pyx_t_6 = __Pyx_PyInt_From_int(__pyx_v_multiplier); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 730, __pyx_L1_error)
+        __pyx_t_6 = __Pyx_PyInt_From_int(__pyx_v_multiplier); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 732, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_6);
-        __pyx_t_7 = PyFloat_FromDouble(__pyx_v_drug_concentration); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 730, __pyx_L1_error)
+        __pyx_t_7 = PyFloat_FromDouble(__pyx_v_drug_concentration); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 732, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_7);
-        __pyx_t_8 = __Pyx_PyInt_From_int(__pyx_v_max_infusion_rate); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 730, __pyx_L1_error)
+        __pyx_t_8 = __Pyx_PyInt_From_int(__pyx_v_max_infusion_rate); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 732, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_8);
         __Pyx_INCREF(__pyx_t_1);
         __pyx_t_9 = __pyx_t_1; __pyx_t_10 = NULL;
@@ -8668,7 +8684,7 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_maintenance_infusion_list(st
         #if CYTHON_FAST_PYCALL
         if (PyFunction_Check(__pyx_t_9)) {
           PyObject *__pyx_temp[7] = {__pyx_t_10, __pyx_t_3, __pyx_t_4, __pyx_t_5, __pyx_t_6, __pyx_t_7, __pyx_t_8};
-          __pyx_t_2 = __Pyx_PyFunction_FastCall(__pyx_t_9, __pyx_temp+1-__pyx_t_11, 6+__pyx_t_11); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 730, __pyx_L1_error)
+          __pyx_t_2 = __Pyx_PyFunction_FastCall(__pyx_t_9, __pyx_temp+1-__pyx_t_11, 6+__pyx_t_11); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 732, __pyx_L1_error)
           __Pyx_XDECREF(__pyx_t_10); __pyx_t_10 = 0;
           __Pyx_GOTREF(__pyx_t_2);
           __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
@@ -8682,7 +8698,7 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_maintenance_infusion_list(st
         #if CYTHON_FAST_PYCCALL
         if (__Pyx_PyFastCFunction_Check(__pyx_t_9)) {
           PyObject *__pyx_temp[7] = {__pyx_t_10, __pyx_t_3, __pyx_t_4, __pyx_t_5, __pyx_t_6, __pyx_t_7, __pyx_t_8};
-          __pyx_t_2 = __Pyx_PyCFunction_FastCall(__pyx_t_9, __pyx_temp+1-__pyx_t_11, 6+__pyx_t_11); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 730, __pyx_L1_error)
+          __pyx_t_2 = __Pyx_PyCFunction_FastCall(__pyx_t_9, __pyx_temp+1-__pyx_t_11, 6+__pyx_t_11); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 732, __pyx_L1_error)
           __Pyx_XDECREF(__pyx_t_10); __pyx_t_10 = 0;
           __Pyx_GOTREF(__pyx_t_2);
           __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
@@ -8694,7 +8710,7 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_maintenance_infusion_list(st
         } else
         #endif
         {
-          __pyx_t_12 = PyTuple_New(6+__pyx_t_11); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 730, __pyx_L1_error)
+          __pyx_t_12 = PyTuple_New(6+__pyx_t_11); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 732, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_12);
           if (__pyx_t_10) {
             __Pyx_GIVEREF(__pyx_t_10); PyTuple_SET_ITEM(__pyx_t_12, 0, __pyx_t_10); __pyx_t_10 = NULL;
@@ -8717,7 +8733,7 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_maintenance_infusion_list(st
           __pyx_t_6 = 0;
           __pyx_t_7 = 0;
           __pyx_t_8 = 0;
-          __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_9, __pyx_t_12, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 730, __pyx_L1_error)
+          __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_9, __pyx_t_12, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 732, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_2);
           __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
         }
@@ -8740,19 +8756,19 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_maintenance_infusion_list(st
     #endif
   }
 
-  /* "opentiva/pkpd.pyx":770
+  /* "opentiva/pkpd.pyx":772
  *         cdef int t, end_v
  * 
  *         inf_out = infusion_list             # <<<<<<<<<<<<<<
  *         start = int(target_concentration[0])
  *         target = target_concentration[1]
  */
-  __pyx_t_1 = __pyx_memoryview_fromslice(__pyx_v_infusion_list, 2, (PyObject *(*)(char *)) __pyx_memview_get_double, (int (*)(char *, PyObject *)) __pyx_memview_set_double, 0);; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 770, __pyx_L1_error)
+  __pyx_t_1 = __pyx_memoryview_fromslice(__pyx_v_infusion_list, 2, (PyObject *(*)(char *)) __pyx_memview_get_double, (int (*)(char *, PyObject *)) __pyx_memview_set_double, 0);; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 772, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_v_inf_out = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "opentiva/pkpd.pyx":771
+  /* "opentiva/pkpd.pyx":773
  * 
  *         inf_out = infusion_list
  *         start = int(target_concentration[0])             # <<<<<<<<<<<<<<
@@ -8767,14 +8783,14 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_maintenance_infusion_list(st
   } else if (unlikely(__pyx_t_13 >= __pyx_v_target_concentration.shape[0])) __pyx_t_11 = 0;
   if (unlikely(__pyx_t_11 != -1)) {
     __Pyx_RaiseBufferIndexError(__pyx_t_11);
-    __PYX_ERR(0, 771, __pyx_L1_error)
+    __PYX_ERR(0, 773, __pyx_L1_error)
   }
-  __pyx_t_1 = __Pyx_PyInt_FromDouble((*((double *) ( /* dim=0 */ (__pyx_v_target_concentration.data + __pyx_t_13 * __pyx_v_target_concentration.strides[0]) )))); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 771, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_FromDouble((*((double *) ( /* dim=0 */ (__pyx_v_target_concentration.data + __pyx_t_13 * __pyx_v_target_concentration.strides[0]) )))); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 773, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_v_start = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "opentiva/pkpd.pyx":772
+  /* "opentiva/pkpd.pyx":774
  *         inf_out = infusion_list
  *         start = int(target_concentration[0])
  *         target = target_concentration[1]             # <<<<<<<<<<<<<<
@@ -8789,14 +8805,14 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_maintenance_infusion_list(st
   } else if (unlikely(__pyx_t_13 >= __pyx_v_target_concentration.shape[0])) __pyx_t_11 = 0;
   if (unlikely(__pyx_t_11 != -1)) {
     __Pyx_RaiseBufferIndexError(__pyx_t_11);
-    __PYX_ERR(0, 772, __pyx_L1_error)
+    __PYX_ERR(0, 774, __pyx_L1_error)
   }
-  __pyx_t_1 = PyFloat_FromDouble((*((double *) ( /* dim=0 */ (__pyx_v_target_concentration.data + __pyx_t_13 * __pyx_v_target_concentration.strides[0]) )))); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 772, __pyx_L1_error)
+  __pyx_t_1 = PyFloat_FromDouble((*((double *) ( /* dim=0 */ (__pyx_v_target_concentration.data + __pyx_t_13 * __pyx_v_target_concentration.strides[0]) )))); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 774, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_v_target = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "opentiva/pkpd.pyx":773
+  /* "opentiva/pkpd.pyx":775
  *         start = int(target_concentration[0])
  *         target = target_concentration[1]
  *         end = int(target_concentration[2])             # <<<<<<<<<<<<<<
@@ -8811,68 +8827,68 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_maintenance_infusion_list(st
   } else if (unlikely(__pyx_t_13 >= __pyx_v_target_concentration.shape[0])) __pyx_t_11 = 0;
   if (unlikely(__pyx_t_11 != -1)) {
     __Pyx_RaiseBufferIndexError(__pyx_t_11);
-    __PYX_ERR(0, 773, __pyx_L1_error)
+    __PYX_ERR(0, 775, __pyx_L1_error)
   }
-  __pyx_t_1 = __Pyx_PyInt_FromDouble((*((double *) ( /* dim=0 */ (__pyx_v_target_concentration.data + __pyx_t_13 * __pyx_v_target_concentration.strides[0]) )))); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 773, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_FromDouble((*((double *) ( /* dim=0 */ (__pyx_v_target_concentration.data + __pyx_t_13 * __pyx_v_target_concentration.strides[0]) )))); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 775, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_v_end = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "opentiva/pkpd.pyx":776
+  /* "opentiva/pkpd.pyx":778
  * 
  *         # Initial infusion
  *         end_v = start + duration             # <<<<<<<<<<<<<<
  *         if end_v > end:
  *             end_v = end
  */
-  __pyx_t_1 = __Pyx_PyInt_From_int(__pyx_v_duration); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 776, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_From_int(__pyx_v_duration); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 778, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = PyNumber_Add(__pyx_v_start, __pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 776, __pyx_L1_error)
+  __pyx_t_2 = PyNumber_Add(__pyx_v_start, __pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 778, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_11 = __Pyx_PyInt_As_int(__pyx_t_2); if (unlikely((__pyx_t_11 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 776, __pyx_L1_error)
+  __pyx_t_11 = __Pyx_PyInt_As_int(__pyx_t_2); if (unlikely((__pyx_t_11 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 778, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_v_end_v = __pyx_t_11;
 
-  /* "opentiva/pkpd.pyx":777
+  /* "opentiva/pkpd.pyx":779
  *         # Initial infusion
  *         end_v = start + duration
  *         if end_v > end:             # <<<<<<<<<<<<<<
  *             end_v = end
  *             duration = end - start
  */
-  __pyx_t_2 = __Pyx_PyInt_From_int(__pyx_v_end_v); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 777, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyInt_From_int(__pyx_v_end_v); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 779, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_1 = PyObject_RichCompare(__pyx_t_2, __pyx_v_end, Py_GT); __Pyx_XGOTREF(__pyx_t_1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 777, __pyx_L1_error)
+  __pyx_t_1 = PyObject_RichCompare(__pyx_t_2, __pyx_v_end, Py_GT); __Pyx_XGOTREF(__pyx_t_1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 779, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_14 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely(__pyx_t_14 < 0)) __PYX_ERR(0, 777, __pyx_L1_error)
+  __pyx_t_14 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely(__pyx_t_14 < 0)) __PYX_ERR(0, 779, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   if (__pyx_t_14) {
 
-    /* "opentiva/pkpd.pyx":778
+    /* "opentiva/pkpd.pyx":780
  *         end_v = start + duration
  *         if end_v > end:
  *             end_v = end             # <<<<<<<<<<<<<<
  *             duration = end - start
  * 
  */
-    __pyx_t_11 = __Pyx_PyInt_As_int(__pyx_v_end); if (unlikely((__pyx_t_11 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 778, __pyx_L1_error)
+    __pyx_t_11 = __Pyx_PyInt_As_int(__pyx_v_end); if (unlikely((__pyx_t_11 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 780, __pyx_L1_error)
     __pyx_v_end_v = __pyx_t_11;
 
-    /* "opentiva/pkpd.pyx":779
+    /* "opentiva/pkpd.pyx":781
  *         if end_v > end:
  *             end_v = end
  *             duration = end - start             # <<<<<<<<<<<<<<
  * 
  *         dose = self.maintenance_infusion(inf_out, target, start, duration)
  */
-    __pyx_t_1 = PyNumber_Subtract(__pyx_v_end, __pyx_v_start); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 779, __pyx_L1_error)
+    __pyx_t_1 = PyNumber_Subtract(__pyx_v_end, __pyx_v_start); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 781, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_11 = __Pyx_PyInt_As_int(__pyx_t_1); if (unlikely((__pyx_t_11 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 779, __pyx_L1_error)
+    __pyx_t_11 = __Pyx_PyInt_As_int(__pyx_t_1); if (unlikely((__pyx_t_11 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 781, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     __pyx_v_duration = __pyx_t_11;
 
-    /* "opentiva/pkpd.pyx":777
+    /* "opentiva/pkpd.pyx":779
  *         # Initial infusion
  *         end_v = start + duration
  *         if end_v > end:             # <<<<<<<<<<<<<<
@@ -8881,17 +8897,17 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_maintenance_infusion_list(st
  */
   }
 
-  /* "opentiva/pkpd.pyx":781
+  /* "opentiva/pkpd.pyx":783
  *             duration = end - start
  * 
  *         dose = self.maintenance_infusion(inf_out, target, start, duration)             # <<<<<<<<<<<<<<
  * 
  *         inf_v = np.array([start, dose, duration, end_v], dtype=np.float64)
  */
-  __pyx_t_15 = __Pyx_PyObject_to_MemoryviewSlice_dsds_double(__pyx_v_inf_out, PyBUF_WRITABLE); if (unlikely(!__pyx_t_15.memview)) __PYX_ERR(0, 781, __pyx_L1_error)
-  __pyx_t_16 = __pyx_PyFloat_AsDouble(__pyx_v_target); if (unlikely((__pyx_t_16 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 781, __pyx_L1_error)
-  __pyx_t_11 = __Pyx_PyInt_As_int(__pyx_v_start); if (unlikely((__pyx_t_11 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 781, __pyx_L1_error)
-  __pyx_t_1 = ((struct __pyx_vtabstruct_8opentiva_4pkpd_PkPdModel *)__pyx_v_self->__pyx_vtab)->maintenance_infusion(__pyx_v_self, __pyx_t_15, __pyx_t_16, __pyx_t_11, __pyx_v_duration, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 781, __pyx_L1_error)
+  __pyx_t_15 = __Pyx_PyObject_to_MemoryviewSlice_dsds_double(__pyx_v_inf_out, PyBUF_WRITABLE); if (unlikely(!__pyx_t_15.memview)) __PYX_ERR(0, 783, __pyx_L1_error)
+  __pyx_t_16 = __pyx_PyFloat_AsDouble(__pyx_v_target); if (unlikely((__pyx_t_16 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 783, __pyx_L1_error)
+  __pyx_t_11 = __Pyx_PyInt_As_int(__pyx_v_start); if (unlikely((__pyx_t_11 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 783, __pyx_L1_error)
+  __pyx_t_1 = ((struct __pyx_vtabstruct_8opentiva_4pkpd_PkPdModel *)__pyx_v_self->__pyx_vtab)->maintenance_infusion(__pyx_v_self, __pyx_t_15, __pyx_t_16, __pyx_t_11, __pyx_v_duration, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 783, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __PYX_XDEC_MEMVIEW(&__pyx_t_15, 1);
   __pyx_t_15.memview = NULL;
@@ -8899,23 +8915,23 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_maintenance_infusion_list(st
   __pyx_v_dose = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "opentiva/pkpd.pyx":783
+  /* "opentiva/pkpd.pyx":785
  *         dose = self.maintenance_infusion(inf_out, target, start, duration)
  * 
  *         inf_v = np.array([start, dose, duration, end_v], dtype=np.float64)             # <<<<<<<<<<<<<<
  *         inf_out = np.vstack((inf_out, inf_v))
  * 
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 783, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 785, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_array); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 783, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_array); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 785, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_PyInt_From_int(__pyx_v_duration); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 783, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_From_int(__pyx_v_duration); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 785, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_9 = __Pyx_PyInt_From_int(__pyx_v_end_v); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 783, __pyx_L1_error)
+  __pyx_t_9 = __Pyx_PyInt_From_int(__pyx_v_end_v); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 785, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_9);
-  __pyx_t_12 = PyList_New(4); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 783, __pyx_L1_error)
+  __pyx_t_12 = PyList_New(4); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 785, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_12);
   __Pyx_INCREF(__pyx_v_start);
   __Pyx_GIVEREF(__pyx_v_start);
@@ -8929,21 +8945,21 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_maintenance_infusion_list(st
   PyList_SET_ITEM(__pyx_t_12, 3, __pyx_t_9);
   __pyx_t_1 = 0;
   __pyx_t_9 = 0;
-  __pyx_t_9 = PyTuple_New(1); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 783, __pyx_L1_error)
+  __pyx_t_9 = PyTuple_New(1); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 785, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_9);
   __Pyx_GIVEREF(__pyx_t_12);
   PyTuple_SET_ITEM(__pyx_t_9, 0, __pyx_t_12);
   __pyx_t_12 = 0;
-  __pyx_t_12 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 783, __pyx_L1_error)
+  __pyx_t_12 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 785, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_12);
-  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 783, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 785, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_8 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_float64); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 783, __pyx_L1_error)
+  __pyx_t_8 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_float64); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 785, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_8);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  if (PyDict_SetItem(__pyx_t_12, __pyx_n_s_dtype, __pyx_t_8) < 0) __PYX_ERR(0, 783, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_12, __pyx_n_s_dtype, __pyx_t_8) < 0) __PYX_ERR(0, 785, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
-  __pyx_t_8 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_9, __pyx_t_12); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 783, __pyx_L1_error)
+  __pyx_t_8 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_9, __pyx_t_12); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 785, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_8);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
@@ -8951,19 +8967,19 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_maintenance_infusion_list(st
   __pyx_v_inf_v = __pyx_t_8;
   __pyx_t_8 = 0;
 
-  /* "opentiva/pkpd.pyx":784
+  /* "opentiva/pkpd.pyx":786
  * 
  *         inf_v = np.array([start, dose, duration, end_v], dtype=np.float64)
  *         inf_out = np.vstack((inf_out, inf_v))             # <<<<<<<<<<<<<<
  * 
  *         # Remaining infusions
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_12, __pyx_n_s_np); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 784, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_12, __pyx_n_s_np); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 786, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_12);
-  __pyx_t_9 = __Pyx_PyObject_GetAttrStr(__pyx_t_12, __pyx_n_s_vstack); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 784, __pyx_L1_error)
+  __pyx_t_9 = __Pyx_PyObject_GetAttrStr(__pyx_t_12, __pyx_n_s_vstack); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 786, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_9);
   __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
-  __pyx_t_12 = PyTuple_New(2); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 784, __pyx_L1_error)
+  __pyx_t_12 = PyTuple_New(2); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 786, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_12);
   __Pyx_INCREF(__pyx_v_inf_out);
   __Pyx_GIVEREF(__pyx_v_inf_out);
@@ -8984,29 +9000,29 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_maintenance_infusion_list(st
   __pyx_t_8 = (__pyx_t_2) ? __Pyx_PyObject_Call2Args(__pyx_t_9, __pyx_t_2, __pyx_t_12) : __Pyx_PyObject_CallOneArg(__pyx_t_9, __pyx_t_12);
   __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
-  if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 784, __pyx_L1_error)
+  if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 786, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_8);
   __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
   __Pyx_DECREF_SET(__pyx_v_inf_out, __pyx_t_8);
   __pyx_t_8 = 0;
 
-  /* "opentiva/pkpd.pyx":787
+  /* "opentiva/pkpd.pyx":789
  * 
  *         # Remaining infusions
  *         t = start + duration             # <<<<<<<<<<<<<<
  *         duration *= multiplier
  * 
  */
-  __pyx_t_8 = __Pyx_PyInt_From_int(__pyx_v_duration); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 787, __pyx_L1_error)
+  __pyx_t_8 = __Pyx_PyInt_From_int(__pyx_v_duration); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 789, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_8);
-  __pyx_t_9 = PyNumber_Add(__pyx_v_start, __pyx_t_8); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 787, __pyx_L1_error)
+  __pyx_t_9 = PyNumber_Add(__pyx_v_start, __pyx_t_8); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 789, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_9);
   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
-  __pyx_t_11 = __Pyx_PyInt_As_int(__pyx_t_9); if (unlikely((__pyx_t_11 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 787, __pyx_L1_error)
+  __pyx_t_11 = __Pyx_PyInt_As_int(__pyx_t_9); if (unlikely((__pyx_t_11 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 789, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
   __pyx_v_t = __pyx_t_11;
 
-  /* "opentiva/pkpd.pyx":788
+  /* "opentiva/pkpd.pyx":790
  *         # Remaining infusions
  *         t = start + duration
  *         duration *= multiplier             # <<<<<<<<<<<<<<
@@ -9015,7 +9031,7 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_maintenance_infusion_list(st
  */
   __pyx_v_duration = (__pyx_v_duration * __pyx_v_multiplier);
 
-  /* "opentiva/pkpd.pyx":790
+  /* "opentiva/pkpd.pyx":792
  *         duration *= multiplier
  * 
  *         while t < end:             # <<<<<<<<<<<<<<
@@ -9023,15 +9039,15 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_maintenance_infusion_list(st
  *             end_v = t + duration
  */
   while (1) {
-    __pyx_t_9 = __Pyx_PyInt_From_int(__pyx_v_t); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 790, __pyx_L1_error)
+    __pyx_t_9 = __Pyx_PyInt_From_int(__pyx_v_t); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 792, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_9);
-    __pyx_t_8 = PyObject_RichCompare(__pyx_t_9, __pyx_v_end, Py_LT); __Pyx_XGOTREF(__pyx_t_8); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 790, __pyx_L1_error)
+    __pyx_t_8 = PyObject_RichCompare(__pyx_t_9, __pyx_v_end, Py_LT); __Pyx_XGOTREF(__pyx_t_8); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 792, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
-    __pyx_t_14 = __Pyx_PyObject_IsTrue(__pyx_t_8); if (unlikely(__pyx_t_14 < 0)) __PYX_ERR(0, 790, __pyx_L1_error)
+    __pyx_t_14 = __Pyx_PyObject_IsTrue(__pyx_t_8); if (unlikely(__pyx_t_14 < 0)) __PYX_ERR(0, 792, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
     if (!__pyx_t_14) break;
 
-    /* "opentiva/pkpd.pyx":792
+    /* "opentiva/pkpd.pyx":794
  *         while t < end:
  * 
  *             end_v = t + duration             # <<<<<<<<<<<<<<
@@ -9040,32 +9056,32 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_maintenance_infusion_list(st
  */
     __pyx_v_end_v = (__pyx_v_t + __pyx_v_duration);
 
-    /* "opentiva/pkpd.pyx":793
+    /* "opentiva/pkpd.pyx":795
  * 
  *             end_v = t + duration
  *             if end_v > end:             # <<<<<<<<<<<<<<
  *                 end_v = end
  *                 duration = end_v - t
  */
-    __pyx_t_8 = __Pyx_PyInt_From_int(__pyx_v_end_v); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 793, __pyx_L1_error)
+    __pyx_t_8 = __Pyx_PyInt_From_int(__pyx_v_end_v); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 795, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_8);
-    __pyx_t_9 = PyObject_RichCompare(__pyx_t_8, __pyx_v_end, Py_GT); __Pyx_XGOTREF(__pyx_t_9); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 793, __pyx_L1_error)
+    __pyx_t_9 = PyObject_RichCompare(__pyx_t_8, __pyx_v_end, Py_GT); __Pyx_XGOTREF(__pyx_t_9); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 795, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
-    __pyx_t_14 = __Pyx_PyObject_IsTrue(__pyx_t_9); if (unlikely(__pyx_t_14 < 0)) __PYX_ERR(0, 793, __pyx_L1_error)
+    __pyx_t_14 = __Pyx_PyObject_IsTrue(__pyx_t_9); if (unlikely(__pyx_t_14 < 0)) __PYX_ERR(0, 795, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
     if (__pyx_t_14) {
 
-      /* "opentiva/pkpd.pyx":794
+      /* "opentiva/pkpd.pyx":796
  *             end_v = t + duration
  *             if end_v > end:
  *                 end_v = end             # <<<<<<<<<<<<<<
  *                 duration = end_v - t
  * 
  */
-      __pyx_t_11 = __Pyx_PyInt_As_int(__pyx_v_end); if (unlikely((__pyx_t_11 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 794, __pyx_L1_error)
+      __pyx_t_11 = __Pyx_PyInt_As_int(__pyx_v_end); if (unlikely((__pyx_t_11 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 796, __pyx_L1_error)
       __pyx_v_end_v = __pyx_t_11;
 
-      /* "opentiva/pkpd.pyx":795
+      /* "opentiva/pkpd.pyx":797
  *             if end_v > end:
  *                 end_v = end
  *                 duration = end_v - t             # <<<<<<<<<<<<<<
@@ -9074,7 +9090,7 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_maintenance_infusion_list(st
  */
       __pyx_v_duration = (__pyx_v_end_v - __pyx_v_t);
 
-      /* "opentiva/pkpd.pyx":793
+      /* "opentiva/pkpd.pyx":795
  * 
  *             end_v = t + duration
  *             if end_v > end:             # <<<<<<<<<<<<<<
@@ -9083,16 +9099,16 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_maintenance_infusion_list(st
  */
     }
 
-    /* "opentiva/pkpd.pyx":797
+    /* "opentiva/pkpd.pyx":799
  *                 duration = end_v - t
  * 
  *             dose = self.maintenance_infusion(inf_out, target, t, duration)             # <<<<<<<<<<<<<<
  * 
  *             rate = (dose / drug_concentration) * (60 * 60)
  */
-    __pyx_t_15 = __Pyx_PyObject_to_MemoryviewSlice_dsds_double(__pyx_v_inf_out, PyBUF_WRITABLE); if (unlikely(!__pyx_t_15.memview)) __PYX_ERR(0, 797, __pyx_L1_error)
-    __pyx_t_16 = __pyx_PyFloat_AsDouble(__pyx_v_target); if (unlikely((__pyx_t_16 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 797, __pyx_L1_error)
-    __pyx_t_9 = ((struct __pyx_vtabstruct_8opentiva_4pkpd_PkPdModel *)__pyx_v_self->__pyx_vtab)->maintenance_infusion(__pyx_v_self, __pyx_t_15, __pyx_t_16, __pyx_v_t, __pyx_v_duration, 0); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 797, __pyx_L1_error)
+    __pyx_t_15 = __Pyx_PyObject_to_MemoryviewSlice_dsds_double(__pyx_v_inf_out, PyBUF_WRITABLE); if (unlikely(!__pyx_t_15.memview)) __PYX_ERR(0, 799, __pyx_L1_error)
+    __pyx_t_16 = __pyx_PyFloat_AsDouble(__pyx_v_target); if (unlikely((__pyx_t_16 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 799, __pyx_L1_error)
+    __pyx_t_9 = ((struct __pyx_vtabstruct_8opentiva_4pkpd_PkPdModel *)__pyx_v_self->__pyx_vtab)->maintenance_infusion(__pyx_v_self, __pyx_t_15, __pyx_t_16, __pyx_v_t, __pyx_v_duration, 0); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 799, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_9);
     __PYX_XDEC_MEMVIEW(&__pyx_t_15, 1);
     __pyx_t_15.memview = NULL;
@@ -9100,58 +9116,58 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_maintenance_infusion_list(st
     __Pyx_DECREF_SET(__pyx_v_dose, __pyx_t_9);
     __pyx_t_9 = 0;
 
-    /* "opentiva/pkpd.pyx":799
+    /* "opentiva/pkpd.pyx":801
  *             dose = self.maintenance_infusion(inf_out, target, t, duration)
  * 
  *             rate = (dose / drug_concentration) * (60 * 60)             # <<<<<<<<<<<<<<
  * 
  *             # If rate above max rate match max infusion rate
  */
-    __pyx_t_9 = PyFloat_FromDouble(__pyx_v_drug_concentration); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 799, __pyx_L1_error)
+    __pyx_t_9 = PyFloat_FromDouble(__pyx_v_drug_concentration); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 801, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_9);
-    __pyx_t_8 = __Pyx_PyNumber_Divide(__pyx_v_dose, __pyx_t_9); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 799, __pyx_L1_error)
+    __pyx_t_8 = __Pyx_PyNumber_Divide(__pyx_v_dose, __pyx_t_9); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 801, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_8);
     __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
-    __pyx_t_9 = PyNumber_Multiply(__pyx_t_8, __pyx_int_3600); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 799, __pyx_L1_error)
+    __pyx_t_9 = PyNumber_Multiply(__pyx_t_8, __pyx_int_3600); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 801, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_9);
     __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
     __Pyx_XDECREF_SET(__pyx_v_rate, __pyx_t_9);
     __pyx_t_9 = 0;
 
-    /* "opentiva/pkpd.pyx":802
+    /* "opentiva/pkpd.pyx":804
  * 
  *             # If rate above max rate match max infusion rate
  *             if rate > max_infusion_rate:             # <<<<<<<<<<<<<<
  *                 dose = rate / (60 * 60) * drug_concentration
  * 
  */
-    __pyx_t_9 = __Pyx_PyInt_From_int(__pyx_v_max_infusion_rate); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 802, __pyx_L1_error)
+    __pyx_t_9 = __Pyx_PyInt_From_int(__pyx_v_max_infusion_rate); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 804, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_9);
-    __pyx_t_8 = PyObject_RichCompare(__pyx_v_rate, __pyx_t_9, Py_GT); __Pyx_XGOTREF(__pyx_t_8); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 802, __pyx_L1_error)
+    __pyx_t_8 = PyObject_RichCompare(__pyx_v_rate, __pyx_t_9, Py_GT); __Pyx_XGOTREF(__pyx_t_8); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 804, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
-    __pyx_t_14 = __Pyx_PyObject_IsTrue(__pyx_t_8); if (unlikely(__pyx_t_14 < 0)) __PYX_ERR(0, 802, __pyx_L1_error)
+    __pyx_t_14 = __Pyx_PyObject_IsTrue(__pyx_t_8); if (unlikely(__pyx_t_14 < 0)) __PYX_ERR(0, 804, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
     if (__pyx_t_14) {
 
-      /* "opentiva/pkpd.pyx":803
+      /* "opentiva/pkpd.pyx":805
  *             # If rate above max rate match max infusion rate
  *             if rate > max_infusion_rate:
  *                 dose = rate / (60 * 60) * drug_concentration             # <<<<<<<<<<<<<<
  * 
  *             inf_v = np.array([t, dose, duration, end_v], dtype=np.float64)
  */
-      __pyx_t_8 = __Pyx_PyNumber_Divide(__pyx_v_rate, __pyx_int_3600); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 803, __pyx_L1_error)
+      __pyx_t_8 = __Pyx_PyNumber_Divide(__pyx_v_rate, __pyx_int_3600); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 805, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_8);
-      __pyx_t_9 = PyFloat_FromDouble(__pyx_v_drug_concentration); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 803, __pyx_L1_error)
+      __pyx_t_9 = PyFloat_FromDouble(__pyx_v_drug_concentration); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 805, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_9);
-      __pyx_t_12 = PyNumber_Multiply(__pyx_t_8, __pyx_t_9); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 803, __pyx_L1_error)
+      __pyx_t_12 = PyNumber_Multiply(__pyx_t_8, __pyx_t_9); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 805, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_12);
       __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
       __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
       __Pyx_DECREF_SET(__pyx_v_dose, __pyx_t_12);
       __pyx_t_12 = 0;
 
-      /* "opentiva/pkpd.pyx":802
+      /* "opentiva/pkpd.pyx":804
  * 
  *             # If rate above max rate match max infusion rate
  *             if rate > max_infusion_rate:             # <<<<<<<<<<<<<<
@@ -9160,25 +9176,25 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_maintenance_infusion_list(st
  */
     }
 
-    /* "opentiva/pkpd.pyx":805
+    /* "opentiva/pkpd.pyx":807
  *                 dose = rate / (60 * 60) * drug_concentration
  * 
  *             inf_v = np.array([t, dose, duration, end_v], dtype=np.float64)             # <<<<<<<<<<<<<<
  *             inf_out = np.vstack((inf_out, inf_v))
  * 
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_12, __pyx_n_s_np); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 805, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_12, __pyx_n_s_np); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 807, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_12);
-    __pyx_t_9 = __Pyx_PyObject_GetAttrStr(__pyx_t_12, __pyx_n_s_array); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 805, __pyx_L1_error)
+    __pyx_t_9 = __Pyx_PyObject_GetAttrStr(__pyx_t_12, __pyx_n_s_array); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 807, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_9);
     __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
-    __pyx_t_12 = __Pyx_PyInt_From_int(__pyx_v_t); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 805, __pyx_L1_error)
+    __pyx_t_12 = __Pyx_PyInt_From_int(__pyx_v_t); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 807, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_12);
-    __pyx_t_8 = __Pyx_PyInt_From_int(__pyx_v_duration); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 805, __pyx_L1_error)
+    __pyx_t_8 = __Pyx_PyInt_From_int(__pyx_v_duration); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 807, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_8);
-    __pyx_t_2 = __Pyx_PyInt_From_int(__pyx_v_end_v); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 805, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyInt_From_int(__pyx_v_end_v); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 807, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_1 = PyList_New(4); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 805, __pyx_L1_error)
+    __pyx_t_1 = PyList_New(4); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 807, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_GIVEREF(__pyx_t_12);
     PyList_SET_ITEM(__pyx_t_1, 0, __pyx_t_12);
@@ -9192,21 +9208,21 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_maintenance_infusion_list(st
     __pyx_t_12 = 0;
     __pyx_t_8 = 0;
     __pyx_t_2 = 0;
-    __pyx_t_2 = PyTuple_New(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 805, __pyx_L1_error)
+    __pyx_t_2 = PyTuple_New(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 807, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_GIVEREF(__pyx_t_1);
     PyTuple_SET_ITEM(__pyx_t_2, 0, __pyx_t_1);
     __pyx_t_1 = 0;
-    __pyx_t_1 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 805, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 807, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __Pyx_GetModuleGlobalName(__pyx_t_8, __pyx_n_s_np); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 805, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_8, __pyx_n_s_np); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 807, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_8);
-    __pyx_t_12 = __Pyx_PyObject_GetAttrStr(__pyx_t_8, __pyx_n_s_float64); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 805, __pyx_L1_error)
+    __pyx_t_12 = __Pyx_PyObject_GetAttrStr(__pyx_t_8, __pyx_n_s_float64); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 807, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_12);
     __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
-    if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_dtype, __pyx_t_12) < 0) __PYX_ERR(0, 805, __pyx_L1_error)
+    if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_dtype, __pyx_t_12) < 0) __PYX_ERR(0, 807, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
-    __pyx_t_12 = __Pyx_PyObject_Call(__pyx_t_9, __pyx_t_2, __pyx_t_1); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 805, __pyx_L1_error)
+    __pyx_t_12 = __Pyx_PyObject_Call(__pyx_t_9, __pyx_t_2, __pyx_t_1); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 807, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_12);
     __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
@@ -9214,19 +9230,19 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_maintenance_infusion_list(st
     __Pyx_DECREF_SET(__pyx_v_inf_v, __pyx_t_12);
     __pyx_t_12 = 0;
 
-    /* "opentiva/pkpd.pyx":806
+    /* "opentiva/pkpd.pyx":808
  * 
  *             inf_v = np.array([t, dose, duration, end_v], dtype=np.float64)
  *             inf_out = np.vstack((inf_out, inf_v))             # <<<<<<<<<<<<<<
  * 
  *             t += duration
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 806, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 808, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_vstack); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 806, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_vstack); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 808, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __pyx_t_1 = PyTuple_New(2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 806, __pyx_L1_error)
+    __pyx_t_1 = PyTuple_New(2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 808, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_INCREF(__pyx_v_inf_out);
     __Pyx_GIVEREF(__pyx_v_inf_out);
@@ -9247,13 +9263,13 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_maintenance_infusion_list(st
     __pyx_t_12 = (__pyx_t_9) ? __Pyx_PyObject_Call2Args(__pyx_t_2, __pyx_t_9, __pyx_t_1) : __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_1);
     __Pyx_XDECREF(__pyx_t_9); __pyx_t_9 = 0;
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 806, __pyx_L1_error)
+    if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 808, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_12);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __Pyx_DECREF_SET(__pyx_v_inf_out, __pyx_t_12);
     __pyx_t_12 = 0;
 
-    /* "opentiva/pkpd.pyx":808
+    /* "opentiva/pkpd.pyx":810
  *             inf_out = np.vstack((inf_out, inf_v))
  * 
  *             t += duration             # <<<<<<<<<<<<<<
@@ -9262,7 +9278,7 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_maintenance_infusion_list(st
  */
     __pyx_v_t = (__pyx_v_t + __pyx_v_duration);
 
-    /* "opentiva/pkpd.pyx":809
+    /* "opentiva/pkpd.pyx":811
  * 
  *             t += duration
  *             duration *= multiplier             # <<<<<<<<<<<<<<
@@ -9272,7 +9288,7 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_maintenance_infusion_list(st
     __pyx_v_duration = (__pyx_v_duration * __pyx_v_multiplier);
   }
 
-  /* "opentiva/pkpd.pyx":810
+  /* "opentiva/pkpd.pyx":812
  *             t += duration
  *             duration *= multiplier
  *         return inf_out             # <<<<<<<<<<<<<<
@@ -9284,7 +9300,7 @@ static PyObject *__pyx_f_8opentiva_4pkpd_9PkPdModel_maintenance_infusion_list(st
   __pyx_r = __pyx_v_inf_out;
   goto __pyx_L0;
 
-  /* "opentiva/pkpd.pyx":730
+  /* "opentiva/pkpd.pyx":732
  * 
  * 
  *     cpdef maintenance_infusion_list(self, double [:] target_concentration,             # <<<<<<<<<<<<<<
@@ -9368,35 +9384,35 @@ static PyObject *__pyx_pw_8opentiva_4pkpd_9PkPdModel_21maintenance_infusion_list
         case  1:
         if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_infusion_list)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("maintenance_infusion_list", 1, 6, 6, 1); __PYX_ERR(0, 730, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("maintenance_infusion_list", 1, 6, 6, 1); __PYX_ERR(0, 732, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  2:
         if (likely((values[2] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_duration)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("maintenance_infusion_list", 1, 6, 6, 2); __PYX_ERR(0, 730, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("maintenance_infusion_list", 1, 6, 6, 2); __PYX_ERR(0, 732, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  3:
         if (likely((values[3] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_multiplier)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("maintenance_infusion_list", 1, 6, 6, 3); __PYX_ERR(0, 730, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("maintenance_infusion_list", 1, 6, 6, 3); __PYX_ERR(0, 732, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  4:
         if (likely((values[4] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_drug_concentration)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("maintenance_infusion_list", 1, 6, 6, 4); __PYX_ERR(0, 730, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("maintenance_infusion_list", 1, 6, 6, 4); __PYX_ERR(0, 732, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  5:
         if (likely((values[5] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_max_infusion_rate)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("maintenance_infusion_list", 1, 6, 6, 5); __PYX_ERR(0, 730, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("maintenance_infusion_list", 1, 6, 6, 5); __PYX_ERR(0, 732, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "maintenance_infusion_list") < 0)) __PYX_ERR(0, 730, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "maintenance_infusion_list") < 0)) __PYX_ERR(0, 732, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 6) {
       goto __pyx_L5_argtuple_error;
@@ -9408,16 +9424,16 @@ static PyObject *__pyx_pw_8opentiva_4pkpd_9PkPdModel_21maintenance_infusion_list
       values[4] = PyTuple_GET_ITEM(__pyx_args, 4);
       values[5] = PyTuple_GET_ITEM(__pyx_args, 5);
     }
-    __pyx_v_target_concentration = __Pyx_PyObject_to_MemoryviewSlice_ds_double(values[0], PyBUF_WRITABLE); if (unlikely(!__pyx_v_target_concentration.memview)) __PYX_ERR(0, 730, __pyx_L3_error)
-    __pyx_v_infusion_list = __Pyx_PyObject_to_MemoryviewSlice_dsds_double(values[1], PyBUF_WRITABLE); if (unlikely(!__pyx_v_infusion_list.memview)) __PYX_ERR(0, 731, __pyx_L3_error)
-    __pyx_v_duration = __Pyx_PyInt_As_int(values[2]); if (unlikely((__pyx_v_duration == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 731, __pyx_L3_error)
-    __pyx_v_multiplier = __Pyx_PyInt_As_int(values[3]); if (unlikely((__pyx_v_multiplier == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 732, __pyx_L3_error)
-    __pyx_v_drug_concentration = __pyx_PyFloat_AsDouble(values[4]); if (unlikely((__pyx_v_drug_concentration == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 732, __pyx_L3_error)
-    __pyx_v_max_infusion_rate = __Pyx_PyInt_As_int(values[5]); if (unlikely((__pyx_v_max_infusion_rate == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 733, __pyx_L3_error)
+    __pyx_v_target_concentration = __Pyx_PyObject_to_MemoryviewSlice_ds_double(values[0], PyBUF_WRITABLE); if (unlikely(!__pyx_v_target_concentration.memview)) __PYX_ERR(0, 732, __pyx_L3_error)
+    __pyx_v_infusion_list = __Pyx_PyObject_to_MemoryviewSlice_dsds_double(values[1], PyBUF_WRITABLE); if (unlikely(!__pyx_v_infusion_list.memview)) __PYX_ERR(0, 733, __pyx_L3_error)
+    __pyx_v_duration = __Pyx_PyInt_As_int(values[2]); if (unlikely((__pyx_v_duration == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 733, __pyx_L3_error)
+    __pyx_v_multiplier = __Pyx_PyInt_As_int(values[3]); if (unlikely((__pyx_v_multiplier == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 734, __pyx_L3_error)
+    __pyx_v_drug_concentration = __pyx_PyFloat_AsDouble(values[4]); if (unlikely((__pyx_v_drug_concentration == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 734, __pyx_L3_error)
+    __pyx_v_max_infusion_rate = __Pyx_PyInt_As_int(values[5]); if (unlikely((__pyx_v_max_infusion_rate == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 735, __pyx_L3_error)
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("maintenance_infusion_list", 1, 6, 6, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 730, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("maintenance_infusion_list", 1, 6, 6, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 732, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("opentiva.pkpd.PkPdModel.maintenance_infusion_list", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
@@ -9439,9 +9455,9 @@ static PyObject *__pyx_pf_8opentiva_4pkpd_9PkPdModel_20maintenance_infusion_list
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("maintenance_infusion_list", 0);
   __Pyx_XDECREF(__pyx_r);
-  if (unlikely(!__pyx_v_target_concentration.memview)) { __Pyx_RaiseUnboundLocalError("target_concentration"); __PYX_ERR(0, 730, __pyx_L1_error) }
-  if (unlikely(!__pyx_v_infusion_list.memview)) { __Pyx_RaiseUnboundLocalError("infusion_list"); __PYX_ERR(0, 730, __pyx_L1_error) }
-  __pyx_t_1 = __pyx_f_8opentiva_4pkpd_9PkPdModel_maintenance_infusion_list(__pyx_v_self, __pyx_v_target_concentration, __pyx_v_infusion_list, __pyx_v_duration, __pyx_v_multiplier, __pyx_v_drug_concentration, __pyx_v_max_infusion_rate, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 730, __pyx_L1_error)
+  if (unlikely(!__pyx_v_target_concentration.memview)) { __Pyx_RaiseUnboundLocalError("target_concentration"); __PYX_ERR(0, 732, __pyx_L1_error) }
+  if (unlikely(!__pyx_v_infusion_list.memview)) { __Pyx_RaiseUnboundLocalError("infusion_list"); __PYX_ERR(0, 732, __pyx_L1_error) }
+  __pyx_t_1 = __pyx_f_8opentiva_4pkpd_9PkPdModel_maintenance_infusion_list(__pyx_v_self, __pyx_v_target_concentration, __pyx_v_infusion_list, __pyx_v_duration, __pyx_v_multiplier, __pyx_v_drug_concentration, __pyx_v_max_infusion_rate, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 732, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -9460,7 +9476,7 @@ static PyObject *__pyx_pf_8opentiva_4pkpd_9PkPdModel_20maintenance_infusion_list
   return __pyx_r;
 }
 
-/* "opentiva/pkpd.pyx":813
+/* "opentiva/pkpd.pyx":815
  * 
  * 
  *     cpdef int plasma_decrement_time(self, int time, double target,             # <<<<<<<<<<<<<<
@@ -9509,15 +9525,15 @@ static int __pyx_f_8opentiva_4pkpd_9PkPdModel_plasma_decrement_time(struct __pyx
     if (unlikely(!__Pyx_object_dict_version_matches(((PyObject *)__pyx_v_self), __pyx_tp_dict_version, __pyx_obj_dict_version))) {
       PY_UINT64_T __pyx_type_dict_guard = __Pyx_get_tp_dict_version(((PyObject *)__pyx_v_self));
       #endif
-      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_plasma_decrement_time); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 813, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_plasma_decrement_time); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 815, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)(void*)__pyx_pw_8opentiva_4pkpd_9PkPdModel_23plasma_decrement_time)) {
-        __pyx_t_3 = __Pyx_PyInt_From_int(__pyx_v_time); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 813, __pyx_L1_error)
+        __pyx_t_3 = __Pyx_PyInt_From_int(__pyx_v_time); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 815, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_3);
-        __pyx_t_4 = PyFloat_FromDouble(__pyx_v_target); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 813, __pyx_L1_error)
+        __pyx_t_4 = PyFloat_FromDouble(__pyx_v_target); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 815, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_4);
-        if (unlikely(!__pyx_v_infusion_list.memview)) { __Pyx_RaiseUnboundLocalError("infusion_list"); __PYX_ERR(0, 813, __pyx_L1_error) }
-        __pyx_t_5 = __pyx_memoryview_fromslice(__pyx_v_infusion_list, 2, (PyObject *(*)(char *)) __pyx_memview_get_double, (int (*)(char *, PyObject *)) __pyx_memview_set_double, 0);; if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 813, __pyx_L1_error)
+        if (unlikely(!__pyx_v_infusion_list.memview)) { __Pyx_RaiseUnboundLocalError("infusion_list"); __PYX_ERR(0, 815, __pyx_L1_error) }
+        __pyx_t_5 = __pyx_memoryview_fromslice(__pyx_v_infusion_list, 2, (PyObject *(*)(char *)) __pyx_memview_get_double, (int (*)(char *, PyObject *)) __pyx_memview_set_double, 0);; if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 815, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_5);
         __Pyx_INCREF(__pyx_t_1);
         __pyx_t_6 = __pyx_t_1; __pyx_t_7 = NULL;
@@ -9535,7 +9551,7 @@ static int __pyx_f_8opentiva_4pkpd_9PkPdModel_plasma_decrement_time(struct __pyx
         #if CYTHON_FAST_PYCALL
         if (PyFunction_Check(__pyx_t_6)) {
           PyObject *__pyx_temp[4] = {__pyx_t_7, __pyx_t_3, __pyx_t_4, __pyx_t_5};
-          __pyx_t_2 = __Pyx_PyFunction_FastCall(__pyx_t_6, __pyx_temp+1-__pyx_t_8, 3+__pyx_t_8); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 813, __pyx_L1_error)
+          __pyx_t_2 = __Pyx_PyFunction_FastCall(__pyx_t_6, __pyx_temp+1-__pyx_t_8, 3+__pyx_t_8); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 815, __pyx_L1_error)
           __Pyx_XDECREF(__pyx_t_7); __pyx_t_7 = 0;
           __Pyx_GOTREF(__pyx_t_2);
           __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
@@ -9546,7 +9562,7 @@ static int __pyx_f_8opentiva_4pkpd_9PkPdModel_plasma_decrement_time(struct __pyx
         #if CYTHON_FAST_PYCCALL
         if (__Pyx_PyFastCFunction_Check(__pyx_t_6)) {
           PyObject *__pyx_temp[4] = {__pyx_t_7, __pyx_t_3, __pyx_t_4, __pyx_t_5};
-          __pyx_t_2 = __Pyx_PyCFunction_FastCall(__pyx_t_6, __pyx_temp+1-__pyx_t_8, 3+__pyx_t_8); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 813, __pyx_L1_error)
+          __pyx_t_2 = __Pyx_PyCFunction_FastCall(__pyx_t_6, __pyx_temp+1-__pyx_t_8, 3+__pyx_t_8); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 815, __pyx_L1_error)
           __Pyx_XDECREF(__pyx_t_7); __pyx_t_7 = 0;
           __Pyx_GOTREF(__pyx_t_2);
           __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
@@ -9555,7 +9571,7 @@ static int __pyx_f_8opentiva_4pkpd_9PkPdModel_plasma_decrement_time(struct __pyx
         } else
         #endif
         {
-          __pyx_t_9 = PyTuple_New(3+__pyx_t_8); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 813, __pyx_L1_error)
+          __pyx_t_9 = PyTuple_New(3+__pyx_t_8); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 815, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_9);
           if (__pyx_t_7) {
             __Pyx_GIVEREF(__pyx_t_7); PyTuple_SET_ITEM(__pyx_t_9, 0, __pyx_t_7); __pyx_t_7 = NULL;
@@ -9569,12 +9585,12 @@ static int __pyx_f_8opentiva_4pkpd_9PkPdModel_plasma_decrement_time(struct __pyx
           __pyx_t_3 = 0;
           __pyx_t_4 = 0;
           __pyx_t_5 = 0;
-          __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_6, __pyx_t_9, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 813, __pyx_L1_error)
+          __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_6, __pyx_t_9, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 815, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_2);
           __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
         }
         __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-        __pyx_t_8 = __Pyx_PyInt_As_int(__pyx_t_2); if (unlikely((__pyx_t_8 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 813, __pyx_L1_error)
+        __pyx_t_8 = __Pyx_PyInt_As_int(__pyx_t_2); if (unlikely((__pyx_t_8 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 815, __pyx_L1_error)
         __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
         __pyx_r = __pyx_t_8;
         __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
@@ -9593,7 +9609,7 @@ static int __pyx_f_8opentiva_4pkpd_9PkPdModel_plasma_decrement_time(struct __pyx
     #endif
   }
 
-  /* "opentiva/pkpd.pyx":841
+  /* "opentiva/pkpd.pyx":843
  *         cdef int end, t, decrement_time
  *         cdef double cp
  *         cdef Py_ssize_t x_max = int(infusion_list.shape[0])             # <<<<<<<<<<<<<<
@@ -9602,35 +9618,35 @@ static int __pyx_f_8opentiva_4pkpd_9PkPdModel_plasma_decrement_time(struct __pyx
  */
   __pyx_v_x_max = (__pyx_v_infusion_list.shape[0]);
 
-  /* "opentiva/pkpd.pyx":844
+  /* "opentiva/pkpd.pyx":846
  *         cdef Py_ssize_t x
  * 
  *         inf_tmp = np.empty((0, 4), dtype=np.float64)             # <<<<<<<<<<<<<<
  * 
  *         for x in range(x_max):
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 844, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 846, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_empty); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 844, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_empty); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 846, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 844, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 846, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __Pyx_GetModuleGlobalName(__pyx_t_6, __pyx_n_s_np); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 844, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_6, __pyx_n_s_np); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 846, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
-  __pyx_t_9 = __Pyx_PyObject_GetAttrStr(__pyx_t_6, __pyx_n_s_float64); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 844, __pyx_L1_error)
+  __pyx_t_9 = __Pyx_PyObject_GetAttrStr(__pyx_t_6, __pyx_n_s_float64); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 846, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_9);
   __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_dtype, __pyx_t_9) < 0) __PYX_ERR(0, 844, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_dtype, __pyx_t_9) < 0) __PYX_ERR(0, 846, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
-  __pyx_t_9 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_tuple__4, __pyx_t_1); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 844, __pyx_L1_error)
+  __pyx_t_9 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_tuple__4, __pyx_t_1); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 846, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_9);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_v_inf_tmp = __pyx_t_9;
   __pyx_t_9 = 0;
 
-  /* "opentiva/pkpd.pyx":846
+  /* "opentiva/pkpd.pyx":848
  *         inf_tmp = np.empty((0, 4), dtype=np.float64)
  * 
  *         for x in range(x_max):             # <<<<<<<<<<<<<<
@@ -9642,7 +9658,7 @@ static int __pyx_f_8opentiva_4pkpd_9PkPdModel_plasma_decrement_time(struct __pyx
   for (__pyx_t_12 = 0; __pyx_t_12 < __pyx_t_11; __pyx_t_12+=1) {
     __pyx_v_x = __pyx_t_12;
 
-    /* "opentiva/pkpd.pyx":847
+    /* "opentiva/pkpd.pyx":849
  * 
  *         for x in range(x_max):
  *             end =  int(infusion_list[x, 3])             # <<<<<<<<<<<<<<
@@ -9662,11 +9678,11 @@ static int __pyx_f_8opentiva_4pkpd_9PkPdModel_plasma_decrement_time(struct __pyx
     } else if (unlikely(__pyx_t_14 >= __pyx_v_infusion_list.shape[1])) __pyx_t_8 = 1;
     if (unlikely(__pyx_t_8 != -1)) {
       __Pyx_RaiseBufferIndexError(__pyx_t_8);
-      __PYX_ERR(0, 847, __pyx_L1_error)
+      __PYX_ERR(0, 849, __pyx_L1_error)
     }
     __pyx_v_end = ((int)(*((double *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_infusion_list.data + __pyx_t_13 * __pyx_v_infusion_list.strides[0]) ) + __pyx_t_14 * __pyx_v_infusion_list.strides[1]) ))));
 
-    /* "opentiva/pkpd.pyx":849
+    /* "opentiva/pkpd.pyx":851
  *             end =  int(infusion_list[x, 3])
  * 
  *             if end <= time:             # <<<<<<<<<<<<<<
@@ -9676,94 +9692,18 @@ static int __pyx_f_8opentiva_4pkpd_9PkPdModel_plasma_decrement_time(struct __pyx
     __pyx_t_15 = ((__pyx_v_end <= __pyx_v_time) != 0);
     if (__pyx_t_15) {
 
-      /* "opentiva/pkpd.pyx":850
+      /* "opentiva/pkpd.pyx":852
  * 
  *             if end <= time:
  *                 inf_tmp = np.vstack((inf_tmp, infusion_list[x, :]))             # <<<<<<<<<<<<<<
  *             else:
  *                 inf_tmp = np.vstack((inf_tmp, infusion_list[x, :]))
  */
-      __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 850, __pyx_L1_error)
+      __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 852, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
-      __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_vstack); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 850, __pyx_L1_error)
+      __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_vstack); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 852, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-      __pyx_t_16.data = __pyx_v_infusion_list.data;
-      __pyx_t_16.memview = __pyx_v_infusion_list.memview;
-      __PYX_INC_MEMVIEW(&__pyx_t_16, 0);
-      {
-    Py_ssize_t __pyx_tmp_idx = __pyx_v_x;
-        Py_ssize_t __pyx_tmp_shape = __pyx_v_infusion_list.shape[0];
-    Py_ssize_t __pyx_tmp_stride = __pyx_v_infusion_list.strides[0];
-        if (__pyx_tmp_idx < 0)
-            __pyx_tmp_idx += __pyx_tmp_shape;
-        if (unlikely(!__Pyx_is_valid_index(__pyx_tmp_idx, __pyx_tmp_shape))) {
-            PyErr_SetString(PyExc_IndexError,
-                            "Index out of bounds (axis 0)");
-            __PYX_ERR(0, 850, __pyx_L1_error)
-        }
-        __pyx_t_16.data += __pyx_tmp_idx * __pyx_tmp_stride;
-}
-
-__pyx_t_16.shape[0] = __pyx_v_infusion_list.shape[1];
-__pyx_t_16.strides[0] = __pyx_v_infusion_list.strides[1];
-    __pyx_t_16.suboffsets[0] = -1;
-
-__pyx_t_1 = __pyx_memoryview_fromslice(__pyx_t_16, 1, (PyObject *(*)(char *)) __pyx_memview_get_double, (int (*)(char *, PyObject *)) __pyx_memview_set_double, 0);; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 850, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_1);
-      __PYX_XDEC_MEMVIEW(&__pyx_t_16, 1);
-      __pyx_t_16.memview = NULL;
-      __pyx_t_16.data = NULL;
-      __pyx_t_6 = PyTuple_New(2); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 850, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_6);
-      __Pyx_INCREF(__pyx_v_inf_tmp);
-      __Pyx_GIVEREF(__pyx_v_inf_tmp);
-      PyTuple_SET_ITEM(__pyx_t_6, 0, __pyx_v_inf_tmp);
-      __Pyx_GIVEREF(__pyx_t_1);
-      PyTuple_SET_ITEM(__pyx_t_6, 1, __pyx_t_1);
-      __pyx_t_1 = 0;
-      __pyx_t_1 = NULL;
-      if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_2))) {
-        __pyx_t_1 = PyMethod_GET_SELF(__pyx_t_2);
-        if (likely(__pyx_t_1)) {
-          PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_2);
-          __Pyx_INCREF(__pyx_t_1);
-          __Pyx_INCREF(function);
-          __Pyx_DECREF_SET(__pyx_t_2, function);
-        }
-      }
-      __pyx_t_9 = (__pyx_t_1) ? __Pyx_PyObject_Call2Args(__pyx_t_2, __pyx_t_1, __pyx_t_6) : __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_6);
-      __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
-      __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-      if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 850, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_9);
-      __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-      __Pyx_DECREF_SET(__pyx_v_inf_tmp, __pyx_t_9);
-      __pyx_t_9 = 0;
-
-      /* "opentiva/pkpd.pyx":849
- *             end =  int(infusion_list[x, 3])
- * 
- *             if end <= time:             # <<<<<<<<<<<<<<
- *                 inf_tmp = np.vstack((inf_tmp, infusion_list[x, :]))
- *             else:
- */
-      goto __pyx_L5;
-    }
-
-    /* "opentiva/pkpd.pyx":852
- *                 inf_tmp = np.vstack((inf_tmp, infusion_list[x, :]))
- *             else:
- *                 inf_tmp = np.vstack((inf_tmp, infusion_list[x, :]))             # <<<<<<<<<<<<<<
- *                 inf_tmp[x, 3] = time
- *                 break
- */
-    /*else*/ {
-      __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_np); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 852, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_2);
-      __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_vstack); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 852, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_6);
-      __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
       __pyx_t_16.data = __pyx_v_infusion_list.data;
       __pyx_t_16.memview = __pyx_v_infusion_list.memview;
       __PYX_INC_MEMVIEW(&__pyx_t_16, 0);
@@ -9785,12 +9725,88 @@ __pyx_t_16.shape[0] = __pyx_v_infusion_list.shape[1];
 __pyx_t_16.strides[0] = __pyx_v_infusion_list.strides[1];
     __pyx_t_16.suboffsets[0] = -1;
 
-__pyx_t_2 = __pyx_memoryview_fromslice(__pyx_t_16, 1, (PyObject *(*)(char *)) __pyx_memview_get_double, (int (*)(char *, PyObject *)) __pyx_memview_set_double, 0);; if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 852, __pyx_L1_error)
+__pyx_t_1 = __pyx_memoryview_fromslice(__pyx_t_16, 1, (PyObject *(*)(char *)) __pyx_memview_get_double, (int (*)(char *, PyObject *)) __pyx_memview_set_double, 0);; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 852, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_1);
+      __PYX_XDEC_MEMVIEW(&__pyx_t_16, 1);
+      __pyx_t_16.memview = NULL;
+      __pyx_t_16.data = NULL;
+      __pyx_t_6 = PyTuple_New(2); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 852, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_6);
+      __Pyx_INCREF(__pyx_v_inf_tmp);
+      __Pyx_GIVEREF(__pyx_v_inf_tmp);
+      PyTuple_SET_ITEM(__pyx_t_6, 0, __pyx_v_inf_tmp);
+      __Pyx_GIVEREF(__pyx_t_1);
+      PyTuple_SET_ITEM(__pyx_t_6, 1, __pyx_t_1);
+      __pyx_t_1 = 0;
+      __pyx_t_1 = NULL;
+      if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_2))) {
+        __pyx_t_1 = PyMethod_GET_SELF(__pyx_t_2);
+        if (likely(__pyx_t_1)) {
+          PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_2);
+          __Pyx_INCREF(__pyx_t_1);
+          __Pyx_INCREF(function);
+          __Pyx_DECREF_SET(__pyx_t_2, function);
+        }
+      }
+      __pyx_t_9 = (__pyx_t_1) ? __Pyx_PyObject_Call2Args(__pyx_t_2, __pyx_t_1, __pyx_t_6) : __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_6);
+      __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
+      __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
+      if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 852, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_9);
+      __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+      __Pyx_DECREF_SET(__pyx_v_inf_tmp, __pyx_t_9);
+      __pyx_t_9 = 0;
+
+      /* "opentiva/pkpd.pyx":851
+ *             end =  int(infusion_list[x, 3])
+ * 
+ *             if end <= time:             # <<<<<<<<<<<<<<
+ *                 inf_tmp = np.vstack((inf_tmp, infusion_list[x, :]))
+ *             else:
+ */
+      goto __pyx_L5;
+    }
+
+    /* "opentiva/pkpd.pyx":854
+ *                 inf_tmp = np.vstack((inf_tmp, infusion_list[x, :]))
+ *             else:
+ *                 inf_tmp = np.vstack((inf_tmp, infusion_list[x, :]))             # <<<<<<<<<<<<<<
+ *                 inf_tmp[x, 3] = time
+ *                 break
+ */
+    /*else*/ {
+      __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_np); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 854, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_2);
+      __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_vstack); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 854, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_6);
+      __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+      __pyx_t_16.data = __pyx_v_infusion_list.data;
+      __pyx_t_16.memview = __pyx_v_infusion_list.memview;
+      __PYX_INC_MEMVIEW(&__pyx_t_16, 0);
+      {
+    Py_ssize_t __pyx_tmp_idx = __pyx_v_x;
+        Py_ssize_t __pyx_tmp_shape = __pyx_v_infusion_list.shape[0];
+    Py_ssize_t __pyx_tmp_stride = __pyx_v_infusion_list.strides[0];
+        if (__pyx_tmp_idx < 0)
+            __pyx_tmp_idx += __pyx_tmp_shape;
+        if (unlikely(!__Pyx_is_valid_index(__pyx_tmp_idx, __pyx_tmp_shape))) {
+            PyErr_SetString(PyExc_IndexError,
+                            "Index out of bounds (axis 0)");
+            __PYX_ERR(0, 854, __pyx_L1_error)
+        }
+        __pyx_t_16.data += __pyx_tmp_idx * __pyx_tmp_stride;
+}
+
+__pyx_t_16.shape[0] = __pyx_v_infusion_list.shape[1];
+__pyx_t_16.strides[0] = __pyx_v_infusion_list.strides[1];
+    __pyx_t_16.suboffsets[0] = -1;
+
+__pyx_t_2 = __pyx_memoryview_fromslice(__pyx_t_16, 1, (PyObject *(*)(char *)) __pyx_memview_get_double, (int (*)(char *, PyObject *)) __pyx_memview_set_double, 0);; if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 854, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
       __PYX_XDEC_MEMVIEW(&__pyx_t_16, 1);
       __pyx_t_16.memview = NULL;
       __pyx_t_16.data = NULL;
-      __pyx_t_1 = PyTuple_New(2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 852, __pyx_L1_error)
+      __pyx_t_1 = PyTuple_New(2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 854, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_INCREF(__pyx_v_inf_tmp);
       __Pyx_GIVEREF(__pyx_v_inf_tmp);
@@ -9811,24 +9827,24 @@ __pyx_t_2 = __pyx_memoryview_fromslice(__pyx_t_16, 1, (PyObject *(*)(char *)) __
       __pyx_t_9 = (__pyx_t_2) ? __Pyx_PyObject_Call2Args(__pyx_t_6, __pyx_t_2, __pyx_t_1) : __Pyx_PyObject_CallOneArg(__pyx_t_6, __pyx_t_1);
       __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-      if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 852, __pyx_L1_error)
+      if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 854, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_9);
       __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
       __Pyx_DECREF_SET(__pyx_v_inf_tmp, __pyx_t_9);
       __pyx_t_9 = 0;
 
-      /* "opentiva/pkpd.pyx":853
+      /* "opentiva/pkpd.pyx":855
  *             else:
  *                 inf_tmp = np.vstack((inf_tmp, infusion_list[x, :]))
  *                 inf_tmp[x, 3] = time             # <<<<<<<<<<<<<<
  *                 break
  * 
  */
-      __pyx_t_9 = __Pyx_PyInt_From_int(__pyx_v_time); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 853, __pyx_L1_error)
+      __pyx_t_9 = __Pyx_PyInt_From_int(__pyx_v_time); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 855, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_9);
-      __pyx_t_6 = PyInt_FromSsize_t(__pyx_v_x); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 853, __pyx_L1_error)
+      __pyx_t_6 = PyInt_FromSsize_t(__pyx_v_x); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 855, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_6);
-      __pyx_t_1 = PyTuple_New(2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 853, __pyx_L1_error)
+      __pyx_t_1 = PyTuple_New(2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 855, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_GIVEREF(__pyx_t_6);
       PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_t_6);
@@ -9836,11 +9852,11 @@ __pyx_t_2 = __pyx_memoryview_fromslice(__pyx_t_16, 1, (PyObject *(*)(char *)) __
       __Pyx_GIVEREF(__pyx_int_3);
       PyTuple_SET_ITEM(__pyx_t_1, 1, __pyx_int_3);
       __pyx_t_6 = 0;
-      if (unlikely(PyObject_SetItem(__pyx_v_inf_tmp, __pyx_t_1, __pyx_t_9) < 0)) __PYX_ERR(0, 853, __pyx_L1_error)
+      if (unlikely(PyObject_SetItem(__pyx_v_inf_tmp, __pyx_t_1, __pyx_t_9) < 0)) __PYX_ERR(0, 855, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
       __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
 
-      /* "opentiva/pkpd.pyx":854
+      /* "opentiva/pkpd.pyx":856
  *                 inf_tmp = np.vstack((inf_tmp, infusion_list[x, :]))
  *                 inf_tmp[x, 3] = time
  *                 break             # <<<<<<<<<<<<<<
@@ -9853,7 +9869,7 @@ __pyx_t_2 = __pyx_memoryview_fromslice(__pyx_t_16, 1, (PyObject *(*)(char *)) __
   }
   __pyx_L4_break:;
 
-  /* "opentiva/pkpd.pyx":856
+  /* "opentiva/pkpd.pyx":858
  *                 break
  * 
  *         t = time             # <<<<<<<<<<<<<<
@@ -9862,20 +9878,20 @@ __pyx_t_2 = __pyx_memoryview_fromslice(__pyx_t_16, 1, (PyObject *(*)(char *)) __
  */
   __pyx_v_t = __pyx_v_time;
 
-  /* "opentiva/pkpd.pyx":857
+  /* "opentiva/pkpd.pyx":859
  * 
  *         t = time
  *         cp = self.calculate_cp(inf_tmp, time)             # <<<<<<<<<<<<<<
  * 
  *         if target == 0:
  */
-  __pyx_t_17 = __Pyx_PyObject_to_MemoryviewSlice_dsds_double(__pyx_v_inf_tmp, PyBUF_WRITABLE); if (unlikely(!__pyx_t_17.memview)) __PYX_ERR(0, 857, __pyx_L1_error)
+  __pyx_t_17 = __Pyx_PyObject_to_MemoryviewSlice_dsds_double(__pyx_v_inf_tmp, PyBUF_WRITABLE); if (unlikely(!__pyx_t_17.memview)) __PYX_ERR(0, 859, __pyx_L1_error)
   __pyx_v_cp = ((struct __pyx_vtabstruct_8opentiva_4pkpd_PkPdModel *)__pyx_v_self->__pyx_vtab)->calculate_cp(__pyx_v_self, __pyx_t_17, __pyx_v_time, 0);
   __PYX_XDEC_MEMVIEW(&__pyx_t_17, 1);
   __pyx_t_17.memview = NULL;
   __pyx_t_17.data = NULL;
 
-  /* "opentiva/pkpd.pyx":859
+  /* "opentiva/pkpd.pyx":861
  *         cp = self.calculate_cp(inf_tmp, time)
  * 
  *         if target == 0:             # <<<<<<<<<<<<<<
@@ -9885,7 +9901,7 @@ __pyx_t_2 = __pyx_memoryview_fromslice(__pyx_t_16, 1, (PyObject *(*)(char *)) __
   __pyx_t_15 = ((__pyx_v_target == 0.0) != 0);
   if (__pyx_t_15) {
 
-    /* "opentiva/pkpd.pyx":860
+    /* "opentiva/pkpd.pyx":862
  * 
  *         if target == 0:
  *             target = 0.1  # Approximate 0 to 0.1 to avoid infinite loop             # <<<<<<<<<<<<<<
@@ -9894,7 +9910,7 @@ __pyx_t_2 = __pyx_memoryview_fromslice(__pyx_t_16, 1, (PyObject *(*)(char *)) __
  */
     __pyx_v_target = 0.1;
 
-    /* "opentiva/pkpd.pyx":859
+    /* "opentiva/pkpd.pyx":861
  *         cp = self.calculate_cp(inf_tmp, time)
  * 
  *         if target == 0:             # <<<<<<<<<<<<<<
@@ -9903,7 +9919,7 @@ __pyx_t_2 = __pyx_memoryview_fromslice(__pyx_t_16, 1, (PyObject *(*)(char *)) __
  */
   }
 
-  /* "opentiva/pkpd.pyx":862
+  /* "opentiva/pkpd.pyx":864
  *             target = 0.1  # Approximate 0 to 0.1 to avoid infinite loop
  * 
  *         while cp >= target:             # <<<<<<<<<<<<<<
@@ -9914,20 +9930,20 @@ __pyx_t_2 = __pyx_memoryview_fromslice(__pyx_t_16, 1, (PyObject *(*)(char *)) __
     __pyx_t_15 = ((__pyx_v_cp >= __pyx_v_target) != 0);
     if (!__pyx_t_15) break;
 
-    /* "opentiva/pkpd.pyx":863
+    /* "opentiva/pkpd.pyx":865
  * 
  *         while cp >= target:
  *             cp = self.calculate_cp(inf_tmp, t)             # <<<<<<<<<<<<<<
  *             t += 1
  * 
  */
-    __pyx_t_17 = __Pyx_PyObject_to_MemoryviewSlice_dsds_double(__pyx_v_inf_tmp, PyBUF_WRITABLE); if (unlikely(!__pyx_t_17.memview)) __PYX_ERR(0, 863, __pyx_L1_error)
+    __pyx_t_17 = __Pyx_PyObject_to_MemoryviewSlice_dsds_double(__pyx_v_inf_tmp, PyBUF_WRITABLE); if (unlikely(!__pyx_t_17.memview)) __PYX_ERR(0, 865, __pyx_L1_error)
     __pyx_v_cp = ((struct __pyx_vtabstruct_8opentiva_4pkpd_PkPdModel *)__pyx_v_self->__pyx_vtab)->calculate_cp(__pyx_v_self, __pyx_t_17, __pyx_v_t, 0);
     __PYX_XDEC_MEMVIEW(&__pyx_t_17, 1);
     __pyx_t_17.memview = NULL;
     __pyx_t_17.data = NULL;
 
-    /* "opentiva/pkpd.pyx":864
+    /* "opentiva/pkpd.pyx":866
  *         while cp >= target:
  *             cp = self.calculate_cp(inf_tmp, t)
  *             t += 1             # <<<<<<<<<<<<<<
@@ -9937,7 +9953,7 @@ __pyx_t_2 = __pyx_memoryview_fromslice(__pyx_t_16, 1, (PyObject *(*)(char *)) __
     __pyx_v_t = (__pyx_v_t + 1);
   }
 
-  /* "opentiva/pkpd.pyx":866
+  /* "opentiva/pkpd.pyx":868
  *             t += 1
  * 
  *         decrement_time = t - time             # <<<<<<<<<<<<<<
@@ -9946,7 +9962,7 @@ __pyx_t_2 = __pyx_memoryview_fromslice(__pyx_t_16, 1, (PyObject *(*)(char *)) __
  */
   __pyx_v_decrement_time = (__pyx_v_t - __pyx_v_time);
 
-  /* "opentiva/pkpd.pyx":868
+  /* "opentiva/pkpd.pyx":870
  *         decrement_time = t - time
  * 
  *         return decrement_time             # <<<<<<<<<<<<<<
@@ -9956,7 +9972,7 @@ __pyx_t_2 = __pyx_memoryview_fromslice(__pyx_t_16, 1, (PyObject *(*)(char *)) __
   __pyx_r = __pyx_v_decrement_time;
   goto __pyx_L0;
 
-  /* "opentiva/pkpd.pyx":813
+  /* "opentiva/pkpd.pyx":815
  * 
  * 
  *     cpdef int plasma_decrement_time(self, int time, double target,             # <<<<<<<<<<<<<<
@@ -10022,17 +10038,17 @@ static PyObject *__pyx_pw_8opentiva_4pkpd_9PkPdModel_23plasma_decrement_time(PyO
         case  1:
         if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_target)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("plasma_decrement_time", 1, 3, 3, 1); __PYX_ERR(0, 813, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("plasma_decrement_time", 1, 3, 3, 1); __PYX_ERR(0, 815, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  2:
         if (likely((values[2] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_infusion_list)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("plasma_decrement_time", 1, 3, 3, 2); __PYX_ERR(0, 813, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("plasma_decrement_time", 1, 3, 3, 2); __PYX_ERR(0, 815, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "plasma_decrement_time") < 0)) __PYX_ERR(0, 813, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "plasma_decrement_time") < 0)) __PYX_ERR(0, 815, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 3) {
       goto __pyx_L5_argtuple_error;
@@ -10041,13 +10057,13 @@ static PyObject *__pyx_pw_8opentiva_4pkpd_9PkPdModel_23plasma_decrement_time(PyO
       values[1] = PyTuple_GET_ITEM(__pyx_args, 1);
       values[2] = PyTuple_GET_ITEM(__pyx_args, 2);
     }
-    __pyx_v_time = __Pyx_PyInt_As_int(values[0]); if (unlikely((__pyx_v_time == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 813, __pyx_L3_error)
-    __pyx_v_target = __pyx_PyFloat_AsDouble(values[1]); if (unlikely((__pyx_v_target == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 813, __pyx_L3_error)
-    __pyx_v_infusion_list = __Pyx_PyObject_to_MemoryviewSlice_dsds_double(values[2], PyBUF_WRITABLE); if (unlikely(!__pyx_v_infusion_list.memview)) __PYX_ERR(0, 814, __pyx_L3_error)
+    __pyx_v_time = __Pyx_PyInt_As_int(values[0]); if (unlikely((__pyx_v_time == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 815, __pyx_L3_error)
+    __pyx_v_target = __pyx_PyFloat_AsDouble(values[1]); if (unlikely((__pyx_v_target == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 815, __pyx_L3_error)
+    __pyx_v_infusion_list = __Pyx_PyObject_to_MemoryviewSlice_dsds_double(values[2], PyBUF_WRITABLE); if (unlikely(!__pyx_v_infusion_list.memview)) __PYX_ERR(0, 816, __pyx_L3_error)
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("plasma_decrement_time", 1, 3, 3, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 813, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("plasma_decrement_time", 1, 3, 3, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 815, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("opentiva.pkpd.PkPdModel.plasma_decrement_time", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
@@ -10069,8 +10085,8 @@ static PyObject *__pyx_pf_8opentiva_4pkpd_9PkPdModel_22plasma_decrement_time(str
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("plasma_decrement_time", 0);
   __Pyx_XDECREF(__pyx_r);
-  if (unlikely(!__pyx_v_infusion_list.memview)) { __Pyx_RaiseUnboundLocalError("infusion_list"); __PYX_ERR(0, 813, __pyx_L1_error) }
-  __pyx_t_1 = __Pyx_PyInt_From_int(__pyx_f_8opentiva_4pkpd_9PkPdModel_plasma_decrement_time(__pyx_v_self, __pyx_v_time, __pyx_v_target, __pyx_v_infusion_list, 1)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 813, __pyx_L1_error)
+  if (unlikely(!__pyx_v_infusion_list.memview)) { __Pyx_RaiseUnboundLocalError("infusion_list"); __PYX_ERR(0, 815, __pyx_L1_error) }
+  __pyx_t_1 = __Pyx_PyInt_From_int(__pyx_f_8opentiva_4pkpd_9PkPdModel_plasma_decrement_time(__pyx_v_self, __pyx_v_time, __pyx_v_target, __pyx_v_infusion_list, 1)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 815, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -10088,7 +10104,7 @@ static PyObject *__pyx_pf_8opentiva_4pkpd_9PkPdModel_22plasma_decrement_time(str
   return __pyx_r;
 }
 
-/* "opentiva/pkpd.pyx":871
+/* "opentiva/pkpd.pyx":873
  * 
  * 
  *     cpdef int effect_decrement_time(self, int time, double target,             # <<<<<<<<<<<<<<
@@ -10141,15 +10157,15 @@ static int __pyx_f_8opentiva_4pkpd_9PkPdModel_effect_decrement_time(struct __pyx
     if (unlikely(!__Pyx_object_dict_version_matches(((PyObject *)__pyx_v_self), __pyx_tp_dict_version, __pyx_obj_dict_version))) {
       PY_UINT64_T __pyx_type_dict_guard = __Pyx_get_tp_dict_version(((PyObject *)__pyx_v_self));
       #endif
-      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_effect_decrement_time); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 871, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_effect_decrement_time); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 873, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)(void*)__pyx_pw_8opentiva_4pkpd_9PkPdModel_25effect_decrement_time)) {
-        __pyx_t_3 = __Pyx_PyInt_From_int(__pyx_v_time); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 871, __pyx_L1_error)
+        __pyx_t_3 = __Pyx_PyInt_From_int(__pyx_v_time); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 873, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_3);
-        __pyx_t_4 = PyFloat_FromDouble(__pyx_v_target); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 871, __pyx_L1_error)
+        __pyx_t_4 = PyFloat_FromDouble(__pyx_v_target); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 873, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_4);
-        if (unlikely(!__pyx_v_infusion_list.memview)) { __Pyx_RaiseUnboundLocalError("infusion_list"); __PYX_ERR(0, 871, __pyx_L1_error) }
-        __pyx_t_5 = __pyx_memoryview_fromslice(__pyx_v_infusion_list, 2, (PyObject *(*)(char *)) __pyx_memview_get_double, (int (*)(char *, PyObject *)) __pyx_memview_set_double, 0);; if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 871, __pyx_L1_error)
+        if (unlikely(!__pyx_v_infusion_list.memview)) { __Pyx_RaiseUnboundLocalError("infusion_list"); __PYX_ERR(0, 873, __pyx_L1_error) }
+        __pyx_t_5 = __pyx_memoryview_fromslice(__pyx_v_infusion_list, 2, (PyObject *(*)(char *)) __pyx_memview_get_double, (int (*)(char *, PyObject *)) __pyx_memview_set_double, 0);; if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 873, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_5);
         __Pyx_INCREF(__pyx_t_1);
         __pyx_t_6 = __pyx_t_1; __pyx_t_7 = NULL;
@@ -10167,7 +10183,7 @@ static int __pyx_f_8opentiva_4pkpd_9PkPdModel_effect_decrement_time(struct __pyx
         #if CYTHON_FAST_PYCALL
         if (PyFunction_Check(__pyx_t_6)) {
           PyObject *__pyx_temp[4] = {__pyx_t_7, __pyx_t_3, __pyx_t_4, __pyx_t_5};
-          __pyx_t_2 = __Pyx_PyFunction_FastCall(__pyx_t_6, __pyx_temp+1-__pyx_t_8, 3+__pyx_t_8); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 871, __pyx_L1_error)
+          __pyx_t_2 = __Pyx_PyFunction_FastCall(__pyx_t_6, __pyx_temp+1-__pyx_t_8, 3+__pyx_t_8); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 873, __pyx_L1_error)
           __Pyx_XDECREF(__pyx_t_7); __pyx_t_7 = 0;
           __Pyx_GOTREF(__pyx_t_2);
           __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
@@ -10178,7 +10194,7 @@ static int __pyx_f_8opentiva_4pkpd_9PkPdModel_effect_decrement_time(struct __pyx
         #if CYTHON_FAST_PYCCALL
         if (__Pyx_PyFastCFunction_Check(__pyx_t_6)) {
           PyObject *__pyx_temp[4] = {__pyx_t_7, __pyx_t_3, __pyx_t_4, __pyx_t_5};
-          __pyx_t_2 = __Pyx_PyCFunction_FastCall(__pyx_t_6, __pyx_temp+1-__pyx_t_8, 3+__pyx_t_8); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 871, __pyx_L1_error)
+          __pyx_t_2 = __Pyx_PyCFunction_FastCall(__pyx_t_6, __pyx_temp+1-__pyx_t_8, 3+__pyx_t_8); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 873, __pyx_L1_error)
           __Pyx_XDECREF(__pyx_t_7); __pyx_t_7 = 0;
           __Pyx_GOTREF(__pyx_t_2);
           __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
@@ -10187,7 +10203,7 @@ static int __pyx_f_8opentiva_4pkpd_9PkPdModel_effect_decrement_time(struct __pyx
         } else
         #endif
         {
-          __pyx_t_9 = PyTuple_New(3+__pyx_t_8); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 871, __pyx_L1_error)
+          __pyx_t_9 = PyTuple_New(3+__pyx_t_8); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 873, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_9);
           if (__pyx_t_7) {
             __Pyx_GIVEREF(__pyx_t_7); PyTuple_SET_ITEM(__pyx_t_9, 0, __pyx_t_7); __pyx_t_7 = NULL;
@@ -10201,12 +10217,12 @@ static int __pyx_f_8opentiva_4pkpd_9PkPdModel_effect_decrement_time(struct __pyx
           __pyx_t_3 = 0;
           __pyx_t_4 = 0;
           __pyx_t_5 = 0;
-          __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_6, __pyx_t_9, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 871, __pyx_L1_error)
+          __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_6, __pyx_t_9, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 873, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_2);
           __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
         }
         __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-        __pyx_t_8 = __Pyx_PyInt_As_int(__pyx_t_2); if (unlikely((__pyx_t_8 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 871, __pyx_L1_error)
+        __pyx_t_8 = __Pyx_PyInt_As_int(__pyx_t_2); if (unlikely((__pyx_t_8 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 873, __pyx_L1_error)
         __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
         __pyx_r = __pyx_t_8;
         __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
@@ -10225,7 +10241,7 @@ static int __pyx_f_8opentiva_4pkpd_9PkPdModel_effect_decrement_time(struct __pyx
     #endif
   }
 
-  /* "opentiva/pkpd.pyx":899
+  /* "opentiva/pkpd.pyx":901
  *         cdef int end, t, decrement_time
  *         cdef double previous_cp, current_cp, previous_ce
  *         cdef Py_ssize_t x_max = int(infusion_list.shape[0])             # <<<<<<<<<<<<<<
@@ -10234,7 +10250,7 @@ static int __pyx_f_8opentiva_4pkpd_9PkPdModel_effect_decrement_time(struct __pyx
  */
   __pyx_v_x_max = (__pyx_v_infusion_list.shape[0]);
 
-  /* "opentiva/pkpd.pyx":902
+  /* "opentiva/pkpd.pyx":904
  *         cdef Py_ssize_t x
  * 
  *         previous_ce = 0             # <<<<<<<<<<<<<<
@@ -10243,35 +10259,35 @@ static int __pyx_f_8opentiva_4pkpd_9PkPdModel_effect_decrement_time(struct __pyx
  */
   __pyx_v_previous_ce = 0.0;
 
-  /* "opentiva/pkpd.pyx":903
+  /* "opentiva/pkpd.pyx":905
  * 
  *         previous_ce = 0
  *         inf_tmp = np.empty((0, 4), dtype=np.float64)             # <<<<<<<<<<<<<<
  * 
  *         for x in range(x_max):
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 903, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 905, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_empty); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 903, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_empty); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 905, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 903, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 905, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __Pyx_GetModuleGlobalName(__pyx_t_6, __pyx_n_s_np); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 903, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_6, __pyx_n_s_np); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 905, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
-  __pyx_t_9 = __Pyx_PyObject_GetAttrStr(__pyx_t_6, __pyx_n_s_float64); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 903, __pyx_L1_error)
+  __pyx_t_9 = __Pyx_PyObject_GetAttrStr(__pyx_t_6, __pyx_n_s_float64); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 905, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_9);
   __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_dtype, __pyx_t_9) < 0) __PYX_ERR(0, 903, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_dtype, __pyx_t_9) < 0) __PYX_ERR(0, 905, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
-  __pyx_t_9 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_tuple__4, __pyx_t_1); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 903, __pyx_L1_error)
+  __pyx_t_9 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_tuple__4, __pyx_t_1); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 905, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_9);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_v_inf_tmp = __pyx_t_9;
   __pyx_t_9 = 0;
 
-  /* "opentiva/pkpd.pyx":905
+  /* "opentiva/pkpd.pyx":907
  *         inf_tmp = np.empty((0, 4), dtype=np.float64)
  * 
  *         for x in range(x_max):             # <<<<<<<<<<<<<<
@@ -10283,7 +10299,7 @@ static int __pyx_f_8opentiva_4pkpd_9PkPdModel_effect_decrement_time(struct __pyx
   for (__pyx_t_12 = 0; __pyx_t_12 < __pyx_t_11; __pyx_t_12+=1) {
     __pyx_v_x = __pyx_t_12;
 
-    /* "opentiva/pkpd.pyx":906
+    /* "opentiva/pkpd.pyx":908
  * 
  *         for x in range(x_max):
  *             end =  int(infusion_list[x, 3])             # <<<<<<<<<<<<<<
@@ -10303,11 +10319,11 @@ static int __pyx_f_8opentiva_4pkpd_9PkPdModel_effect_decrement_time(struct __pyx
     } else if (unlikely(__pyx_t_14 >= __pyx_v_infusion_list.shape[1])) __pyx_t_8 = 1;
     if (unlikely(__pyx_t_8 != -1)) {
       __Pyx_RaiseBufferIndexError(__pyx_t_8);
-      __PYX_ERR(0, 906, __pyx_L1_error)
+      __PYX_ERR(0, 908, __pyx_L1_error)
     }
     __pyx_v_end = ((int)(*((double *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_infusion_list.data + __pyx_t_13 * __pyx_v_infusion_list.strides[0]) ) + __pyx_t_14 * __pyx_v_infusion_list.strides[1]) ))));
 
-    /* "opentiva/pkpd.pyx":908
+    /* "opentiva/pkpd.pyx":910
  *             end =  int(infusion_list[x, 3])
  * 
  *             if end <= time:             # <<<<<<<<<<<<<<
@@ -10317,94 +10333,18 @@ static int __pyx_f_8opentiva_4pkpd_9PkPdModel_effect_decrement_time(struct __pyx
     __pyx_t_15 = ((__pyx_v_end <= __pyx_v_time) != 0);
     if (__pyx_t_15) {
 
-      /* "opentiva/pkpd.pyx":909
+      /* "opentiva/pkpd.pyx":911
  * 
  *             if end <= time:
  *                 inf_tmp = np.vstack((inf_tmp, infusion_list[x, :]))             # <<<<<<<<<<<<<<
  *             else:
  *                 inf_tmp = np.vstack((inf_tmp, infusion_list[x, :]))
  */
-      __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 909, __pyx_L1_error)
+      __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 911, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
-      __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_vstack); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 909, __pyx_L1_error)
+      __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_vstack); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 911, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-      __pyx_t_16.data = __pyx_v_infusion_list.data;
-      __pyx_t_16.memview = __pyx_v_infusion_list.memview;
-      __PYX_INC_MEMVIEW(&__pyx_t_16, 0);
-      {
-    Py_ssize_t __pyx_tmp_idx = __pyx_v_x;
-        Py_ssize_t __pyx_tmp_shape = __pyx_v_infusion_list.shape[0];
-    Py_ssize_t __pyx_tmp_stride = __pyx_v_infusion_list.strides[0];
-        if (__pyx_tmp_idx < 0)
-            __pyx_tmp_idx += __pyx_tmp_shape;
-        if (unlikely(!__Pyx_is_valid_index(__pyx_tmp_idx, __pyx_tmp_shape))) {
-            PyErr_SetString(PyExc_IndexError,
-                            "Index out of bounds (axis 0)");
-            __PYX_ERR(0, 909, __pyx_L1_error)
-        }
-        __pyx_t_16.data += __pyx_tmp_idx * __pyx_tmp_stride;
-}
-
-__pyx_t_16.shape[0] = __pyx_v_infusion_list.shape[1];
-__pyx_t_16.strides[0] = __pyx_v_infusion_list.strides[1];
-    __pyx_t_16.suboffsets[0] = -1;
-
-__pyx_t_1 = __pyx_memoryview_fromslice(__pyx_t_16, 1, (PyObject *(*)(char *)) __pyx_memview_get_double, (int (*)(char *, PyObject *)) __pyx_memview_set_double, 0);; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 909, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_1);
-      __PYX_XDEC_MEMVIEW(&__pyx_t_16, 1);
-      __pyx_t_16.memview = NULL;
-      __pyx_t_16.data = NULL;
-      __pyx_t_6 = PyTuple_New(2); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 909, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_6);
-      __Pyx_INCREF(__pyx_v_inf_tmp);
-      __Pyx_GIVEREF(__pyx_v_inf_tmp);
-      PyTuple_SET_ITEM(__pyx_t_6, 0, __pyx_v_inf_tmp);
-      __Pyx_GIVEREF(__pyx_t_1);
-      PyTuple_SET_ITEM(__pyx_t_6, 1, __pyx_t_1);
-      __pyx_t_1 = 0;
-      __pyx_t_1 = NULL;
-      if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_2))) {
-        __pyx_t_1 = PyMethod_GET_SELF(__pyx_t_2);
-        if (likely(__pyx_t_1)) {
-          PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_2);
-          __Pyx_INCREF(__pyx_t_1);
-          __Pyx_INCREF(function);
-          __Pyx_DECREF_SET(__pyx_t_2, function);
-        }
-      }
-      __pyx_t_9 = (__pyx_t_1) ? __Pyx_PyObject_Call2Args(__pyx_t_2, __pyx_t_1, __pyx_t_6) : __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_6);
-      __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
-      __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-      if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 909, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_9);
-      __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-      __Pyx_DECREF_SET(__pyx_v_inf_tmp, __pyx_t_9);
-      __pyx_t_9 = 0;
-
-      /* "opentiva/pkpd.pyx":908
- *             end =  int(infusion_list[x, 3])
- * 
- *             if end <= time:             # <<<<<<<<<<<<<<
- *                 inf_tmp = np.vstack((inf_tmp, infusion_list[x, :]))
- *             else:
- */
-      goto __pyx_L5;
-    }
-
-    /* "opentiva/pkpd.pyx":911
- *                 inf_tmp = np.vstack((inf_tmp, infusion_list[x, :]))
- *             else:
- *                 inf_tmp = np.vstack((inf_tmp, infusion_list[x, :]))             # <<<<<<<<<<<<<<
- *                 inf_tmp[x, 3] = time
- *                 break
- */
-    /*else*/ {
-      __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_np); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 911, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_2);
-      __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_vstack); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 911, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_6);
-      __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
       __pyx_t_16.data = __pyx_v_infusion_list.data;
       __pyx_t_16.memview = __pyx_v_infusion_list.memview;
       __PYX_INC_MEMVIEW(&__pyx_t_16, 0);
@@ -10426,12 +10366,88 @@ __pyx_t_16.shape[0] = __pyx_v_infusion_list.shape[1];
 __pyx_t_16.strides[0] = __pyx_v_infusion_list.strides[1];
     __pyx_t_16.suboffsets[0] = -1;
 
-__pyx_t_2 = __pyx_memoryview_fromslice(__pyx_t_16, 1, (PyObject *(*)(char *)) __pyx_memview_get_double, (int (*)(char *, PyObject *)) __pyx_memview_set_double, 0);; if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 911, __pyx_L1_error)
+__pyx_t_1 = __pyx_memoryview_fromslice(__pyx_t_16, 1, (PyObject *(*)(char *)) __pyx_memview_get_double, (int (*)(char *, PyObject *)) __pyx_memview_set_double, 0);; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 911, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_1);
+      __PYX_XDEC_MEMVIEW(&__pyx_t_16, 1);
+      __pyx_t_16.memview = NULL;
+      __pyx_t_16.data = NULL;
+      __pyx_t_6 = PyTuple_New(2); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 911, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_6);
+      __Pyx_INCREF(__pyx_v_inf_tmp);
+      __Pyx_GIVEREF(__pyx_v_inf_tmp);
+      PyTuple_SET_ITEM(__pyx_t_6, 0, __pyx_v_inf_tmp);
+      __Pyx_GIVEREF(__pyx_t_1);
+      PyTuple_SET_ITEM(__pyx_t_6, 1, __pyx_t_1);
+      __pyx_t_1 = 0;
+      __pyx_t_1 = NULL;
+      if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_2))) {
+        __pyx_t_1 = PyMethod_GET_SELF(__pyx_t_2);
+        if (likely(__pyx_t_1)) {
+          PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_2);
+          __Pyx_INCREF(__pyx_t_1);
+          __Pyx_INCREF(function);
+          __Pyx_DECREF_SET(__pyx_t_2, function);
+        }
+      }
+      __pyx_t_9 = (__pyx_t_1) ? __Pyx_PyObject_Call2Args(__pyx_t_2, __pyx_t_1, __pyx_t_6) : __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_6);
+      __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
+      __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
+      if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 911, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_9);
+      __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+      __Pyx_DECREF_SET(__pyx_v_inf_tmp, __pyx_t_9);
+      __pyx_t_9 = 0;
+
+      /* "opentiva/pkpd.pyx":910
+ *             end =  int(infusion_list[x, 3])
+ * 
+ *             if end <= time:             # <<<<<<<<<<<<<<
+ *                 inf_tmp = np.vstack((inf_tmp, infusion_list[x, :]))
+ *             else:
+ */
+      goto __pyx_L5;
+    }
+
+    /* "opentiva/pkpd.pyx":913
+ *                 inf_tmp = np.vstack((inf_tmp, infusion_list[x, :]))
+ *             else:
+ *                 inf_tmp = np.vstack((inf_tmp, infusion_list[x, :]))             # <<<<<<<<<<<<<<
+ *                 inf_tmp[x, 3] = time
+ *                 break
+ */
+    /*else*/ {
+      __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_np); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 913, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_2);
+      __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_vstack); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 913, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_6);
+      __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+      __pyx_t_16.data = __pyx_v_infusion_list.data;
+      __pyx_t_16.memview = __pyx_v_infusion_list.memview;
+      __PYX_INC_MEMVIEW(&__pyx_t_16, 0);
+      {
+    Py_ssize_t __pyx_tmp_idx = __pyx_v_x;
+        Py_ssize_t __pyx_tmp_shape = __pyx_v_infusion_list.shape[0];
+    Py_ssize_t __pyx_tmp_stride = __pyx_v_infusion_list.strides[0];
+        if (__pyx_tmp_idx < 0)
+            __pyx_tmp_idx += __pyx_tmp_shape;
+        if (unlikely(!__Pyx_is_valid_index(__pyx_tmp_idx, __pyx_tmp_shape))) {
+            PyErr_SetString(PyExc_IndexError,
+                            "Index out of bounds (axis 0)");
+            __PYX_ERR(0, 913, __pyx_L1_error)
+        }
+        __pyx_t_16.data += __pyx_tmp_idx * __pyx_tmp_stride;
+}
+
+__pyx_t_16.shape[0] = __pyx_v_infusion_list.shape[1];
+__pyx_t_16.strides[0] = __pyx_v_infusion_list.strides[1];
+    __pyx_t_16.suboffsets[0] = -1;
+
+__pyx_t_2 = __pyx_memoryview_fromslice(__pyx_t_16, 1, (PyObject *(*)(char *)) __pyx_memview_get_double, (int (*)(char *, PyObject *)) __pyx_memview_set_double, 0);; if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 913, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
       __PYX_XDEC_MEMVIEW(&__pyx_t_16, 1);
       __pyx_t_16.memview = NULL;
       __pyx_t_16.data = NULL;
-      __pyx_t_1 = PyTuple_New(2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 911, __pyx_L1_error)
+      __pyx_t_1 = PyTuple_New(2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 913, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_INCREF(__pyx_v_inf_tmp);
       __Pyx_GIVEREF(__pyx_v_inf_tmp);
@@ -10452,24 +10468,24 @@ __pyx_t_2 = __pyx_memoryview_fromslice(__pyx_t_16, 1, (PyObject *(*)(char *)) __
       __pyx_t_9 = (__pyx_t_2) ? __Pyx_PyObject_Call2Args(__pyx_t_6, __pyx_t_2, __pyx_t_1) : __Pyx_PyObject_CallOneArg(__pyx_t_6, __pyx_t_1);
       __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-      if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 911, __pyx_L1_error)
+      if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 913, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_9);
       __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
       __Pyx_DECREF_SET(__pyx_v_inf_tmp, __pyx_t_9);
       __pyx_t_9 = 0;
 
-      /* "opentiva/pkpd.pyx":912
+      /* "opentiva/pkpd.pyx":914
  *             else:
  *                 inf_tmp = np.vstack((inf_tmp, infusion_list[x, :]))
  *                 inf_tmp[x, 3] = time             # <<<<<<<<<<<<<<
  *                 break
  * 
  */
-      __pyx_t_9 = __Pyx_PyInt_From_int(__pyx_v_time); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 912, __pyx_L1_error)
+      __pyx_t_9 = __Pyx_PyInt_From_int(__pyx_v_time); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 914, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_9);
-      __pyx_t_6 = PyInt_FromSsize_t(__pyx_v_x); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 912, __pyx_L1_error)
+      __pyx_t_6 = PyInt_FromSsize_t(__pyx_v_x); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 914, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_6);
-      __pyx_t_1 = PyTuple_New(2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 912, __pyx_L1_error)
+      __pyx_t_1 = PyTuple_New(2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 914, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_GIVEREF(__pyx_t_6);
       PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_t_6);
@@ -10477,11 +10493,11 @@ __pyx_t_2 = __pyx_memoryview_fromslice(__pyx_t_16, 1, (PyObject *(*)(char *)) __
       __Pyx_GIVEREF(__pyx_int_3);
       PyTuple_SET_ITEM(__pyx_t_1, 1, __pyx_int_3);
       __pyx_t_6 = 0;
-      if (unlikely(PyObject_SetItem(__pyx_v_inf_tmp, __pyx_t_1, __pyx_t_9) < 0)) __PYX_ERR(0, 912, __pyx_L1_error)
+      if (unlikely(PyObject_SetItem(__pyx_v_inf_tmp, __pyx_t_1, __pyx_t_9) < 0)) __PYX_ERR(0, 914, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
       __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
 
-      /* "opentiva/pkpd.pyx":913
+      /* "opentiva/pkpd.pyx":915
  *                 inf_tmp = np.vstack((inf_tmp, infusion_list[x, :]))
  *                 inf_tmp[x, 3] = time
  *                 break             # <<<<<<<<<<<<<<
@@ -10494,7 +10510,7 @@ __pyx_t_2 = __pyx_memoryview_fromslice(__pyx_t_16, 1, (PyObject *(*)(char *)) __
   }
   __pyx_L4_break:;
 
-  /* "opentiva/pkpd.pyx":915
+  /* "opentiva/pkpd.pyx":917
  *                 break
  * 
  *         t = 0             # <<<<<<<<<<<<<<
@@ -10503,7 +10519,7 @@ __pyx_t_2 = __pyx_memoryview_fromslice(__pyx_t_16, 1, (PyObject *(*)(char *)) __
  */
   __pyx_v_t = 0;
 
-  /* "opentiva/pkpd.pyx":916
+  /* "opentiva/pkpd.pyx":918
  * 
  *         t = 0
  *         current_cp = 0             # <<<<<<<<<<<<<<
@@ -10512,7 +10528,7 @@ __pyx_t_2 = __pyx_memoryview_fromslice(__pyx_t_16, 1, (PyObject *(*)(char *)) __
  */
   __pyx_v_current_cp = 0.0;
 
-  /* "opentiva/pkpd.pyx":917
+  /* "opentiva/pkpd.pyx":919
  *         t = 0
  *         current_cp = 0
  *         current_ce = 0             # <<<<<<<<<<<<<<
@@ -10521,7 +10537,7 @@ __pyx_t_2 = __pyx_memoryview_fromslice(__pyx_t_16, 1, (PyObject *(*)(char *)) __
  */
   __pyx_v_current_ce = 0.0;
 
-  /* "opentiva/pkpd.pyx":919
+  /* "opentiva/pkpd.pyx":921
  *         current_ce = 0
  * 
  *         if target == 0:             # <<<<<<<<<<<<<<
@@ -10531,7 +10547,7 @@ __pyx_t_2 = __pyx_memoryview_fromslice(__pyx_t_16, 1, (PyObject *(*)(char *)) __
   __pyx_t_15 = ((__pyx_v_target == 0.0) != 0);
   if (__pyx_t_15) {
 
-    /* "opentiva/pkpd.pyx":920
+    /* "opentiva/pkpd.pyx":922
  * 
  *         if target == 0:
  *             target = 0.1  # Approximate 0 to 0.1 to avoid infinite loop             # <<<<<<<<<<<<<<
@@ -10540,7 +10556,7 @@ __pyx_t_2 = __pyx_memoryview_fromslice(__pyx_t_16, 1, (PyObject *(*)(char *)) __
  */
     __pyx_v_target = 0.1;
 
-    /* "opentiva/pkpd.pyx":919
+    /* "opentiva/pkpd.pyx":921
  *         current_ce = 0
  * 
  *         if target == 0:             # <<<<<<<<<<<<<<
@@ -10549,7 +10565,7 @@ __pyx_t_2 = __pyx_memoryview_fromslice(__pyx_t_16, 1, (PyObject *(*)(char *)) __
  */
   }
 
-  /* "opentiva/pkpd.pyx":922
+  /* "opentiva/pkpd.pyx":924
  *             target = 0.1  # Approximate 0 to 0.1 to avoid infinite loop
  * 
  *         while True:             # <<<<<<<<<<<<<<
@@ -10558,7 +10574,7 @@ __pyx_t_2 = __pyx_memoryview_fromslice(__pyx_t_16, 1, (PyObject *(*)(char *)) __
  */
   while (1) {
 
-    /* "opentiva/pkpd.pyx":923
+    /* "opentiva/pkpd.pyx":925
  * 
  *         while True:
  *             previous_cp = current_cp             # <<<<<<<<<<<<<<
@@ -10567,20 +10583,20 @@ __pyx_t_2 = __pyx_memoryview_fromslice(__pyx_t_16, 1, (PyObject *(*)(char *)) __
  */
     __pyx_v_previous_cp = __pyx_v_current_cp;
 
-    /* "opentiva/pkpd.pyx":924
+    /* "opentiva/pkpd.pyx":926
  *         while True:
  *             previous_cp = current_cp
  *             current_cp = self.calculate_cp(inf_tmp, t)             # <<<<<<<<<<<<<<
  * 
  *             current_ce = self.calculate_ce(current_cp, previous_cp,
  */
-    __pyx_t_17 = __Pyx_PyObject_to_MemoryviewSlice_dsds_double(__pyx_v_inf_tmp, PyBUF_WRITABLE); if (unlikely(!__pyx_t_17.memview)) __PYX_ERR(0, 924, __pyx_L1_error)
+    __pyx_t_17 = __Pyx_PyObject_to_MemoryviewSlice_dsds_double(__pyx_v_inf_tmp, PyBUF_WRITABLE); if (unlikely(!__pyx_t_17.memview)) __PYX_ERR(0, 926, __pyx_L1_error)
     __pyx_v_current_cp = ((struct __pyx_vtabstruct_8opentiva_4pkpd_PkPdModel *)__pyx_v_self->__pyx_vtab)->calculate_cp(__pyx_v_self, __pyx_t_17, __pyx_v_t, 0);
     __PYX_XDEC_MEMVIEW(&__pyx_t_17, 1);
     __pyx_t_17.memview = NULL;
     __pyx_t_17.data = NULL;
 
-    /* "opentiva/pkpd.pyx":926
+    /* "opentiva/pkpd.pyx":928
  *             current_cp = self.calculate_cp(inf_tmp, t)
  * 
  *             current_ce = self.calculate_ce(current_cp, previous_cp,             # <<<<<<<<<<<<<<
@@ -10589,7 +10605,7 @@ __pyx_t_2 = __pyx_memoryview_fromslice(__pyx_t_16, 1, (PyObject *(*)(char *)) __
  */
     __pyx_v_current_ce = ((struct __pyx_vtabstruct_8opentiva_4pkpd_PkPdModel *)__pyx_v_self->__pyx_vtab)->calculate_ce(__pyx_v_self, __pyx_v_current_cp, __pyx_v_previous_cp, __pyx_v_previous_ce);
 
-    /* "opentiva/pkpd.pyx":929
+    /* "opentiva/pkpd.pyx":931
  *                                            previous_ce)
  * 
  *             previous_ce = current_ce             # <<<<<<<<<<<<<<
@@ -10598,7 +10614,7 @@ __pyx_t_2 = __pyx_memoryview_fromslice(__pyx_t_16, 1, (PyObject *(*)(char *)) __
  */
     __pyx_v_previous_ce = __pyx_v_current_ce;
 
-    /* "opentiva/pkpd.pyx":931
+    /* "opentiva/pkpd.pyx":933
  *             previous_ce = current_ce
  * 
  *             if (current_ce <= target) and (t > time):             # <<<<<<<<<<<<<<
@@ -10616,7 +10632,7 @@ __pyx_t_2 = __pyx_memoryview_fromslice(__pyx_t_16, 1, (PyObject *(*)(char *)) __
     __pyx_L10_bool_binop_done:;
     if (__pyx_t_15) {
 
-      /* "opentiva/pkpd.pyx":932
+      /* "opentiva/pkpd.pyx":934
  * 
  *             if (current_ce <= target) and (t > time):
  *                 break             # <<<<<<<<<<<<<<
@@ -10625,7 +10641,7 @@ __pyx_t_2 = __pyx_memoryview_fromslice(__pyx_t_16, 1, (PyObject *(*)(char *)) __
  */
       goto __pyx_L8_break;
 
-      /* "opentiva/pkpd.pyx":931
+      /* "opentiva/pkpd.pyx":933
  *             previous_ce = current_ce
  * 
  *             if (current_ce <= target) and (t > time):             # <<<<<<<<<<<<<<
@@ -10634,7 +10650,7 @@ __pyx_t_2 = __pyx_memoryview_fromslice(__pyx_t_16, 1, (PyObject *(*)(char *)) __
  */
     }
 
-    /* "opentiva/pkpd.pyx":934
+    /* "opentiva/pkpd.pyx":936
  *                 break
  * 
  *             t += 1             # <<<<<<<<<<<<<<
@@ -10645,7 +10661,7 @@ __pyx_t_2 = __pyx_memoryview_fromslice(__pyx_t_16, 1, (PyObject *(*)(char *)) __
   }
   __pyx_L8_break:;
 
-  /* "opentiva/pkpd.pyx":936
+  /* "opentiva/pkpd.pyx":938
  *             t += 1
  * 
  *         decrement_time = t - time             # <<<<<<<<<<<<<<
@@ -10654,7 +10670,7 @@ __pyx_t_2 = __pyx_memoryview_fromslice(__pyx_t_16, 1, (PyObject *(*)(char *)) __
  */
   __pyx_v_decrement_time = (__pyx_v_t - __pyx_v_time);
 
-  /* "opentiva/pkpd.pyx":938
+  /* "opentiva/pkpd.pyx":940
  *         decrement_time = t - time
  * 
  *         return decrement_time             # <<<<<<<<<<<<<<
@@ -10664,7 +10680,7 @@ __pyx_t_2 = __pyx_memoryview_fromslice(__pyx_t_16, 1, (PyObject *(*)(char *)) __
   __pyx_r = __pyx_v_decrement_time;
   goto __pyx_L0;
 
-  /* "opentiva/pkpd.pyx":871
+  /* "opentiva/pkpd.pyx":873
  * 
  * 
  *     cpdef int effect_decrement_time(self, int time, double target,             # <<<<<<<<<<<<<<
@@ -10730,17 +10746,17 @@ static PyObject *__pyx_pw_8opentiva_4pkpd_9PkPdModel_25effect_decrement_time(PyO
         case  1:
         if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_target)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("effect_decrement_time", 1, 3, 3, 1); __PYX_ERR(0, 871, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("effect_decrement_time", 1, 3, 3, 1); __PYX_ERR(0, 873, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  2:
         if (likely((values[2] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_infusion_list)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("effect_decrement_time", 1, 3, 3, 2); __PYX_ERR(0, 871, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("effect_decrement_time", 1, 3, 3, 2); __PYX_ERR(0, 873, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "effect_decrement_time") < 0)) __PYX_ERR(0, 871, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "effect_decrement_time") < 0)) __PYX_ERR(0, 873, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 3) {
       goto __pyx_L5_argtuple_error;
@@ -10749,13 +10765,13 @@ static PyObject *__pyx_pw_8opentiva_4pkpd_9PkPdModel_25effect_decrement_time(PyO
       values[1] = PyTuple_GET_ITEM(__pyx_args, 1);
       values[2] = PyTuple_GET_ITEM(__pyx_args, 2);
     }
-    __pyx_v_time = __Pyx_PyInt_As_int(values[0]); if (unlikely((__pyx_v_time == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 871, __pyx_L3_error)
-    __pyx_v_target = __pyx_PyFloat_AsDouble(values[1]); if (unlikely((__pyx_v_target == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 871, __pyx_L3_error)
-    __pyx_v_infusion_list = __Pyx_PyObject_to_MemoryviewSlice_dsds_double(values[2], PyBUF_WRITABLE); if (unlikely(!__pyx_v_infusion_list.memview)) __PYX_ERR(0, 872, __pyx_L3_error)
+    __pyx_v_time = __Pyx_PyInt_As_int(values[0]); if (unlikely((__pyx_v_time == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 873, __pyx_L3_error)
+    __pyx_v_target = __pyx_PyFloat_AsDouble(values[1]); if (unlikely((__pyx_v_target == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 873, __pyx_L3_error)
+    __pyx_v_infusion_list = __Pyx_PyObject_to_MemoryviewSlice_dsds_double(values[2], PyBUF_WRITABLE); if (unlikely(!__pyx_v_infusion_list.memview)) __PYX_ERR(0, 874, __pyx_L3_error)
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("effect_decrement_time", 1, 3, 3, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 871, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("effect_decrement_time", 1, 3, 3, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 873, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("opentiva.pkpd.PkPdModel.effect_decrement_time", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
@@ -10777,8 +10793,8 @@ static PyObject *__pyx_pf_8opentiva_4pkpd_9PkPdModel_24effect_decrement_time(str
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("effect_decrement_time", 0);
   __Pyx_XDECREF(__pyx_r);
-  if (unlikely(!__pyx_v_infusion_list.memview)) { __Pyx_RaiseUnboundLocalError("infusion_list"); __PYX_ERR(0, 871, __pyx_L1_error) }
-  __pyx_t_1 = __Pyx_PyInt_From_int(__pyx_f_8opentiva_4pkpd_9PkPdModel_effect_decrement_time(__pyx_v_self, __pyx_v_time, __pyx_v_target, __pyx_v_infusion_list, 1)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 871, __pyx_L1_error)
+  if (unlikely(!__pyx_v_infusion_list.memview)) { __Pyx_RaiseUnboundLocalError("infusion_list"); __PYX_ERR(0, 873, __pyx_L1_error) }
+  __pyx_t_1 = __Pyx_PyInt_From_int(__pyx_f_8opentiva_4pkpd_9PkPdModel_effect_decrement_time(__pyx_v_self, __pyx_v_time, __pyx_v_target, __pyx_v_infusion_list, 1)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 873, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -10796,7 +10812,7 @@ static PyObject *__pyx_pf_8opentiva_4pkpd_9PkPdModel_24effect_decrement_time(str
   return __pyx_r;
 }
 
-/* "opentiva/pkpd.pyx":941
+/* "opentiva/pkpd.pyx":943
  * 
  * 
  *     cpdef double ke0_tpeak_method_minimise(self, double ke0, double dose,             # <<<<<<<<<<<<<<
@@ -10834,16 +10850,16 @@ static double __pyx_f_8opentiva_4pkpd_9PkPdModel_ke0_tpeak_method_minimise(struc
     if (unlikely(!__Pyx_object_dict_version_matches(((PyObject *)__pyx_v_self), __pyx_tp_dict_version, __pyx_obj_dict_version))) {
       PY_UINT64_T __pyx_type_dict_guard = __Pyx_get_tp_dict_version(((PyObject *)__pyx_v_self));
       #endif
-      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_ke0_tpeak_method_minimise); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 941, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_ke0_tpeak_method_minimise); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 943, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)(void*)__pyx_pw_8opentiva_4pkpd_9PkPdModel_27ke0_tpeak_method_minimise)) {
-        __pyx_t_3 = PyFloat_FromDouble(__pyx_v_ke0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 941, __pyx_L1_error)
+        __pyx_t_3 = PyFloat_FromDouble(__pyx_v_ke0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 943, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_3);
-        __pyx_t_4 = PyFloat_FromDouble(__pyx_v_dose); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 941, __pyx_L1_error)
+        __pyx_t_4 = PyFloat_FromDouble(__pyx_v_dose); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 943, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_4);
-        __pyx_t_5 = PyFloat_FromDouble(__pyx_v_tpeak); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 941, __pyx_L1_error)
+        __pyx_t_5 = PyFloat_FromDouble(__pyx_v_tpeak); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 943, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_5);
-        __pyx_t_6 = PyFloat_FromDouble(__pyx_v_ce_tpeak); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 941, __pyx_L1_error)
+        __pyx_t_6 = PyFloat_FromDouble(__pyx_v_ce_tpeak); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 943, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_6);
         __Pyx_INCREF(__pyx_t_1);
         __pyx_t_7 = __pyx_t_1; __pyx_t_8 = NULL;
@@ -10861,7 +10877,7 @@ static double __pyx_f_8opentiva_4pkpd_9PkPdModel_ke0_tpeak_method_minimise(struc
         #if CYTHON_FAST_PYCALL
         if (PyFunction_Check(__pyx_t_7)) {
           PyObject *__pyx_temp[5] = {__pyx_t_8, __pyx_t_3, __pyx_t_4, __pyx_t_5, __pyx_t_6};
-          __pyx_t_2 = __Pyx_PyFunction_FastCall(__pyx_t_7, __pyx_temp+1-__pyx_t_9, 4+__pyx_t_9); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 941, __pyx_L1_error)
+          __pyx_t_2 = __Pyx_PyFunction_FastCall(__pyx_t_7, __pyx_temp+1-__pyx_t_9, 4+__pyx_t_9); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 943, __pyx_L1_error)
           __Pyx_XDECREF(__pyx_t_8); __pyx_t_8 = 0;
           __Pyx_GOTREF(__pyx_t_2);
           __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
@@ -10873,7 +10889,7 @@ static double __pyx_f_8opentiva_4pkpd_9PkPdModel_ke0_tpeak_method_minimise(struc
         #if CYTHON_FAST_PYCCALL
         if (__Pyx_PyFastCFunction_Check(__pyx_t_7)) {
           PyObject *__pyx_temp[5] = {__pyx_t_8, __pyx_t_3, __pyx_t_4, __pyx_t_5, __pyx_t_6};
-          __pyx_t_2 = __Pyx_PyCFunction_FastCall(__pyx_t_7, __pyx_temp+1-__pyx_t_9, 4+__pyx_t_9); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 941, __pyx_L1_error)
+          __pyx_t_2 = __Pyx_PyCFunction_FastCall(__pyx_t_7, __pyx_temp+1-__pyx_t_9, 4+__pyx_t_9); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 943, __pyx_L1_error)
           __Pyx_XDECREF(__pyx_t_8); __pyx_t_8 = 0;
           __Pyx_GOTREF(__pyx_t_2);
           __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
@@ -10883,7 +10899,7 @@ static double __pyx_f_8opentiva_4pkpd_9PkPdModel_ke0_tpeak_method_minimise(struc
         } else
         #endif
         {
-          __pyx_t_10 = PyTuple_New(4+__pyx_t_9); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 941, __pyx_L1_error)
+          __pyx_t_10 = PyTuple_New(4+__pyx_t_9); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 943, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_10);
           if (__pyx_t_8) {
             __Pyx_GIVEREF(__pyx_t_8); PyTuple_SET_ITEM(__pyx_t_10, 0, __pyx_t_8); __pyx_t_8 = NULL;
@@ -10900,12 +10916,12 @@ static double __pyx_f_8opentiva_4pkpd_9PkPdModel_ke0_tpeak_method_minimise(struc
           __pyx_t_4 = 0;
           __pyx_t_5 = 0;
           __pyx_t_6 = 0;
-          __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_7, __pyx_t_10, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 941, __pyx_L1_error)
+          __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_7, __pyx_t_10, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 943, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_2);
           __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
         }
         __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-        __pyx_t_11 = __pyx_PyFloat_AsDouble(__pyx_t_2); if (unlikely((__pyx_t_11 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 941, __pyx_L1_error)
+        __pyx_t_11 = __pyx_PyFloat_AsDouble(__pyx_t_2); if (unlikely((__pyx_t_11 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 943, __pyx_L1_error)
         __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
         __pyx_r = __pyx_t_11;
         __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
@@ -10924,7 +10940,7 @@ static double __pyx_f_8opentiva_4pkpd_9PkPdModel_ke0_tpeak_method_minimise(struc
     #endif
   }
 
-  /* "opentiva/pkpd.pyx":962
+  /* "opentiva/pkpd.pyx":964
  * 
  *         """
  *         cdef double f = 0             # <<<<<<<<<<<<<<
@@ -10933,7 +10949,7 @@ static double __pyx_f_8opentiva_4pkpd_9PkPdModel_ke0_tpeak_method_minimise(struc
  */
   __pyx_v_f = 0.0;
 
-  /* "opentiva/pkpd.pyx":964
+  /* "opentiva/pkpd.pyx":966
  *         cdef double f = 0
  * 
  *         f = ((ke0 * self.A) / (ke0 - self.alpha)) * \             # <<<<<<<<<<<<<<
@@ -10944,10 +10960,10 @@ static double __pyx_f_8opentiva_4pkpd_9PkPdModel_ke0_tpeak_method_minimise(struc
   __pyx_t_12 = (__pyx_v_ke0 - __pyx_v_self->alpha);
   if (unlikely(__pyx_t_12 == 0)) {
     PyErr_SetString(PyExc_ZeroDivisionError, "float division");
-    __PYX_ERR(0, 964, __pyx_L1_error)
+    __PYX_ERR(0, 966, __pyx_L1_error)
   }
 
-  /* "opentiva/pkpd.pyx":965
+  /* "opentiva/pkpd.pyx":967
  * 
  *         f = ((ke0 * self.A) / (ke0 - self.alpha)) * \
  *             (self.alpha * exp(-self.alpha * tpeak) - ke0 * exp(-ke0 * tpeak))             # <<<<<<<<<<<<<<
@@ -10956,7 +10972,7 @@ static double __pyx_f_8opentiva_4pkpd_9PkPdModel_ke0_tpeak_method_minimise(struc
  */
   __pyx_v_f = ((__pyx_t_11 / __pyx_t_12) * ((__pyx_v_self->alpha * exp(((-__pyx_v_self->alpha) * __pyx_v_tpeak))) - (__pyx_v_ke0 * exp(((-__pyx_v_ke0) * __pyx_v_tpeak)))));
 
-  /* "opentiva/pkpd.pyx":967
+  /* "opentiva/pkpd.pyx":969
  *             (self.alpha * exp(-self.alpha * tpeak) - ke0 * exp(-ke0 * tpeak))
  * 
  *         f += ((ke0 * self.B) / (ke0 - self.beta)) * \             # <<<<<<<<<<<<<<
@@ -10967,10 +10983,10 @@ static double __pyx_f_8opentiva_4pkpd_9PkPdModel_ke0_tpeak_method_minimise(struc
   __pyx_t_11 = (__pyx_v_ke0 - __pyx_v_self->beta);
   if (unlikely(__pyx_t_11 == 0)) {
     PyErr_SetString(PyExc_ZeroDivisionError, "float division");
-    __PYX_ERR(0, 967, __pyx_L1_error)
+    __PYX_ERR(0, 969, __pyx_L1_error)
   }
 
-  /* "opentiva/pkpd.pyx":968
+  /* "opentiva/pkpd.pyx":970
  * 
  *         f += ((ke0 * self.B) / (ke0 - self.beta)) * \
  *              (self.beta * exp(-self.beta * tpeak) - ke0 * exp(-ke0 * tpeak))             # <<<<<<<<<<<<<<
@@ -10979,7 +10995,7 @@ static double __pyx_f_8opentiva_4pkpd_9PkPdModel_ke0_tpeak_method_minimise(struc
  */
   __pyx_v_f = (__pyx_v_f + ((__pyx_t_12 / __pyx_t_11) * ((__pyx_v_self->beta * exp(((-__pyx_v_self->beta) * __pyx_v_tpeak))) - (__pyx_v_ke0 * exp(((-__pyx_v_ke0) * __pyx_v_tpeak))))));
 
-  /* "opentiva/pkpd.pyx":970
+  /* "opentiva/pkpd.pyx":972
  *              (self.beta * exp(-self.beta * tpeak) - ke0 * exp(-ke0 * tpeak))
  * 
  *         f += ((ke0 * self.C) / (ke0 - self.gamma)) * \             # <<<<<<<<<<<<<<
@@ -10990,10 +11006,10 @@ static double __pyx_f_8opentiva_4pkpd_9PkPdModel_ke0_tpeak_method_minimise(struc
   __pyx_t_12 = (__pyx_v_ke0 - __pyx_v_self->gamma);
   if (unlikely(__pyx_t_12 == 0)) {
     PyErr_SetString(PyExc_ZeroDivisionError, "float division");
-    __PYX_ERR(0, 970, __pyx_L1_error)
+    __PYX_ERR(0, 972, __pyx_L1_error)
   }
 
-  /* "opentiva/pkpd.pyx":971
+  /* "opentiva/pkpd.pyx":973
  * 
  *         f += ((ke0 * self.C) / (ke0 - self.gamma)) * \
  *              (self.gamma * exp(-self.gamma * tpeak) - ke0 * exp(-ke0 * tpeak))             # <<<<<<<<<<<<<<
@@ -11002,7 +11018,7 @@ static double __pyx_f_8opentiva_4pkpd_9PkPdModel_ke0_tpeak_method_minimise(struc
  */
   __pyx_v_f = (__pyx_v_f + ((__pyx_t_11 / __pyx_t_12) * ((__pyx_v_self->gamma * exp(((-__pyx_v_self->gamma) * __pyx_v_tpeak))) - (__pyx_v_ke0 * exp(((-__pyx_v_ke0) * __pyx_v_tpeak))))));
 
-  /* "opentiva/pkpd.pyx":973
+  /* "opentiva/pkpd.pyx":975
  *              (self.gamma * exp(-self.gamma * tpeak) - ke0 * exp(-ke0 * tpeak))
  * 
  *         f *= dose             # <<<<<<<<<<<<<<
@@ -11011,7 +11027,7 @@ static double __pyx_f_8opentiva_4pkpd_9PkPdModel_ke0_tpeak_method_minimise(struc
  */
   __pyx_v_f = (__pyx_v_f * __pyx_v_dose);
 
-  /* "opentiva/pkpd.pyx":974
+  /* "opentiva/pkpd.pyx":976
  * 
  *         f *= dose
  *         f /= ce_tpeak             # <<<<<<<<<<<<<<
@@ -11020,11 +11036,11 @@ static double __pyx_f_8opentiva_4pkpd_9PkPdModel_ke0_tpeak_method_minimise(struc
  */
   if (unlikely(__pyx_v_ce_tpeak == 0)) {
     PyErr_SetString(PyExc_ZeroDivisionError, "float division");
-    __PYX_ERR(0, 974, __pyx_L1_error)
+    __PYX_ERR(0, 976, __pyx_L1_error)
   }
   __pyx_v_f = (__pyx_v_f / __pyx_v_ce_tpeak);
 
-  /* "opentiva/pkpd.pyx":976
+  /* "opentiva/pkpd.pyx":978
  *         f /= ce_tpeak
  * 
  *         return f             # <<<<<<<<<<<<<<
@@ -11034,7 +11050,7 @@ static double __pyx_f_8opentiva_4pkpd_9PkPdModel_ke0_tpeak_method_minimise(struc
   __pyx_r = __pyx_v_f;
   goto __pyx_L0;
 
-  /* "opentiva/pkpd.pyx":941
+  /* "opentiva/pkpd.pyx":943
  * 
  * 
  *     cpdef double ke0_tpeak_method_minimise(self, double ke0, double dose,             # <<<<<<<<<<<<<<
@@ -11101,23 +11117,23 @@ static PyObject *__pyx_pw_8opentiva_4pkpd_9PkPdModel_27ke0_tpeak_method_minimise
         case  1:
         if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_dose)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("ke0_tpeak_method_minimise", 1, 4, 4, 1); __PYX_ERR(0, 941, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("ke0_tpeak_method_minimise", 1, 4, 4, 1); __PYX_ERR(0, 943, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  2:
         if (likely((values[2] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_tpeak)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("ke0_tpeak_method_minimise", 1, 4, 4, 2); __PYX_ERR(0, 941, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("ke0_tpeak_method_minimise", 1, 4, 4, 2); __PYX_ERR(0, 943, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  3:
         if (likely((values[3] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_ce_tpeak)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("ke0_tpeak_method_minimise", 1, 4, 4, 3); __PYX_ERR(0, 941, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("ke0_tpeak_method_minimise", 1, 4, 4, 3); __PYX_ERR(0, 943, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "ke0_tpeak_method_minimise") < 0)) __PYX_ERR(0, 941, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "ke0_tpeak_method_minimise") < 0)) __PYX_ERR(0, 943, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 4) {
       goto __pyx_L5_argtuple_error;
@@ -11127,14 +11143,14 @@ static PyObject *__pyx_pw_8opentiva_4pkpd_9PkPdModel_27ke0_tpeak_method_minimise
       values[2] = PyTuple_GET_ITEM(__pyx_args, 2);
       values[3] = PyTuple_GET_ITEM(__pyx_args, 3);
     }
-    __pyx_v_ke0 = __pyx_PyFloat_AsDouble(values[0]); if (unlikely((__pyx_v_ke0 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 941, __pyx_L3_error)
-    __pyx_v_dose = __pyx_PyFloat_AsDouble(values[1]); if (unlikely((__pyx_v_dose == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 941, __pyx_L3_error)
-    __pyx_v_tpeak = __pyx_PyFloat_AsDouble(values[2]); if (unlikely((__pyx_v_tpeak == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 942, __pyx_L3_error)
-    __pyx_v_ce_tpeak = __pyx_PyFloat_AsDouble(values[3]); if (unlikely((__pyx_v_ce_tpeak == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 942, __pyx_L3_error)
+    __pyx_v_ke0 = __pyx_PyFloat_AsDouble(values[0]); if (unlikely((__pyx_v_ke0 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 943, __pyx_L3_error)
+    __pyx_v_dose = __pyx_PyFloat_AsDouble(values[1]); if (unlikely((__pyx_v_dose == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 943, __pyx_L3_error)
+    __pyx_v_tpeak = __pyx_PyFloat_AsDouble(values[2]); if (unlikely((__pyx_v_tpeak == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 944, __pyx_L3_error)
+    __pyx_v_ce_tpeak = __pyx_PyFloat_AsDouble(values[3]); if (unlikely((__pyx_v_ce_tpeak == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 944, __pyx_L3_error)
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("ke0_tpeak_method_minimise", 1, 4, 4, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 941, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("ke0_tpeak_method_minimise", 1, 4, 4, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 943, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("opentiva.pkpd.PkPdModel.ke0_tpeak_method_minimise", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
@@ -11156,7 +11172,7 @@ static PyObject *__pyx_pf_8opentiva_4pkpd_9PkPdModel_26ke0_tpeak_method_minimise
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("ke0_tpeak_method_minimise", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyFloat_FromDouble(__pyx_f_8opentiva_4pkpd_9PkPdModel_ke0_tpeak_method_minimise(__pyx_v_self, __pyx_v_ke0, __pyx_v_dose, __pyx_v_tpeak, __pyx_v_ce_tpeak, 1)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 941, __pyx_L1_error)
+  __pyx_t_1 = PyFloat_FromDouble(__pyx_f_8opentiva_4pkpd_9PkPdModel_ke0_tpeak_method_minimise(__pyx_v_self, __pyx_v_ke0, __pyx_v_dose, __pyx_v_tpeak, __pyx_v_ce_tpeak, 1)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 943, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -11173,7 +11189,7 @@ static PyObject *__pyx_pf_8opentiva_4pkpd_9PkPdModel_26ke0_tpeak_method_minimise
   return __pyx_r;
 }
 
-/* "opentiva/pkpd.pyx":979
+/* "opentiva/pkpd.pyx":981
  * 
  * 
  *     cpdef double ke0_tpeak_method(self, double dose, double tpeak,             # <<<<<<<<<<<<<<
@@ -11209,14 +11225,14 @@ static double __pyx_f_8opentiva_4pkpd_9PkPdModel_ke0_tpeak_method(struct __pyx_o
     if (unlikely(!__Pyx_object_dict_version_matches(((PyObject *)__pyx_v_self), __pyx_tp_dict_version, __pyx_obj_dict_version))) {
       PY_UINT64_T __pyx_type_dict_guard = __Pyx_get_tp_dict_version(((PyObject *)__pyx_v_self));
       #endif
-      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_ke0_tpeak_method); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 979, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_ke0_tpeak_method); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 981, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)(void*)__pyx_pw_8opentiva_4pkpd_9PkPdModel_29ke0_tpeak_method)) {
-        __pyx_t_3 = PyFloat_FromDouble(__pyx_v_dose); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 979, __pyx_L1_error)
+        __pyx_t_3 = PyFloat_FromDouble(__pyx_v_dose); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 981, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_3);
-        __pyx_t_4 = PyFloat_FromDouble(__pyx_v_tpeak); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 979, __pyx_L1_error)
+        __pyx_t_4 = PyFloat_FromDouble(__pyx_v_tpeak); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 981, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_4);
-        __pyx_t_5 = PyFloat_FromDouble(__pyx_v_ce_tpeak); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 979, __pyx_L1_error)
+        __pyx_t_5 = PyFloat_FromDouble(__pyx_v_ce_tpeak); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 981, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_5);
         __Pyx_INCREF(__pyx_t_1);
         __pyx_t_6 = __pyx_t_1; __pyx_t_7 = NULL;
@@ -11234,7 +11250,7 @@ static double __pyx_f_8opentiva_4pkpd_9PkPdModel_ke0_tpeak_method(struct __pyx_o
         #if CYTHON_FAST_PYCALL
         if (PyFunction_Check(__pyx_t_6)) {
           PyObject *__pyx_temp[4] = {__pyx_t_7, __pyx_t_3, __pyx_t_4, __pyx_t_5};
-          __pyx_t_2 = __Pyx_PyFunction_FastCall(__pyx_t_6, __pyx_temp+1-__pyx_t_8, 3+__pyx_t_8); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 979, __pyx_L1_error)
+          __pyx_t_2 = __Pyx_PyFunction_FastCall(__pyx_t_6, __pyx_temp+1-__pyx_t_8, 3+__pyx_t_8); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 981, __pyx_L1_error)
           __Pyx_XDECREF(__pyx_t_7); __pyx_t_7 = 0;
           __Pyx_GOTREF(__pyx_t_2);
           __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
@@ -11245,7 +11261,7 @@ static double __pyx_f_8opentiva_4pkpd_9PkPdModel_ke0_tpeak_method(struct __pyx_o
         #if CYTHON_FAST_PYCCALL
         if (__Pyx_PyFastCFunction_Check(__pyx_t_6)) {
           PyObject *__pyx_temp[4] = {__pyx_t_7, __pyx_t_3, __pyx_t_4, __pyx_t_5};
-          __pyx_t_2 = __Pyx_PyCFunction_FastCall(__pyx_t_6, __pyx_temp+1-__pyx_t_8, 3+__pyx_t_8); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 979, __pyx_L1_error)
+          __pyx_t_2 = __Pyx_PyCFunction_FastCall(__pyx_t_6, __pyx_temp+1-__pyx_t_8, 3+__pyx_t_8); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 981, __pyx_L1_error)
           __Pyx_XDECREF(__pyx_t_7); __pyx_t_7 = 0;
           __Pyx_GOTREF(__pyx_t_2);
           __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
@@ -11254,7 +11270,7 @@ static double __pyx_f_8opentiva_4pkpd_9PkPdModel_ke0_tpeak_method(struct __pyx_o
         } else
         #endif
         {
-          __pyx_t_9 = PyTuple_New(3+__pyx_t_8); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 979, __pyx_L1_error)
+          __pyx_t_9 = PyTuple_New(3+__pyx_t_8); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 981, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_9);
           if (__pyx_t_7) {
             __Pyx_GIVEREF(__pyx_t_7); PyTuple_SET_ITEM(__pyx_t_9, 0, __pyx_t_7); __pyx_t_7 = NULL;
@@ -11268,12 +11284,12 @@ static double __pyx_f_8opentiva_4pkpd_9PkPdModel_ke0_tpeak_method(struct __pyx_o
           __pyx_t_3 = 0;
           __pyx_t_4 = 0;
           __pyx_t_5 = 0;
-          __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_6, __pyx_t_9, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 979, __pyx_L1_error)
+          __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_6, __pyx_t_9, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 981, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_2);
           __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
         }
         __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-        __pyx_t_10 = __pyx_PyFloat_AsDouble(__pyx_t_2); if (unlikely((__pyx_t_10 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 979, __pyx_L1_error)
+        __pyx_t_10 = __pyx_PyFloat_AsDouble(__pyx_t_2); if (unlikely((__pyx_t_10 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 981, __pyx_L1_error)
         __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
         __pyx_r = __pyx_t_10;
         __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
@@ -11292,51 +11308,51 @@ static double __pyx_f_8opentiva_4pkpd_9PkPdModel_ke0_tpeak_method(struct __pyx_o
     #endif
   }
 
-  /* "opentiva/pkpd.pyx":998
+  /* "opentiva/pkpd.pyx":1000
  * 
  *         """
  *         root = optimize.brentq(self.ke0_tpeak_method_minimise,             # <<<<<<<<<<<<<<
  *                                a=1e-5, b=1e2,
  *                                args=(dose, tpeak, ce_tpeak))
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_optimize); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 998, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_optimize); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1000, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_brentq); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 998, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_brentq); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1000, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_ke0_tpeak_method_minimise); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 998, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_ke0_tpeak_method_minimise); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1000, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_6 = PyTuple_New(1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 998, __pyx_L1_error)
+  __pyx_t_6 = PyTuple_New(1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 1000, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
   __Pyx_GIVEREF(__pyx_t_1);
   PyTuple_SET_ITEM(__pyx_t_6, 0, __pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "opentiva/pkpd.pyx":999
+  /* "opentiva/pkpd.pyx":1001
  *         """
  *         root = optimize.brentq(self.ke0_tpeak_method_minimise,
  *                                a=1e-5, b=1e2,             # <<<<<<<<<<<<<<
  *                                args=(dose, tpeak, ce_tpeak))
  *         return root
  */
-  __pyx_t_1 = __Pyx_PyDict_NewPresized(3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 999, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyDict_NewPresized(3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1001, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_a, __pyx_float_1eneg_5) < 0) __PYX_ERR(0, 999, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_b, __pyx_float_1e2) < 0) __PYX_ERR(0, 999, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_a, __pyx_float_1eneg_5) < 0) __PYX_ERR(0, 1001, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_b, __pyx_float_1e2) < 0) __PYX_ERR(0, 1001, __pyx_L1_error)
 
-  /* "opentiva/pkpd.pyx":1000
+  /* "opentiva/pkpd.pyx":1002
  *         root = optimize.brentq(self.ke0_tpeak_method_minimise,
  *                                a=1e-5, b=1e2,
  *                                args=(dose, tpeak, ce_tpeak))             # <<<<<<<<<<<<<<
  *         return root
  */
-  __pyx_t_9 = PyFloat_FromDouble(__pyx_v_dose); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 1000, __pyx_L1_error)
+  __pyx_t_9 = PyFloat_FromDouble(__pyx_v_dose); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 1002, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_9);
-  __pyx_t_5 = PyFloat_FromDouble(__pyx_v_tpeak); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 1000, __pyx_L1_error)
+  __pyx_t_5 = PyFloat_FromDouble(__pyx_v_tpeak); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 1002, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_4 = PyFloat_FromDouble(__pyx_v_ce_tpeak); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1000, __pyx_L1_error)
+  __pyx_t_4 = PyFloat_FromDouble(__pyx_v_ce_tpeak); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1002, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_3 = PyTuple_New(3); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 1000, __pyx_L1_error)
+  __pyx_t_3 = PyTuple_New(3); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 1002, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_GIVEREF(__pyx_t_9);
   PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_t_9);
@@ -11347,17 +11363,17 @@ static double __pyx_f_8opentiva_4pkpd_9PkPdModel_ke0_tpeak_method(struct __pyx_o
   __pyx_t_9 = 0;
   __pyx_t_5 = 0;
   __pyx_t_4 = 0;
-  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_args, __pyx_t_3) < 0) __PYX_ERR(0, 999, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_args, __pyx_t_3) < 0) __PYX_ERR(0, 1001, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "opentiva/pkpd.pyx":998
+  /* "opentiva/pkpd.pyx":1000
  * 
  *         """
  *         root = optimize.brentq(self.ke0_tpeak_method_minimise,             # <<<<<<<<<<<<<<
  *                                a=1e-5, b=1e2,
  *                                args=(dose, tpeak, ce_tpeak))
  */
-  __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_6, __pyx_t_1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 998, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_6, __pyx_t_1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 1000, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
@@ -11365,16 +11381,16 @@ static double __pyx_f_8opentiva_4pkpd_9PkPdModel_ke0_tpeak_method(struct __pyx_o
   __pyx_v_root = __pyx_t_3;
   __pyx_t_3 = 0;
 
-  /* "opentiva/pkpd.pyx":1001
+  /* "opentiva/pkpd.pyx":1003
  *                                a=1e-5, b=1e2,
  *                                args=(dose, tpeak, ce_tpeak))
  *         return root             # <<<<<<<<<<<<<<
  */
-  __pyx_t_10 = __pyx_PyFloat_AsDouble(__pyx_v_root); if (unlikely((__pyx_t_10 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 1001, __pyx_L1_error)
+  __pyx_t_10 = __pyx_PyFloat_AsDouble(__pyx_v_root); if (unlikely((__pyx_t_10 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 1003, __pyx_L1_error)
   __pyx_r = __pyx_t_10;
   goto __pyx_L0;
 
-  /* "opentiva/pkpd.pyx":979
+  /* "opentiva/pkpd.pyx":981
  * 
  * 
  *     cpdef double ke0_tpeak_method(self, double dose, double tpeak,             # <<<<<<<<<<<<<<
@@ -11438,17 +11454,17 @@ static PyObject *__pyx_pw_8opentiva_4pkpd_9PkPdModel_29ke0_tpeak_method(PyObject
         case  1:
         if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_tpeak)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("ke0_tpeak_method", 1, 3, 3, 1); __PYX_ERR(0, 979, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("ke0_tpeak_method", 1, 3, 3, 1); __PYX_ERR(0, 981, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  2:
         if (likely((values[2] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_ce_tpeak)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("ke0_tpeak_method", 1, 3, 3, 2); __PYX_ERR(0, 979, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("ke0_tpeak_method", 1, 3, 3, 2); __PYX_ERR(0, 981, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "ke0_tpeak_method") < 0)) __PYX_ERR(0, 979, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "ke0_tpeak_method") < 0)) __PYX_ERR(0, 981, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 3) {
       goto __pyx_L5_argtuple_error;
@@ -11457,13 +11473,13 @@ static PyObject *__pyx_pw_8opentiva_4pkpd_9PkPdModel_29ke0_tpeak_method(PyObject
       values[1] = PyTuple_GET_ITEM(__pyx_args, 1);
       values[2] = PyTuple_GET_ITEM(__pyx_args, 2);
     }
-    __pyx_v_dose = __pyx_PyFloat_AsDouble(values[0]); if (unlikely((__pyx_v_dose == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 979, __pyx_L3_error)
-    __pyx_v_tpeak = __pyx_PyFloat_AsDouble(values[1]); if (unlikely((__pyx_v_tpeak == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 979, __pyx_L3_error)
-    __pyx_v_ce_tpeak = __pyx_PyFloat_AsDouble(values[2]); if (unlikely((__pyx_v_ce_tpeak == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 980, __pyx_L3_error)
+    __pyx_v_dose = __pyx_PyFloat_AsDouble(values[0]); if (unlikely((__pyx_v_dose == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 981, __pyx_L3_error)
+    __pyx_v_tpeak = __pyx_PyFloat_AsDouble(values[1]); if (unlikely((__pyx_v_tpeak == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 981, __pyx_L3_error)
+    __pyx_v_ce_tpeak = __pyx_PyFloat_AsDouble(values[2]); if (unlikely((__pyx_v_ce_tpeak == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 982, __pyx_L3_error)
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("ke0_tpeak_method", 1, 3, 3, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 979, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("ke0_tpeak_method", 1, 3, 3, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 981, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("opentiva.pkpd.PkPdModel.ke0_tpeak_method", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
@@ -11485,7 +11501,7 @@ static PyObject *__pyx_pf_8opentiva_4pkpd_9PkPdModel_28ke0_tpeak_method(struct _
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("ke0_tpeak_method", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyFloat_FromDouble(__pyx_f_8opentiva_4pkpd_9PkPdModel_ke0_tpeak_method(__pyx_v_self, __pyx_v_dose, __pyx_v_tpeak, __pyx_v_ce_tpeak, 1)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 979, __pyx_L1_error)
+  __pyx_t_1 = PyFloat_FromDouble(__pyx_f_8opentiva_4pkpd_9PkPdModel_ke0_tpeak_method(__pyx_v_self, __pyx_v_dose, __pyx_v_tpeak, __pyx_v_ce_tpeak, 1)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 981, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -26456,10 +26472,10 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
 };
 static CYTHON_SMALL_CODE int __Pyx_InitCachedBuiltins(void) {
   __pyx_builtin_ValueError = __Pyx_GetBuiltinName(__pyx_n_s_ValueError); if (!__pyx_builtin_ValueError) __PYX_ERR(0, 57, __pyx_L1_error)
-  __pyx_builtin_range = __Pyx_GetBuiltinName(__pyx_n_s_range); if (!__pyx_builtin_range) __PYX_ERR(0, 245, __pyx_L1_error)
-  __pyx_builtin_RuntimeError = __Pyx_GetBuiltinName(__pyx_n_s_RuntimeError); if (!__pyx_builtin_RuntimeError) __PYX_ERR(0, 477, __pyx_L1_error)
-  __pyx_builtin_OverflowError = __Pyx_GetBuiltinName(__pyx_n_s_OverflowError); if (!__pyx_builtin_OverflowError) __PYX_ERR(0, 477, __pyx_L1_error)
-  __pyx_builtin_RuntimeWarning = __Pyx_GetBuiltinName(__pyx_n_s_RuntimeWarning); if (!__pyx_builtin_RuntimeWarning) __PYX_ERR(0, 478, __pyx_L1_error)
+  __pyx_builtin_range = __Pyx_GetBuiltinName(__pyx_n_s_range); if (!__pyx_builtin_range) __PYX_ERR(0, 244, __pyx_L1_error)
+  __pyx_builtin_RuntimeError = __Pyx_GetBuiltinName(__pyx_n_s_RuntimeError); if (!__pyx_builtin_RuntimeError) __PYX_ERR(0, 476, __pyx_L1_error)
+  __pyx_builtin_OverflowError = __Pyx_GetBuiltinName(__pyx_n_s_OverflowError); if (!__pyx_builtin_OverflowError) __PYX_ERR(0, 476, __pyx_L1_error)
+  __pyx_builtin_RuntimeWarning = __Pyx_GetBuiltinName(__pyx_n_s_RuntimeWarning); if (!__pyx_builtin_RuntimeWarning) __PYX_ERR(0, 477, __pyx_L1_error)
   __pyx_builtin_MemoryError = __Pyx_GetBuiltinName(__pyx_n_s_MemoryError); if (!__pyx_builtin_MemoryError) __PYX_ERR(1, 148, __pyx_L1_error)
   __pyx_builtin_enumerate = __Pyx_GetBuiltinName(__pyx_n_s_enumerate); if (!__pyx_builtin_enumerate) __PYX_ERR(1, 151, __pyx_L1_error)
   __pyx_builtin_TypeError = __Pyx_GetBuiltinName(__pyx_n_s_TypeError); if (!__pyx_builtin_TypeError) __PYX_ERR(1, 2, __pyx_L1_error)
@@ -26486,28 +26502,28 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple_);
   __Pyx_GIVEREF(__pyx_tuple_);
 
-  /* "opentiva/pkpd.pyx":478
+  /* "opentiva/pkpd.pyx":477
  *                                    args=(inf_out, target, limit, start_mi))
  *         except (RuntimeError, OverflowError):
  *             warnings.warn("Failed to converge on infusion time.", RuntimeWarning)             # <<<<<<<<<<<<<<
  *             end_mi = end_b
  *         else:
  */
-  __pyx_tuple__2 = PyTuple_Pack(2, __pyx_kp_s_Failed_to_converge_on_infusion_t, __pyx_builtin_RuntimeWarning); if (unlikely(!__pyx_tuple__2)) __PYX_ERR(0, 478, __pyx_L1_error)
+  __pyx_tuple__2 = PyTuple_Pack(2, __pyx_kp_s_Failed_to_converge_on_infusion_t, __pyx_builtin_RuntimeWarning); if (unlikely(!__pyx_tuple__2)) __PYX_ERR(0, 477, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__2);
   __Pyx_GIVEREF(__pyx_tuple__2);
 
-  /* "opentiva/pkpd.pyx":844
+  /* "opentiva/pkpd.pyx":846
  *         cdef Py_ssize_t x
  * 
  *         inf_tmp = np.empty((0, 4), dtype=np.float64)             # <<<<<<<<<<<<<<
  * 
  *         for x in range(x_max):
  */
-  __pyx_tuple__3 = PyTuple_Pack(2, __pyx_int_0, __pyx_int_4); if (unlikely(!__pyx_tuple__3)) __PYX_ERR(0, 844, __pyx_L1_error)
+  __pyx_tuple__3 = PyTuple_Pack(2, __pyx_int_0, __pyx_int_4); if (unlikely(!__pyx_tuple__3)) __PYX_ERR(0, 846, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__3);
   __Pyx_GIVEREF(__pyx_tuple__3);
-  __pyx_tuple__4 = PyTuple_Pack(1, __pyx_tuple__3); if (unlikely(!__pyx_tuple__4)) __PYX_ERR(0, 844, __pyx_L1_error)
+  __pyx_tuple__4 = PyTuple_Pack(1, __pyx_tuple__3); if (unlikely(!__pyx_tuple__4)) __PYX_ERR(0, 846, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__4);
   __Pyx_GIVEREF(__pyx_tuple__4);
 

@@ -164,7 +164,7 @@ cdef class PkPdModel:
 
         Returns
         -------
-            double
+        double
             plasma concentration of increment
         """
 
@@ -216,7 +216,6 @@ cdef class PkPdModel:
         """Takes an array of infusions and returns the plasma concentration
         at a point in time
 
-
         Parameters
         ----------
         infusion_list
@@ -232,7 +231,7 @@ cdef class PkPdModel:
         -------
         double
             plasma concentration at a point in time
-         """
+        """
 
         cdef double dose, cp, target
         cdef int start, duration, end, elapsed, diff
@@ -514,7 +513,8 @@ cdef class PkPdModel:
         return inf_out, target_time
 
 
-    cpdef double ce_duration_minimise(self, int duration, double [:, :] infusion_list,
+    cpdef double ce_duration_minimise(self, int duration, 
+                                      double [:, :] infusion_list, 
                                       double target, double limit, int start):
         """ Minimisation function to calculate duration of Tinf
 
@@ -526,7 +526,8 @@ cdef class PkPdModel:
         Parameters
         ----------
         duration
-            duration in seconds of Tcoast phase of the revised effect site targeting
+            duration in seconds of Tcoast phase of the revised effect site
+            targeting
         infusion_list
             2d array of infusions with each row containing:
             [start time of infusion in seconds,
@@ -583,8 +584,8 @@ cdef class PkPdModel:
 
     cpdef ce_cplimit_minimise(self, double limit, double [:, :] infusion_list,
                   double target, int duration_b, int start_b,
-                  int duration_ce, double drug_concentration, int max_infusion_rate,
-                  int bolus_time):
+                  int duration_ce, double drug_concentration,
+                  int max_infusion_rate, int bolus_time):
         """Minimisation function to calculate limit value for original targeting
 
         Method when minimised by changing the limit variable will give
@@ -657,7 +658,8 @@ cdef class PkPdModel:
 
         # Add bolus dose to array
         end_b = start_b + duration_b
-        inf_v = np.array([start_b, dose_cp, duration_b, end_b], dtype=np.float64)
+        inf_v = np.array([start_b, dose_cp, duration_b, end_b], 
+                          dtype=np.float64)
         inf_tmp = np.vstack((inf_tmp, inf_v))
 
         previous_ce = 0
@@ -682,8 +684,8 @@ cdef class PkPdModel:
 
     cpdef maintenance_infusion(self, double [:, :] infusion_list, double target,
                                int time, int duration):
-        """Returns the dose over 1 second to make up for clearance and elimination
-        loses starting at a point in time over a duration
+        """Returns the dose over 1 second to make up for clearance and 
+        elimination loses starting at a point in time over a duration
 
         Parameters
         ----------
@@ -706,7 +708,7 @@ cdef class PkPdModel:
         double
             dose per 1 second that would maintain a steady state
             concentration over the duration time period
-         """
+        """
 
         cdef double dose, cp
 
