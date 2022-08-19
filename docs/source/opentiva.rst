@@ -36,6 +36,14 @@ opentiva.dexmedetomidine module
    :undoc-members:
    :show-inheritance:
 
+opentiva.etomidate module
+-------------------------
+
+.. automodule:: opentiva.etomidate
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 opentiva.fentanyl module
 ------------------------
 
@@ -116,6 +124,14 @@ opentiva.remifentanil module
    :undoc-members:
    :show-inheritance:
 
+opentiva.remimazolam module
+---------------------------
+
+.. automodule:: opentiva.remimazolam
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 opentiva.rocuronium module
 --------------------------
 
@@ -136,14 +152,6 @@ opentiva.thiopental module
 --------------------------
 
 .. automodule:: opentiva.thiopental
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-opentiva.validation module
---------------------------
-
-.. automodule:: opentiva.validation
    :members:
    :undoc-members:
    :show-inheritance:
