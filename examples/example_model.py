@@ -8,6 +8,7 @@ This script simulates a target controlled infusion model of the Eleveld
 propofol model (without opiates)
 
 Documentation of opentiva can be found here:
+https://opentiva.readthedocs.io
 """
 
 

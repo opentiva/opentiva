@@ -8,6 +8,7 @@ This script simulates a user defined infusion of remifentanil at 10 ml/hr
 using the Minto model.
 
 Documentation of opentiva can be found here:
+https://opentiva.readthedocs.io
 """
 
 

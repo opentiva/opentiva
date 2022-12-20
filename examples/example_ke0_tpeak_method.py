@@ -1,6 +1,17 @@
 #!/usr/bin/env python3
 # encoding: utf-8
 
+"""
+Example finding ke0 using the tpeak method
+
+This script derives the ke0 constant using the tpeak method for the Marsh
+Diprifusor model.
+
+Documentation of opentiva can be found here:
+https://opentiva.readthedocs.io
+"""
+
+
 import opentiva.propofol as propofol
 import opentiva.pkpd as pkpd
 
