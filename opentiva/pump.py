@@ -114,6 +114,9 @@ class Pump:
 
     @property
     def drug_concentration(self):
+        """ Get or set the drug concentration. Setting the drug concentration
+        will check for valid type and value.
+        """
         return self._drug_concentration
 
     @drug_concentration.setter
@@ -126,6 +129,9 @@ class Pump:
 
     @property
     def end_time(self):
+        """ Get or set the end time. Setting the end time will check for valid
+        type and value.
+        """
         return self._end_time
 
     @end_time.setter
@@ -138,6 +144,9 @@ class Pump:
 
     @property
     def cp_limit(self):
+        """ Get or set the cp limit. Setting the cp limit will check for valid
+        type and value.
+        """
         return self._cp_limit
 
     @cp_limit.setter
@@ -150,6 +159,9 @@ class Pump:
 
     @property
     def cp_limit_duration(self):
+        """ Get or set the cp limit duration. Setting the cp limit duration
+        will check for valid type and value.
+        """
         return self._cp_limit_duration
 
     @cp_limit_duration.setter
@@ -162,6 +174,9 @@ class Pump:
 
     @property
     def maintenance_infusion_multiplier(self):
+        """ Get or set the maintenance infusion multiplier. Setting the
+        maintenance infusion multiplier will check for valid type and value.
+        """
         return self._maintenance_infusion_multiplier
 
     @maintenance_infusion_multiplier.setter
@@ -174,6 +189,9 @@ class Pump:
 
     @property
     def maintenance_infusion_duration(self):
+        """ Get or set the maintenance infusion duration. Setting the
+        maintenance infusion duration will check for valid type and value.
+        """
         return self._maintenance_infusion_duration
 
     @maintenance_infusion_duration.setter
@@ -186,6 +204,9 @@ class Pump:
 
     @property
     def max_infusion_rate(self):
+        """ Get or set the max infusion rate. Setting the max infusion rate
+        will check for valid type and value.
+        """
         return self._max_infusion_rate
 
     @max_infusion_rate.setter
@@ -198,6 +219,9 @@ class Pump:
 
     @property
     def bolus_time(self):
+        """ Get or set the bolus time. Setting the bolus time will check for
+        valid type and value.
+        """
         return self._bolus_time
 
     @bolus_time.setter
