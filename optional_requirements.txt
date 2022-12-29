@@ -1,4 +1,2 @@
 Cython==0.29.23
 matplotlib==3.5.0
-build
-twine
