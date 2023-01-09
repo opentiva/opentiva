@@ -116,7 +116,7 @@ class Eleveld(Model):
         self.weight_lower = -1
         self.weight_upper = -1
         self.pmid = "28509794"
-        self.doi = " 10.1097/ALN.0000000000001634"
+        self.doi = "10.1097/ALN.0000000000001634"
         self.validate_anthropometric_values()
 
         # Reference person
