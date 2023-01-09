@@ -103,7 +103,7 @@ Plasma concentration
 
 The plasma concentration is calculated using the methods outlined by 
 `Dubois et al in the PFIM software
-<http://www.pfim.biostat.fr/PFIM_PKPD_library.pdf>`_. 
+<http://www.pfim.biostat.fr/pfim/download/PFIM_PKPD_Library4.0.pdf>`_. 
 
 For multiple doses using a three compartment model the plasma concentration 
 is given by:
