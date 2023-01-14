@@ -9,15 +9,15 @@ can be returned by interacting with the model object.
 
 .. code:: python
 
-    import opentiva
+    import opentiva.remifentanil as remifentanil
 
     sex = 0  # male
     age = 30  # years
     weight = 70  # kg
     height = 170  # cm
 
-    remifentanil_minto = opentiva.remifentanil.Minto(sex=sex, age=age,
-                                                     weight=weight, height=height)
+    remifentanil_minto = remifentanil.Minto(sex=sex, age=age,
+                                            weight=weight, height=height)
 
     print(remifentanil_minto.compartments)
         # Number of compartments that the model uses
@@ -94,6 +94,9 @@ Hypnotics
    * Hannivoort
    * PerezGuille
    * Rolle
+* Etomidate
+   * Kaneda
+   * Lin
 * Ketamine
    * Clements250
    * Domino
@@ -113,6 +116,9 @@ Hypnotics
    * Schnider
    * Schuttler
    * Short
+* Remimazolam
+   * Schmith
+   * Schuttler
 * Thiopental
    *  Stanski
 

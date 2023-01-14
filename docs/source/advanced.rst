@@ -16,9 +16,9 @@ Example
 
 .. code:: python
   
-   import opentiva
+   import opentiva.pump as pump
    
-   p1 = opentiva.pump.Pump(...)
+   p1 = pump.Pump(...)
 
    p1.add_infusion(start=300, dose=0.042, duration=(60*60))
 
@@ -55,9 +55,9 @@ Example
 
 .. code:: python
   
-   import opentiva
+   import opentiva.pump as pump
    
-   p1 = opentiva.pump.Pump(...)
+   p1 = pump.Pump(...)
    p1.add_target(start=0, target=4, duration=10, effect=False)
 
    decrement_time = p1.decrement_time(start=300, effect=False,
@@ -95,9 +95,9 @@ Direct calling
 
 .. code:: python
   
-   import opentiva
+   import opentiva.pump as pump
    
-   p1 = opentiva.pump.Pump(...)
+   p1 = pump.Pump(...)
 
    output = p1.target_concentrations
 
@@ -212,14 +212,14 @@ Take a new module `newdrug` with model as class `Model`:
 
 .. code:: python
 
-   import opentiva
+   import opentiva.pump as pump
    from . import newdrug
 
    drug_model = newdrug.Model(sex=sex, age=age,
                               weight=weight, height=height)
 
-   p1 = opentiva.pump.Pump(model=drug_model, drug_concentration=10,
-                           end_time=(60*60))
+   p1 = pump.Pump(model=drug_model, drug_concentration=10,
+                  end_time=(60*60))
 
 Minimal example
 ~~~~~~~~~~~~~~~
@@ -343,18 +343,19 @@ Details of the theory surrounding this can be found :ref:`here<Ke0 'tpeak' metho
 
 .. code:: python
 
-    import opentiva
+    import opentiva.propofol as propofol
+    import opentica.pkpd as pkpd
 
     sex = 0  # male
     age = 30  # years
     weight = 70  # kg
     height = 170  # cm
 
-    propofol_marsh = opentiva.propofol.MarshDiprifusor(sex=sex, age=age,
-                                                       weight=weight, 
-                                                       height=height)
+    propofol_marsh = propofol.MarshDiprifusor(sex=sex, age=age,
+                                              weight=weight, 
+                                              height=height)
     
-    pkpd_model = opentiva.pkpd.PkPdModel(propofol_marsh)
+    pkpd_model = pkpd.PkPdModel(propofol_marsh)
 
     dose = 1 # bolus dose in mg
     tpeak = 236 # time to peak effect site concentration in seconds

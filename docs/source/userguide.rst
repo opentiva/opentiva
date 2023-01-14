@@ -17,9 +17,9 @@ All the availiable drug models follow the same import format.
 
 .. code:: python
 
-    import opentiva
+    import opentiva.*drug* as *drug*
 
-    drug_model = opentiva.drug.Model(sex, age, weight, height)
+    drug_model = *drug*.*Model*(sex, age, weight, height)
 
 The parameters are:
 
@@ -57,33 +57,34 @@ Examples
 
 .. code:: python
 
-    import opentiva
+    import opentiva.propofol as propofol
+    import opentiva.remifentanil as remifentanil
 
     sex = 0  # male
     age = 30  # years
     weight = 70  # kg
     height = 170  # cm
 
-    propofol_schnider = opentiva.propofol.Schnider(sex=sex, age=age,
-                                                   weight=weight, height=height)
-    propofol_eleveld = opentiva.propofol.EleveldWithoutOpiates(sex=sex, age=age,
-                                                               weight=weight, height=height)
-    remifentanil_minto = opentiva.remifentanil.Minto(sex=sex, age=age, 
-                                                     weight=weight, height=height)
+    propofol_schnider = propofol.Schnider(sex=sex, age=age,
+                                          weight=weight, height=height)
+    propofol_eleveld = propofol.EleveldWithoutOpiates(sex=sex, age=age,
+                                                      weight=weight, height=height)
+    remifentanil_minto = remifentanil.Minto(sex=sex, age=age, 
+                                            weight=weight, height=height)
 
 **Returning a model's pharmokinetic/ pharmacodynamic values:**
 
 .. code:: python
 
-    import opentiva
+    import opentiva.remifentanil as remifentanil
 
     sex = 0  # male
     age = 30  # years
     weight = 70  # kg
     height = 170  # cm
 
-    remifentanil_minto = opentiva.remifentanil.Minto(sex=sex, age=age,
-                                                     weight=weight, height=height)
+    remifentanil_minto = remifentanil.Minto(sex=sex, age=age,
+                                            weight=weight, height=height)
     
     print(remifentanil_minto.compartments)  
         # Number of compartments that the model uses
@@ -102,15 +103,15 @@ not met. These will written to sys.stderr and returned as a string.
 
 .. code:: python
 
-    import opentiva
+    import opentiva.propofol as propofol
 
     sex = 1  # female
     age = 5  # years
     weight = 18  # kg
     height = 109  # cm
 
-    propofol_marsh = opentiva.propofol.MarshDiprifusor(sex=sex, age=age,
-                                                       weight=weight, height=height)
+    propofol_marsh = propofol.MarshDiprifusor(sex=sex, age=age,
+                                              weight=weight, height=height)
     warning = propofol_marsh.warning
     print(warning)
 
@@ -124,14 +125,16 @@ A minimal example of the required parameters is:
 
 .. code:: python
 
-    import opentiva
+    import opentiva.propofol as propofol
+    import opentiva.pump as pump
     
-    propofol_eleveld = opentiva.propofol.Eleveld(sex=0, age=30, 
-                                                 weight=70, height=170,
-                                                 opiates_coadministered=False)
+    propofol_eleveld = propofol.Eleveld(sex=0, age=30, 
+                                        weight=70, height=170,
+                                        opiates_coadministered=False)
     
-    p1 = opentiva.pump.Pump(model=propofol_eleveld, drug_concentration=10,
-                            end_time=(60*60))
+    p1 = pump.Pump(model=propofol_eleveld,
+                   drug_concentration=10,
+                   end_time=(60*60))
 
 .. list-table:: 
    :widths: 33 33 33
@@ -205,10 +208,11 @@ Full example
 
 .. code:: python
 
-    import opentiva
+    import opentiva.propofol as propofol
+    import opentiva.pump as pump
     
-    propofol_paedfusor = opentiva.propofol.Paedfusor(sex=0, age=5, 
-                                                     weight=18, height=109)
+    propofol_paedfusor = propofol.Paedfusor(sex=0, age=5, 
+                                            weight=18, height=109)
     
     p1 = pump.Pump(model=propofol_paedfusor,
                    drug_concentration=10,  # propofol concentration of 10 mg/ml
@@ -231,9 +235,9 @@ This is achieved by using the `add_target` function.
 
 .. code:: python
 
-    import opentiva
+    import opentiva.pump as pump
 
-    p1 = opentiva.pump.Pump(...)
+    p1 = pump.Pump(...)
 
     p1.add_target(...)
 
@@ -454,21 +458,22 @@ A full example is show below:
 
 .. code:: python
 
-    import opentiva
+    import opentiva.propofol as propofol
+    import opentiva.pump as pump
 
-    adult35 = opentiva.propofol.Eleveld(sex=0, age=35, 
-                                        weight=70, height=170, 
-                                        opiates_coadministered=False)
+    adult35 = propofol.Eleveld(sex=0, age=35, 
+                               weight=70, height=170, 
+                               opiates_coadministered=False)
 
-    p1 = opentiva.pump.Pump(model=adult35,
-                           drug_concentration=10,
-                           end_time=(1*60*60),
-                           maintenance_infusion_duration=10,
-                           maintenance_infusion_multiplier=2,
-                           cp_limit = 1.2,
-                           cp_limit_duration = 10,
-                           max_infusion_rate = 1200,
-                           bolus_time = 20)
+    p1 = pump.Pump(model=adult35,
+                   drug_concentration=10,
+                   end_time=(1*60*60),
+                   maintenance_infusion_duration=10,
+                   maintenance_infusion_multiplier=2,
+                   cp_limit = 1.2,
+                   cp_limit_duration = 10,
+                   max_infusion_rate = 1200,
+                   bolus_time = 20)
 
     # Target Ce 3 using revised method at time 0
     p1.add_target(start=0,
