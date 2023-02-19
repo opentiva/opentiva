@@ -50,8 +50,6 @@ Donate
 Support opentiva by donating to:
 
 - `Buy me a coffee <https://www.buymeacoffee.com/opentiva>`_
-- BTC bc1qfxtg5fl900fu000hc5j0yajs9d958s0tcwz6vh 
-- ETH 0xeDf7C1fA7b0Ed483e9DA563d05bE58B7fcD57f16
 
 Disclaimer
 ----------
