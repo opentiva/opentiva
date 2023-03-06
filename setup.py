@@ -23,7 +23,7 @@ with open("README.rst", 'r') as f:
 
 setup(
    name='opentiva',
-   version='1.1.0',
+   version='1.1.1',
    description='Simulation of target controlled infusions using'
                'pharmacokinetic and pharmacodynamic models.',
    long_description=readme,

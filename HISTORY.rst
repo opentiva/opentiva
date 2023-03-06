@@ -1,6 +1,18 @@
 Release History
 ===============
 
+1.1.1 (2023-03-06)
+------------------
+
+**Improvements**
+- Update documentation 
+
+**Bugfixes**
+
+- Fixed typos
+- Fixed readthedocs documentation of api
+
+
 1.1.0 (2022-08-19)
 ------------------
 
