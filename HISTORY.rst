@@ -5,6 +5,7 @@ Release History
 ------------------
 
 **Improvements**
+
 - Update documentation 
 
 **Bugfixes**
