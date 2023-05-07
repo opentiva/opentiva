@@ -19,20 +19,22 @@
       "inputs": {
         "flake-utils": "flake-utils",
         "nixpkgs": "nixpkgs",
-        "pypi-deps-db": "pypi-deps-db"
+        "pypi-deps-db": [
+          "pypi"
+        ]
       },
       "locked": {
-        "lastModified": 1654084003,
-        "narHash": "sha256-j/XrVVistvM+Ua+0tNFvO5z83isL+LBgmBi9XppxuKA=",
+        "lastModified": 1681814846,
+        "narHash": "sha256-IMQ1Twf/ozE53CwrunXNlYD3D31xqgz/mZyZG38Ov/Y=",
         "owner": "DavHau",
         "repo": "mach-nix",
-        "rev": "7e14360bde07dcae32e5e24f366c83272f52923f",
+        "rev": "8d903072c7b5426d90bc42a008242c76590af916",
         "type": "github"
       },
       "original": {
-        "id": "mach-nix",
-        "ref": "3.5.0",
-        "type": "indirect"
+        "owner": "DavHau",
+        "repo": "mach-nix",
+        "type": "github"
       }
     },
     "nixpkgs": {
@@ -52,11 +54,11 @@
     },
     "nixpkgs_2": {
       "locked": {
-        "lastModified": 1658093278,
-        "narHash": "sha256-uftJGDkMn7RUZVDA3IDZVYiNKgzk1redcejkkcncwv8=",
+        "lastModified": 1683442750,
+        "narHash": "sha256-IiJ0WWW6OcCrVFl1ijE+gTaP0ChFfV6dNkJR05yStmw=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "78e748fa68079b77ac055c80ef21342dd7e2ae2b",
+        "rev": "eb751d65225ec53de9cf3d88acbf08d275882389",
         "type": "github"
       },
       "original": {
@@ -64,14 +66,14 @@
         "type": "indirect"
       }
     },
-    "pypi-deps-db": {
+    "pypi": {
       "flake": false,
       "locked": {
-        "lastModified": 1643877077,
-        "narHash": "sha256-jv8pIvRFTP919GybOxXE5TfOkrjTbdo9QiCO1TD3ZaY=",
+        "lastModified": 1683450728,
+        "narHash": "sha256-zvOgtrAFsD/yTweAT/0omfs7k29lN0psu/kVXmrQebY=",
         "owner": "DavHau",
         "repo": "pypi-deps-db",
-        "rev": "da53397f0b782b0b18deb72ef8e0fb5aa7c98aa3",
+        "rev": "3fb29073fe779cdfb72a20b9394f1b8d6234011f",
         "type": "github"
       },
       "original": {
@@ -83,7 +85,8 @@
     "root": {
       "inputs": {
         "mach-nix": "mach-nix",
-        "nixpkgs": "nixpkgs_2"
+        "nixpkgs": "nixpkgs_2",
+        "pypi": "pypi"
       }
     }
   },

@@ -1,10 +1,13 @@
 {
   inputs = {
     # https://github.com/DavHau/mach-nix
-    mach-nix.url = "mach-nix/3.5.0";
+    mach-nix.url = "github:DavHau/mach-nix";
+    pypi.url = "github:DavHau/pypi-deps-db";
+    pypi.flake = false;
+    mach-nix.inputs.pypi-deps-db.follows = "pypi";
   };
 
-  outputs = {self, nixpkgs, mach-nix }@inp:
+  outputs = {self, nixpkgs, mach-nix, pypi }@inp:
     let
       l = nixpkgs.lib // builtins;
       supportedSystems = [ "x86_64-linux" "aarch64-darwin" ];
