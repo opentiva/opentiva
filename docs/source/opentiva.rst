@@ -20,6 +20,14 @@ opentiva.atracurium module
    :undoc-members:
    :show-inheritance:
 
+opentiva.biometrics module
+--------------------------
+
+.. automodule:: opentiva.biometrics
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 opentiva.cisatracurium module
 -----------------------------
 
@@ -48,14 +56,6 @@ opentiva.fentanyl module
 ------------------------
 
 .. automodule:: opentiva.fentanyl
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-opentiva.helpers module
------------------------
-
-.. automodule:: opentiva.helpers
    :members:
    :undoc-members:
    :show-inheritance:

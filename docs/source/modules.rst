@@ -5,3 +5,4 @@ opentiva
    :maxdepth: 4
 
    opentiva
+   setup
