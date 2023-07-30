@@ -1,6 +1,6 @@
 from numpy import exp
 
-from . model import Model
+from .model import Model
 
 """
 opentiva.fentanyl
