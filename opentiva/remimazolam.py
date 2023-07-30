@@ -1,5 +1,5 @@
-from . helpers import body_mass_index
-from . model import Model
+from .biometrics import body_mass_index
+from .model import Model
 
 """
 opentiva.remimazolam

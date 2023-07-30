@@ -1,7 +1,7 @@
 from numpy import exp
 
-from . helpers import bsa_dubois, crcl_cockcroft_gault, crcl_schwartz
-from . model import Model
+from .biometrics import bsa_dubois, crcl_cockcroft_gault, crcl_schwartz
+from .model import Model
 
 """
 opentiva.rocuronium

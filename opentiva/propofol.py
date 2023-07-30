@@ -1,7 +1,7 @@
 from numpy import exp
 
-from . helpers import lbm_dubois, ffm_alsallami
-from . model import Model
+from .biometrics import lbm_dubois, ffm_alsallami
+from .model import Model
 
 """
 opentiva.propofol

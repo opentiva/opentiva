@@ -3,7 +3,7 @@
 
 import warnings
 
-from . helpers import body_mass_index
+from .biometrics import body_mass_index
 
 """
 opentiva.model

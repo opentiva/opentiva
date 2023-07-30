@@ -1,8 +1,8 @@
 from numpy import exp
 
-from . helpers import lbm_dubois, ffm_alsallami, ffm_janmahasation, \
+from .biometrics import lbm_dubois, ffm_alsallami, ffm_janmahasation, \
                       body_mass_index
-from . model import Model
+from .model import Model
 
 """
 opentiva.remifentanil
