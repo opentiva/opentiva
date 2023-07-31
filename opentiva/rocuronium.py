@@ -71,14 +71,15 @@ ke0 : float
 
 class Kleijn(Model):
     """Kleijn class holds pharmacokinetic parameters for the Kleijn
-    rocuronium model with no sevoflurane.
+    rocuronium model.
 
     Reference: PMID: 21535448 DOI: 10.1111/j.1365-2125.2011.04000.x
 
     """
 
     def __init__(self, sex: int, age: float, weight: float, height: float,
-                 creatinine: float, sevoflurane: bool, asian: bool = False):
+                 creatinine: float = 80, sevoflurane: bool = False,
+                 asian: bool = False):
         super().__init__(sex, age, weight, height)
 
         self.compartments = 2
