@@ -271,7 +271,7 @@ class Eleveld(Model):
     """
 
     def __init__(self, sex: int, age: float, weight: float, height: float,
-                 opiates_coadministered: bool):
+                 opiates_coadministered: bool = False):
         super().__init__(sex, age, weight, height)
 
         self.compartments = 3
