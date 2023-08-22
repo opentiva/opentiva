@@ -1,12 +1,23 @@
 Release History
 ===============
 
+1.1.2 (2023-03-06)
+------------------
+
+**Improvements**
+
+- Update documentation
+- Updated __init.py__
+- Added default values of creatinine and sevoflurane use to Kleijn model
+- Added default values of coadministration of opiates in Eleveld model
+
+
 1.1.1 (2023-03-06)
 ------------------
 
 **Improvements**
 
-- Update documentation 
+- Update documentation
 
 **Bugfixes**
 
@@ -41,14 +52,10 @@ Release History
 
 **Bugfixes**
 
-- Fixed ke0 example 
+- Fixed ke0 example
 - Added missing self to Schnider model
 
 1.0.4 (2021-05-13)
 ------------------
 
 First working release
-
-
-
-
