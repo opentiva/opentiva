@@ -1,25 +1,30 @@
 {
+  description = "Opentiva Development Shell";
+
   inputs = {
-    # https://github.com/DavHau/mach-nix
-    mach-nix.url = "github:DavHau/mach-nix";
-    pypi.url = "github:DavHau/pypi-deps-db";
-    pypi.flake = false;
-    mach-nix.inputs.pypi-deps-db.follows = "pypi";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    flake-utils.url = "github:numtide/flake-utils";
   };
 
-  outputs = {self, nixpkgs, mach-nix, pypi }@inp:
-    let
-      l = nixpkgs.lib // builtins;
-      supportedSystems = [ "x86_64-linux" "aarch64-darwin" ];
-      forAllSystems = f: l.genAttrs supportedSystems
-        (system: f system (import nixpkgs {inherit system;}));
-    in
-    {
-      # enter this python environment by executing `nix shell .`
-      defaultPackage = forAllSystems (system: pkgs: mach-nix.lib."${system}".mkPython {
-        python = "python39Full";
-        requirements = builtins.readFile ./requirements.txt + builtins.readFile ./optional_requirements.txt;
-      });
-    };
-}
+  outputs = { self, nixpkgs, flake-utils, ... }:
+    flake-utils.lib.eachDefaultSystem (system:
+      let
+        pkgs = nixpkgs.legacyPackages.${system};
+        my-python-packages = ps: with ps; [
+          cython
+          matplotlib
+          numpy
+          setuptools
+          scipy
+        ];
+      in
+      {
+        devShells.default = pkgs.mkShell {
+          nativeBuildInputs = with pkgs; [
+            (python310.withPackages my-python-packages)
+          ];
 
+        };
+      }
+    );
+}
