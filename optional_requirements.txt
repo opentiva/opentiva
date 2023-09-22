@@ -1,2 +1,2 @@
-Cython==0.29.23
-matplotlib==3.5.0
+Cython==0.29.36
+matplotlib==3.7.2
